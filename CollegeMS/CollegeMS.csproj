@@ -52,6 +52,18 @@
     <Compile Include="feeForm.Designer.cs">
       <DependentUpon>feeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Giangvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giangvien.Designer.cs">
+      <DependentUpon>Giangvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hocvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hocvien.Designer.cs">
+      <DependentUpon>Hocvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="loadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +80,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="feeForm.resx">
       <DependentUpon>feeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giangvien.resx">
+      <DependentUpon>Giangvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hocvien.resx">
+      <DependentUpon>Hocvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loadingForm.resx">
       <DependentUpon>loadingForm.cs</DependentUpon>
@@ -109,6 +127,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo trường_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dhmohcm-324x160.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book Shelf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star Filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\High Importance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\More Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grades.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
