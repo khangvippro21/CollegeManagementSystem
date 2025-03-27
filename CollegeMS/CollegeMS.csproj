@@ -161,5 +161,56 @@
   <ItemGroup>
     <None Include="Resources\Grades.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banknotes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scorecard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schoolboy at a Desk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Training.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student Center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scorecard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banknotes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
