@@ -263,6 +263,16 @@ namespace CollegeMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_money_40__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-money-40 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_student_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-student-40", resourceCulture);

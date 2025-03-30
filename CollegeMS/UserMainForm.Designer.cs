@@ -34,16 +34,16 @@
             this.lbDatetime = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panelSlide = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbWelcome = new System.Windows.Forms.Label();
             this.btQLTK = new System.Windows.Forms.Button();
             this.btQLHP = new System.Windows.Forms.Button();
             this.btQLMH = new System.Windows.Forms.Button();
             this.btQLGV = new System.Windows.Forms.Button();
             this.btQLHV = new System.Windows.Forms.Button();
             this.btDashboard = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelSlide = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbWelcome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -122,45 +122,6 @@
             this.panel1.Size = new System.Drawing.Size(300, 692);
             this.panel1.TabIndex = 6;
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.panelSlide);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 174);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(8, 518);
-            this.panel5.TabIndex = 0;
-            // 
-            // panelSlide
-            // 
-            this.panelSlide.BackColor = System.Drawing.Color.White;
-            this.panelSlide.Location = new System.Drawing.Point(0, 0);
-            this.panelSlide.Name = "panelSlide";
-            this.panelSlide.Size = new System.Drawing.Size(8, 80);
-            this.panelSlide.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lbWelcome);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 174);
-            this.panel2.TabIndex = 0;
-            // 
-            // lbWelcome
-            // 
-            this.lbWelcome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWelcome.ForeColor = System.Drawing.Color.White;
-            this.lbWelcome.Location = new System.Drawing.Point(60, 102);
-            this.lbWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbWelcome.Name = "lbWelcome";
-            this.lbWelcome.Size = new System.Drawing.Size(177, 49);
-            this.lbWelcome.TabIndex = 1;
-            this.lbWelcome.Text = "WELCOME!";
-            // 
             // btQLTK
             // 
             this.btQLTK.Dock = System.Windows.Forms.DockStyle.Top;
@@ -185,7 +146,7 @@
             this.btQLHP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btQLHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btQLHP.ForeColor = System.Drawing.Color.White;
-            this.btQLHP.Image = global::CollegeMS.Properties.Resources.icons8_money_40__1_;
+            this.btQLHP.Image = global::CollegeMS.Properties.Resources.icons8_money_40__2_;
             this.btQLHP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btQLHP.Location = new System.Drawing.Point(8, 494);
             this.btQLHP.Name = "btQLHP";
@@ -262,6 +223,45 @@
             this.btDashboard.Text = "               Dashboard";
             this.btDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btDashboard.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panelSlide);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 174);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(8, 518);
+            this.panel5.TabIndex = 0;
+            // 
+            // panelSlide
+            // 
+            this.panelSlide.BackColor = System.Drawing.Color.White;
+            this.panelSlide.Location = new System.Drawing.Point(0, 0);
+            this.panelSlide.Name = "panelSlide";
+            this.panelSlide.Size = new System.Drawing.Size(8, 80);
+            this.panelSlide.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lbWelcome);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(300, 174);
+            this.panel2.TabIndex = 0;
+            // 
+            // lbWelcome
+            // 
+            this.lbWelcome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWelcome.ForeColor = System.Drawing.Color.White;
+            this.lbWelcome.Location = new System.Drawing.Point(60, 102);
+            this.lbWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbWelcome.Name = "lbWelcome";
+            this.lbWelcome.Size = new System.Drawing.Size(177, 49);
+            this.lbWelcome.TabIndex = 1;
+            this.lbWelcome.Text = "WELCOME!";
             // 
             // pictureBox1
             // 
