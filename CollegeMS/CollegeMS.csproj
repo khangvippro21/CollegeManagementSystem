@@ -251,5 +251,15 @@
   <ItemGroup>
     <None Include="Resources\icons8-money-40 %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{1523952c-9670-4599-8fe2-b6c142ecaae0}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TransferObject\TransferObject.csproj">
+      <Project>{439b6c42-b088-4e00-a822-dcbed1e05df9}</Project>
+      <Name>TransferObject</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
