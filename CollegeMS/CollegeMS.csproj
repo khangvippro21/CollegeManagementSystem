@@ -84,12 +84,6 @@
     <Compile Include="UserMainForm.Designer.cs">
       <DependentUpon>UserMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserRegister.Designer.cs">
-      <DependentUpon>UserRegister.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="feeForm.resx">
       <DependentUpon>feeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,9 +111,6 @@
     </Compile>
     <EmbeddedResource Include="UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserRegister.resx">
-      <DependentUpon>UserRegister.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
