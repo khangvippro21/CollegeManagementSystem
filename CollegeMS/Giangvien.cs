@@ -33,34 +33,10 @@ namespace CollegeMS
             lbDatetime.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
         }
 
-        private void Giangvien_Load(object sender, EventArgs e)
+
+        private void Giangvien_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btndkkh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btdanhgia_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }

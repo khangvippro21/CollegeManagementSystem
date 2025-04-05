@@ -8,6 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferObject;
 
 namespace CollegeMS
 {
@@ -19,19 +20,19 @@ namespace CollegeMS
         }
         private void UserMainForm_Load(object sender, EventArgs e)
         {
-            this.Show();
+            this.Hide();
             this.Enabled = false;
             loginForm loginForm = new loginForm();
             DialogResult result = loginForm.ShowDialog();
             if (result == DialogResult.OK)
             {
                 this.Enabled=true;
+                this.Show();
             }
             else
             {
                 this.Close();
             }
-
         }
         private void UserMainForm_FormClosed(object sender, FormClosedEventArgs e)
         {

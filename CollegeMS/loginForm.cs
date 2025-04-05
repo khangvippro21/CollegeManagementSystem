@@ -37,11 +37,9 @@ namespace CollegeMS
             UserPass = txtPassword.Text.Trim();
             UserAccount acc = new UserAccount(UserId, UserPass);
             bool b = true;
-            int n_role = 2;
             try
             {
                 b = login.LoginBL(acc);
-                n_role = login.RoleCheckBL(acc);
             }
             catch(SqlException ex)
             {
@@ -53,20 +51,19 @@ namespace CollegeMS
             }
             if (b)
             {
-                switch(n_role)
+                switch (acc.UserRole)
                 {
-                    case 1:
+                    case "student":
                         hv.Show();
                         return;
-                    case -1:
+                    case "lecturer":
                         gv.Show();
                         return;
-                    case 0:
+                    case "admin":
                         this.DialogResult = DialogResult.OK;
                         return;
                 }
             }
-
             else
             {
                 string msg = "Username or Password is incorrect !";
@@ -81,8 +78,6 @@ namespace CollegeMS
         {
             this.Close();
         }
-
-        
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (cbShowPassword.Checked)

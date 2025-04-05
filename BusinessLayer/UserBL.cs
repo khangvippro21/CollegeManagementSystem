@@ -25,17 +25,5 @@ namespace BusinessLayer
                 throw ex;
             }
         }
-        public int RoleCheckBL(UserAccount account)
-        {
-            UserAccess a = new UserAccess();
-            try
-            {
-                return a.RoleCheckDL(account);
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-        }
     }
 }

@@ -34,16 +34,16 @@
             this.lbDatetime = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelSlide = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbWelcome = new System.Windows.Forms.Label();
             this.btQLTK = new System.Windows.Forms.Button();
             this.btQLHP = new System.Windows.Forms.Button();
             this.btQLMH = new System.Windows.Forms.Button();
             this.btQLGV = new System.Windows.Forms.Button();
             this.btQLHV = new System.Windows.Forms.Button();
             this.btDashboard = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panelSlide = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbWelcome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -121,6 +121,47 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 554);
             this.panel1.TabIndex = 6;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panelSlide);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 139);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(7, 415);
+            this.panel5.TabIndex = 0;
+            // 
+            // panelSlide
+            // 
+            this.panelSlide.BackColor = System.Drawing.Color.White;
+            this.panelSlide.Location = new System.Drawing.Point(0, 0);
+            this.panelSlide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelSlide.Name = "panelSlide";
+            this.panelSlide.Size = new System.Drawing.Size(7, 64);
+            this.panelSlide.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lbWelcome);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(267, 139);
+            this.panel2.TabIndex = 0;
+            // 
+            // lbWelcome
+            // 
+            this.lbWelcome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWelcome.ForeColor = System.Drawing.Color.White;
+            this.lbWelcome.Location = new System.Drawing.Point(53, 82);
+            this.lbWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbWelcome.Name = "lbWelcome";
+            this.lbWelcome.Size = new System.Drawing.Size(157, 39);
+            this.lbWelcome.TabIndex = 1;
+            this.lbWelcome.Text = "WELCOME!";
             // 
             // btQLTK
             // 
@@ -230,47 +271,6 @@
             this.btDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btDashboard.UseVisualStyleBackColor = true;
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.panelSlide);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 139);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(7, 415);
-            this.panel5.TabIndex = 0;
-            // 
-            // panelSlide
-            // 
-            this.panelSlide.BackColor = System.Drawing.Color.White;
-            this.panelSlide.Location = new System.Drawing.Point(0, 0);
-            this.panelSlide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelSlide.Name = "panelSlide";
-            this.panelSlide.Size = new System.Drawing.Size(7, 64);
-            this.panelSlide.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lbWelcome);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(267, 139);
-            this.panel2.TabIndex = 0;
-            // 
-            // lbWelcome
-            // 
-            this.lbWelcome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWelcome.ForeColor = System.Drawing.Color.White;
-            this.lbWelcome.Location = new System.Drawing.Point(53, 82);
-            this.lbWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbWelcome.Name = "lbWelcome";
-            this.lbWelcome.Size = new System.Drawing.Size(157, 39);
-            this.lbWelcome.TabIndex = 1;
-            this.lbWelcome.Text = "WELCOME!";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CollegeMS.Properties.Resources.Student_Center;
@@ -293,7 +293,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Admin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserMainForm_FormClosed);
             this.Load += new System.EventHandler(this.UserMainForm_Load);

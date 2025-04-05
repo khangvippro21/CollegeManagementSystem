@@ -88,7 +88,7 @@
             this.btthoat.Name = "btthoat";
             this.btthoat.Size = new System.Drawing.Size(242, 46);
             this.btthoat.TabIndex = 19;
-            this.btthoat.Text = "                Thoát";
+            this.btthoat.Text = "             Thoát";
             this.btthoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btthoat.UseVisualStyleBackColor = true;
             // 
@@ -100,7 +100,7 @@
             this.btBaocaosuco.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btBaocaosuco.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btBaocaosuco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBaocaosuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btBaocaosuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBaocaosuco.ForeColor = System.Drawing.Color.White;
             this.btBaocaosuco.Image = global::CollegeMS.Properties.Resources.Error1;
             this.btBaocaosuco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -109,10 +109,9 @@
             this.btBaocaosuco.Name = "btBaocaosuco";
             this.btBaocaosuco.Size = new System.Drawing.Size(242, 46);
             this.btBaocaosuco.TabIndex = 18;
-            this.btBaocaosuco.Text = "               Báo cáo sự cố";
+            this.btBaocaosuco.Text = "             Báo cáo sự cố";
             this.btBaocaosuco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btBaocaosuco.UseVisualStyleBackColor = true;
-            this.btBaocaosuco.Click += new System.EventHandler(this.btBaocaosuco_Click);
             // 
             // btndkkh
             // 
@@ -122,7 +121,7 @@
             this.btndkkh.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btndkkh.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btndkkh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndkkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btndkkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndkkh.ForeColor = System.Drawing.Color.White;
             this.btndkkh.Image = global::CollegeMS.Properties.Resources.Edit;
             this.btndkkh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,7 +130,7 @@
             this.btndkkh.Name = "btndkkh";
             this.btndkkh.Size = new System.Drawing.Size(242, 46);
             this.btndkkh.TabIndex = 17;
-            this.btndkkh.Text = "             Đăng kí lịch dạy";
+            this.btndkkh.Text = "             Đăng kí khóa học";
             this.btndkkh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndkkh.UseVisualStyleBackColor = true;
             // 
@@ -143,7 +142,7 @@
             this.btRateGV.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btRateGV.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btRateGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btRateGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRateGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btRateGV.ForeColor = System.Drawing.Color.White;
             this.btRateGV.Image = global::CollegeMS.Properties.Resources.Star;
             this.btRateGV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -152,10 +151,9 @@
             this.btRateGV.Name = "btRateGV";
             this.btRateGV.Size = new System.Drawing.Size(242, 46);
             this.btRateGV.TabIndex = 12;
-            this.btRateGV.Text = "              Đánh giá giảng viên";
+            this.btRateGV.Text = "             Đánh giá giảng viên";
             this.btRateGV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btRateGV.UseVisualStyleBackColor = true;
-            this.btRateGV.Click += new System.EventHandler(this.btRateGV_Click);
             // 
             // bthocphi
             // 
@@ -165,7 +163,7 @@
             this.bthocphi.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.bthocphi.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.bthocphi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bthocphi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.bthocphi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bthocphi.ForeColor = System.Drawing.Color.White;
             this.bthocphi.Image = global::CollegeMS.Properties.Resources.Banknotes1;
             this.bthocphi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,7 +172,7 @@
             this.bthocphi.Name = "bthocphi";
             this.bthocphi.Size = new System.Drawing.Size(242, 46);
             this.bthocphi.TabIndex = 11;
-            this.bthocphi.Text = "              Xem học phí";
+            this.bthocphi.Text = "             Xem học phí";
             this.bthocphi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bthocphi.UseVisualStyleBackColor = true;
             // 
@@ -324,7 +322,7 @@
             this.Name = "Hocvien";
             this.Text = "Student";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.LecturerMain_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Hocvien_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

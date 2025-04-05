@@ -12,27 +12,25 @@ namespace DataLayer
 {
     public class UserAccess:DatabaseAccess
     {
-        public bool LoginDL(UserAccount account)
+        public bool LoginDL(UserAccount account) 
         {
-            string sql = "SELECT COUNT(UserId) FROM Users WHERE UserId = '" + 
+            string checkuser = "SELECT COUNT(UserId) FROM Users WHERE UserId = '" + 
                 account.UserId + "'AND UserPass = '" + account.UserPass + "'";
+            string checkRole = "SELECT Users.UserRole FROM Users WHERE UserId = '" +
+                account.UserId + "'";
             try
             {
-                return ((int)MyExecuteScalar(sql, CommandType.Text) > 0);
+                int exist = (int)MyExecuteScalar(checkuser, CommandType.Text);
+                if(exist > 0)
+                {
+                    account.UserRole = (string)MyExecuteScalar(checkRole, CommandType.Text);
+                }
+                return (exist > 0);
             }
             catch (SqlException ex)
             {
                 throw ex;
             }
-        }
-        public int RoleCheckDL(UserAccount acc)
-        {
-            string sql = "SELECT Users.UserRole FROM Users WHERE UserId = '" +
-                acc.UserId + "'";
-            string role = (string)MyExecuteScalar(sql,CommandType.Text);  
-            if (role == "student")  return 1; 
-            if (role == "lecturer") return -1;
-            else return 0;
         }
     }
 }
