@@ -1,6 +1,6 @@
 ﻿namespace CollegeMS
 {
-    partial class lecturerForm
+    partial class Giangvien
     {
         /// <summary>
         /// Required designer variable.
@@ -66,7 +66,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 554);
             this.panel1.TabIndex = 3;
@@ -85,7 +85,7 @@
             this.btthoat.Image = global::CollegeMS.Properties.Resources.Import2;
             this.btthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btthoat.Location = new System.Drawing.Point(19, 416);
-            this.btthoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btthoat.Margin = new System.Windows.Forms.Padding(4);
             this.btthoat.Name = "btthoat";
             this.btthoat.Size = new System.Drawing.Size(242, 46);
             this.btthoat.TabIndex = 13;
@@ -106,7 +106,7 @@
             this.btBaocaosuco.Image = global::CollegeMS.Properties.Resources.Error1;
             this.btBaocaosuco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btBaocaosuco.Location = new System.Drawing.Point(19, 343);
-            this.btBaocaosuco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btBaocaosuco.Margin = new System.Windows.Forms.Padding(4);
             this.btBaocaosuco.Name = "btBaocaosuco";
             this.btBaocaosuco.Size = new System.Drawing.Size(242, 46);
             this.btBaocaosuco.TabIndex = 12;
@@ -127,7 +127,7 @@
             this.btdanhgia.Image = global::CollegeMS.Properties.Resources.Scorecard1;
             this.btdanhgia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btdanhgia.Location = new System.Drawing.Point(19, 270);
-            this.btdanhgia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btdanhgia.Margin = new System.Windows.Forms.Padding(4);
             this.btdanhgia.Name = "btdanhgia";
             this.btdanhgia.Size = new System.Drawing.Size(242, 46);
             this.btdanhgia.TabIndex = 11;
@@ -149,7 +149,7 @@
             this.bthocphi.Image = global::CollegeMS.Properties.Resources.Account1;
             this.bthocphi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bthocphi.Location = new System.Drawing.Point(19, 204);
-            this.bthocphi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bthocphi.Margin = new System.Windows.Forms.Padding(4);
             this.bthocphi.Name = "bthocphi";
             this.bthocphi.Size = new System.Drawing.Size(242, 46);
             this.bthocphi.TabIndex = 10;
@@ -165,7 +165,7 @@
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 139);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(11, 415);
             this.panel5.TabIndex = 9;
@@ -174,7 +174,7 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Location = new System.Drawing.Point(0, 204);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(11, 46);
             this.panel9.TabIndex = 14;
@@ -183,7 +183,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Location = new System.Drawing.Point(0, 66);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(11, 46);
             this.panel8.TabIndex = 1;
@@ -192,7 +192,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Location = new System.Drawing.Point(0, 130);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(11, 46);
             this.panel7.TabIndex = 1;
@@ -202,7 +202,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Location = new System.Drawing.Point(2, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(11, 46);
             this.panel6.TabIndex = 0;
@@ -220,7 +220,7 @@
             this.btndkkh.Image = global::CollegeMS.Properties.Resources.Edit;
             this.btndkkh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndkkh.Location = new System.Drawing.Point(19, 139);
-            this.btndkkh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btndkkh.Margin = new System.Windows.Forms.Padding(4);
             this.btndkkh.Name = "btndkkh";
             this.btndkkh.Size = new System.Drawing.Size(242, 46);
             this.btndkkh.TabIndex = 1;
@@ -235,7 +235,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(267, 139);
             this.panel2.TabIndex = 0;
@@ -255,7 +255,7 @@
             // 
             this.pictureBox1.Image = global::CollegeMS.Properties.Resources.Student_Center;
             this.pictureBox1.Location = new System.Drawing.Point(99, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -266,7 +266,7 @@
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(267, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 53);
             this.panel3.TabIndex = 4;
@@ -297,7 +297,7 @@
             this.panel4.Controls.Add(this.lbDatetime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(267, 53);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(800, 90);
             this.panel4.TabIndex = 5;
@@ -314,7 +314,7 @@
             this.lbloaichucnang.TabIndex = 0;
             this.lbloaichucnang.Text = "?????";
             // 
-            // lecturerForm
+            // Giangvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -322,9 +322,10 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "lecturerForm";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Giangvien";
             this.Text = "Lecturer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Giangvien_Load);
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

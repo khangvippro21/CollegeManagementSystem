@@ -24,6 +24,7 @@ namespace CollegeMS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            UserMainForm a = new UserMainForm();
             if (progressBar1.Value < 100)
             {
                 progressBar1.Value += 20;
@@ -31,6 +32,8 @@ namespace CollegeMS
             else
             {
                 timer1.Stop();
+                this.Hide();
+                a.Show();
             }
         }
     }

@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace CollegeMS
 {
-    public partial class lecturerForm: Form
+    public partial class Giangvien: Form
     {
         private Timer timer;
-        public lecturerForm()
+        public Giangvien()
         {
             InitializeComponent();
             LoadDateTime();
