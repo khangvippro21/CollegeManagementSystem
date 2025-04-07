@@ -35,7 +35,7 @@ namespace CollegeMS
         }
 
         
-        private void Hocvien_FormClosing(object sender, FormClosingEventArgs e)
+        private void Hocvien_FormClosing(object sender, FormClosingEventArgs e) 
         {
             Application.Exit();
         }

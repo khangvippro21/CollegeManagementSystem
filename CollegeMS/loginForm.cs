@@ -53,13 +53,13 @@ namespace CollegeMS
             {
                 switch (acc.UserRole)
                 {
-                    case "student":
+                    case "Student":
                         hv.Show();
                         return;
-                    case "lecturer":
+                    case "Lecturer":
                         gv.Show();
                         return;
-                    case "admin":
+                    case "Admin":
                         this.DialogResult = DialogResult.OK;
                         return;
                 }

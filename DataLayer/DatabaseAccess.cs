@@ -60,6 +60,21 @@ namespace DataLayer
                 DisConnect();
             }
         }
+       public SqlDataAdapter MyAdapterExecute(string sql)
+        {
+            string cnstr = "Data Source=.;Initial Catalog=CollegeMS;Integrated Security=True";
+            try 
+            {
+                return (new SqlDataAdapter(sql, cnstr));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            
+            
+        }
+       
     }
 
 }

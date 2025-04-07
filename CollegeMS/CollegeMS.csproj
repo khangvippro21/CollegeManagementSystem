@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dashboardUS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dashboardUS.Designer.cs">
+      <DependentUpon>dashboardUS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Giangvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +85,9 @@
     <Compile Include="UserMainForm.Designer.cs">
       <DependentUpon>UserMainForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="dashboardUS.resx">
+      <DependentUpon>dashboardUS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Giangvien.resx">
       <DependentUpon>Giangvien.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +252,18 @@
       <Project>{439b6c42-b088-4e00-a822-dcbed1e05df9}</Project>
       <Name>TransferObject</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Training1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Feedback Hub.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,9 +20,9 @@ namespace DataLayer
                 account.UserId + "'";
             try
             {
-                int exist = (int)MyExecuteScalar(checkuser, CommandType.Text);
+                int exist = (int)MyExecuteScalar(checkuser, CommandType.Text); 
                 if(exist > 0)
-                {
+                { 
                     account.UserRole = (string)MyExecuteScalar(checkRole, CommandType.Text);
                 }
                 return (exist > 0);
