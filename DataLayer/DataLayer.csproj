@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseAccess.cs" />
+    <Compile Include="HocphiDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentDAL.cs" />
     <Compile Include="UserAccess.cs" />
   </ItemGroup>
   <ItemGroup>

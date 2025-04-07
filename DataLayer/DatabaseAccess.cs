@@ -12,15 +12,24 @@ namespace DataLayer
 {
     public class DatabaseAccess
     {
-        private SqlConnection cn;
+        protected SqlConnection cn;
+        public SqlConnection GetConnection()
+        {
+            if (cn == null)
+            {
+                string cnStr = "Data Source=BAOBODOI\\DINHBAO;Initial Catalog=CollegeMS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+                cn = new SqlConnection(cnStr);
+            }
+            return cn;
+        }
 
         public DatabaseAccess()
         {
-            string cnStr = "Data Source=.;Initial Catalog=CollegeMS;Integrated Security=True";
+            string cnStr = "Data Source=BAOBODOI\\DINHBAO;Initial Catalog=CollegeMS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
             cn = new SqlConnection(cnStr);
         }
 
-        private void Connect()
+        protected void Connect()
         {
             try
             {
@@ -28,13 +37,15 @@ namespace DataLayer
                 {
                     cn.Open();
                 }
+               
+
             }
             catch (SqlException ex)
             {
                 throw ex;
             }
         }
-        private void DisConnect()
+        protected void DisConnect()
         {
             if (cn != null && cn.State == ConnectionState.Open)
             {

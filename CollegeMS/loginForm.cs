@@ -24,10 +24,7 @@ namespace CollegeMS
             InitializeComponent();
         }
 
-        private void loginForm_Load(object sender, EventArgs e)
-        {
-
-        }
+       
         private void btLogin_Click(object sender, EventArgs e)
         {
             Hocvien hv = new Hocvien();

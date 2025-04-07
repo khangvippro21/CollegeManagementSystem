@@ -16,7 +16,7 @@ namespace CollegeMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loadingForm());
+            Application.Run(new UserMainForm());
         }
     }
 }

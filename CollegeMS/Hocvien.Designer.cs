@@ -324,7 +324,7 @@
             this.Name = "Hocvien";
             this.Text = "Student";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.LecturerMain_Load);
+       
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

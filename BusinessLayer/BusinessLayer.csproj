@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HocphiBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentBL.cs" />
     <Compile Include="UserBL.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +55,9 @@
       <Project>{439b6c42-b088-4e00-a822-dcbed1e05df9}</Project>
       <Name>TransferObject</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
