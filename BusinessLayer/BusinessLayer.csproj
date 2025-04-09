@@ -45,8 +45,10 @@
     <Compile Include="FieldCount\CoTble_BL.cs" />
     <Compile Include="FieldCount\LeTble_BL.cs" />
     <Compile Include="FieldCount\RvTble_BL.cs" />
+    <Compile Include="HocphiBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FieldCount\StudentTble_BL.cs" />
+    <Compile Include="StudentBL.cs" />
     <Compile Include="UserBL.cs" />
   </ItemGroup>
   <ItemGroup>

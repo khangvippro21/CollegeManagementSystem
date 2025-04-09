@@ -14,6 +14,7 @@ namespace CollegeMS
 {
     public partial class UserMainForm : Form
     {
+        private UserControlFee userControlHocphi;
         public UserMainForm()
         {
             InitializeComponent();
@@ -39,6 +40,28 @@ namespace CollegeMS
             Application.Exit();
         }
 
-        
+        private void btQLHV_Click(object sender, EventArgs e)
+        {
+            pnContentStu.Controls.Clear();
+            UserControlStudents studentControl = new UserControlStudents();
+            studentControl.Dock = DockStyle.Fill;
+            pnContentStu.Controls.Add(studentControl);
+            pnContentStu.BringToFront();
+            pnContentStu.Show();
+        }
+        //Moi them vao
+        private void btDashboard_Click(object sender, EventArgs e)
+        {
+            pnContentStu.Hide();
+        }
+
+        private void btQLHP_Click(object sender, EventArgs e)
+        {
+            pnContentStu.Controls.Clear();
+            userControlHocphi = new UserControlFee();
+            pnContentStu.Controls.Add(userControlHocphi);
+            pnContentStu.BringToFront();
+            //pnContentStu.Show();
+        }
     }
 }

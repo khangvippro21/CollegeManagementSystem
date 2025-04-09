@@ -46,8 +46,10 @@
     <Compile Include="FieldCount\CourseTble_access.cs" />
     <Compile Include="FieldCount\LecturerTble_access.cs" />
     <Compile Include="FieldCount\ReviewTble_access.cs" />
+    <Compile Include="HocphiDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FieldCount\StudentTble_access.cs" />
+    <Compile Include="StudentDAL.cs" />
     <Compile Include="UserAccess.cs" />
   </ItemGroup>
   <ItemGroup>
