@@ -17,7 +17,7 @@ namespace DataLayer
         public DatabaseAccess()
         {
             string cnStr =
-                "Data Source=BAOBODOI\\DINHBAO;Initial Catalog=colms;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+                "Data Source=.;Initial Catalog=CollegeMS;Integrated Security=True";
             cn = new SqlConnection(cnStr);
         }
 
@@ -70,7 +70,7 @@ namespace DataLayer
             catch (SqlException ex)
             {
                 throw ex;
- Bao2
+
             }  
         }
 
@@ -95,8 +95,8 @@ namespace DataLayer
 
 
             }   
- test
+
         }
 
     }
-}
+

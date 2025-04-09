@@ -51,6 +51,7 @@ namespace CollegeMS
             dashboardUS1.Visible = true;
             userControlFee1.Visible = false;
             userControlStudents1.Visible = false;
+
         }
 
         private void btQLHP_Click(object sender, EventArgs e)
