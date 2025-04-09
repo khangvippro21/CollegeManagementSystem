@@ -32,5 +32,104 @@ namespace DataLayer
                 throw ex;
             }
         }
+
+
+        public string GenerateNewUserId(string prefix)
+        {
+            string sql = @"
+                SELECT TOP 1 UserId 
+                FROM Users 
+                WHERE UserId LIKE @Prefix + '[0-9][0-9][0-9]' 
+                ORDER BY UserId DESC";
+
+            string lastUserId = string.Empty;
+            int newIdNumber = 1;
+            try
+            {
+                Connect();
+
+                using (SqlCommand cmd = new SqlCommand(sql, cn))
+                {
+                    cmd.Parameters.AddWithValue("@Prefix", prefix);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            lastUserId = reader["UserId"].ToString();
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi khi lấy mã người dùng cuối cùng: " + ex.Message);
+            }
+
+            if (!string.IsNullOrEmpty(lastUserId))
+            {
+                string lastIdNumberStr = lastUserId.Substring(prefix.Length);
+                if (int.TryParse(lastIdNumberStr, out int lastIdNumber))
+                {
+                    newIdNumber = lastIdNumber + 1;
+                }
+            }
+
+            return prefix + newIdNumber.ToString("D3");
+        }
+
+
+        public void CreateUser(string userId, string userPass, string userRole)
+        {
+            if (UserExists(userId))
+            {
+                throw new Exception("Tài khoản với UserId " + userId + " đã tồn tại.");
+            }
+
+            string sql = "INSERT INTO Users (UserId, UserPass, UserRole) VALUES (@UserId, @UserPass, @UserRole)";
+        
+
+            try
+            {
+                Connect();
+
+                using (SqlCommand cmd = new SqlCommand(sql, cn))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", userId);
+                    cmd.Parameters.AddWithValue("@UserPass", userPass);
+                    cmd.Parameters.AddWithValue("@UserRole", userRole);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi khi tạo tài khoản: " + ex.Message);
+            }
+        }
+
+
+        public bool UserExists(string userId)
+        {
+            string sql = "SELECT COUNT(*) FROM Users WHERE UserId = @UserId";
+
+            try
+            {
+                Connect();
+                using (SqlCommand cmd = new SqlCommand(sql, cn))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", userId);
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi khi kiểm tra UserId: " + ex.Message);
+            }
+        }
+
+
+
     }
+
 }
+

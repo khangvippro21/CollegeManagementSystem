@@ -14,6 +14,7 @@ namespace CollegeMS
 {
     public partial class UserMainForm : Form
     {
+        private UserControlFee userControlHocphi;
         public UserMainForm()
         {
             InitializeComponent();
@@ -33,12 +34,34 @@ namespace CollegeMS
             {
                 this.Close();
             }
+            dashboardUS1.Visible = true;
+            userControlFee1.Visible = false;
+            userControlStudents1.Visible = false;
+        }
+        
+        private void btQLHV_Click(object sender, EventArgs e)
+        {
+            dashboardUS1.Visible = false;
+            userControlFee1.Visible = false;
+            userControlStudents1.Visible = true;
+        }
+        //Moi them vao
+        private void btDashboard_Click(object sender, EventArgs e)
+        {
+            dashboardUS1.Visible = true;
+            userControlFee1.Visible = false;
+            userControlStudents1.Visible = false;
+        }
+
+        private void btQLHP_Click(object sender, EventArgs e)
+        {
+            dashboardUS1.Visible = false;
+            userControlFee1.Visible = true;
+            userControlStudents1.Visible = false;
         }
         private void UserMainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
-
-        
     }
 }

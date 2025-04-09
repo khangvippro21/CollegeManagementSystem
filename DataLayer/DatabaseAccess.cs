@@ -16,8 +16,8 @@ namespace DataLayer
 
         public DatabaseAccess()
         {
-            string cnStr = 
-                "Data Source=.;Initial Catalog=CollegeMS;Integrated Security=True";
+            string cnStr =
+                "Data Source=BAOBODOI\\DINHBAO;Initial Catalog=colms;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
             cn = new SqlConnection(cnStr);
         }
 
@@ -62,16 +62,41 @@ namespace DataLayer
         }
        public SqlDataAdapter MyAdapterExecute(string sql)
         {
-            string cnstr = "Data Source=.;Initial Catalog=CollegeMS;Integrated Security=True";
+            //string cnstr = "Data Source=BAOBODOI\\DINHBAO;Initial Catalog=CollegeMS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
             try 
             {
-                return (new SqlDataAdapter(sql, cnstr));
+                return (new SqlDataAdapter(sql, cn));
             }
             catch (SqlException ex)
             {
                 throw ex;
-            }   
+ Bao2
+            }  
         }
-       
+
+        public int MyExecuteNonQuery(SqlCommand cmd)
+        {
+            int rowsAffected = -1;
+            try
+            {
+                Connect(); 
+                cmd.Connection = cn;
+                rowsAffected = cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi khi thực thi NonQuery: " + ex.Message);
+            }
+            finally
+            {
+                DisConnect(); 
+            }
+            return rowsAffected;
+
+
+            }   
+ test
+        }
+
     }
 }
