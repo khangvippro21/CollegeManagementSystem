@@ -44,15 +44,11 @@ namespace DataLayer
 
             string lastUserId = string.Empty;
             int newIdNumber = 1;
-
-            SqlConnection connection = GetConnection();
-
             try
             {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
+                Connect();
 
-                using (SqlCommand cmd = new SqlCommand(sql, connection))
+                using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
                     cmd.Parameters.AddWithValue("@Prefix", prefix);
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -90,14 +86,13 @@ namespace DataLayer
             }
 
             string sql = "INSERT INTO Users (UserId, UserPass, UserRole) VALUES (@UserId, @UserPass, @UserRole)";
-            SqlConnection connection = GetConnection();
+        
 
             try
             {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
+                Connect();
 
-                using (SqlCommand cmd = new SqlCommand(sql, connection))
+                using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
                     cmd.Parameters.AddWithValue("@UserId", userId);
                     cmd.Parameters.AddWithValue("@UserPass", userPass);
@@ -115,14 +110,11 @@ namespace DataLayer
         public bool UserExists(string userId)
         {
             string sql = "SELECT COUNT(*) FROM Users WHERE UserId = @UserId";
-            SqlConnection connection = GetConnection();
 
             try
             {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
-
-                using (SqlCommand cmd = new SqlCommand(sql, connection))
+                Connect();
+                using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
                     cmd.Parameters.AddWithValue("@UserId", userId);
                     int count = (int)cmd.ExecuteScalar();

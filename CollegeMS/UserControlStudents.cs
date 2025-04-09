@@ -12,12 +12,12 @@ using TransferObject;
 
 namespace CollegeMS
 {
-    public partial class UserControlStudents: UserControl
+    public partial class UserControlStudents : UserControl
     {
         private UserMainForm prform;
         private DataGridView dgvStudents;
         protected StudentBL studentbl;
-
+        //sua cai nay
         public UserControlStudents()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace CollegeMS
             studentbl = new StudentBL();
             LoadStudentData();
         }
-
+        //sua cai nay
         public UserControlStudents(UserMainForm parentForm)
         {
             InitializeComponent();
@@ -33,8 +33,8 @@ namespace CollegeMS
             studentbl = new StudentBL();
             LoadStudentData();
         }
-
-        public void LoadStudentData()
+        //sua cai nay
+       public void LoadStudentData()
         {
             try
             {
@@ -58,12 +58,45 @@ namespace CollegeMS
                 MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message);
             }
         }
-
+        //sua cai nay
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            string name = txthoten.Text;
+            string phone = txtsdt.Text;
+            string email = txtEmail.Text;
+            string gender = cbgioitinh.SelectedItem != null ? cbgioitinh.SelectedItem.ToString() : "";
+            string address = txtDiachi.Text;
+            DateTime birth = dtpStu.Value;
+            string path = txtPic.Text;
+            TransferObject.StudentDTO newStudent = new TransferObject.StudentDTO(
+                "", name, phone, email, gender, address, path, birth);
+
+            try
+            {
+
+                studentbl.InsertStudent(newStudent);
+                MessageBox.Show("Thêm học viên thành công!");
+                LoadStudentData();
+                ClearInputFields();
+                tabControlStu.SelectedTab = searchStu;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thêm học viên: " + ex.Message);
+            }
 
         }
-
+        private void ClearInputFields()
+        {
+            txthoten.Clear();
+            txtsdt.Clear();
+            txtEmail.Clear();
+            cbgioitinh.SelectedIndex = -1;
+            txtDiachi.Clear();
+            txtsearchStu.Clear();
+            dtpStu.Value = DateTime.Now;
+        }
+        //sua cai nay
         private void btnsearchStu_Click(object sender, EventArgs e)
         {
 
@@ -78,7 +111,7 @@ namespace CollegeMS
             }
         }
 
-
+        //sua cai nay
         private void SearchStudents(string name)
         {
             try
@@ -91,5 +124,22 @@ namespace CollegeMS
                 MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
             }
         }
+
+       
+        //tham khao cai nay
+        //private void UserControlStudents_Load(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        StudentBL a = new StudentBL();
+        //        dataGridViewStu.DataSource = a.getallstudent();
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Lỗi khi tải danh sách student : " + ex.Message);
+
+        //    }
+        //}
     }
 }

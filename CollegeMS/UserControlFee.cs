@@ -19,24 +19,16 @@ namespace CollegeMS
         public UserControlFee()
         {
             InitializeComponent();
-            hocphiBL = new HocphiBL();
-            LoadfeeData();
+            
         }
 
-        public void LoadfeeData()
+        private void UserControlFee_Load(object sender, EventArgs e)
         {
             try
             {
-                List<HocphiDTO> tuitionList = hocphiBL.GetAllTuitionInfo();
-                dataGridViewFee.DataSource = tuitionList;
+                HocphiBL a = new HocphiBL();
+                dataGridViewFee.DataSource = a.gethocphi();
 
-                // Tùy chỉnh tiêu đề cột
-                if (dataGridViewFee.Columns.Count > 0)
-                {
-                    dataGridViewFee.Columns["StudentName"].HeaderText = "Tên Học Viên";
-                    dataGridViewFee.Columns["CourseName"].HeaderText = "Tên Khóa Học";
-                    dataGridViewFee.Columns["Fee"].HeaderText = "Học Phí";
-                }
             }
             catch (Exception ex)
             {
@@ -44,7 +36,6 @@ namespace CollegeMS
 
             }
         }
-
     }
 }
 

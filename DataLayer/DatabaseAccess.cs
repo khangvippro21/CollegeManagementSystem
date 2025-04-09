@@ -12,17 +12,16 @@ namespace DataLayer
 {
     public class DatabaseAccess
     {
-        private SqlConnection cn;
+        public SqlConnection cn;
 
         public DatabaseAccess()
         {
-            //Sua lai default
             string cnStr =
-                "Data Source=BAOBODOI\\DINHBAO;Initial Catalog=CollegeMS;Integrated Security=True;TrustServerCertificate=True";
+                "Data Source=.;Initial Catalog=CollegeMS;Integrated Security=True;TrustServerCertificate=True";
             cn = new SqlConnection(cnStr);
         }
 
-        private void Connect()
+        public void Connect()
         {
             try
             {
@@ -36,7 +35,7 @@ namespace DataLayer
                 throw ex;
             }
         }
-        private void DisConnect()
+        public void DisConnect()
         {
             if (cn != null && cn.State == ConnectionState.Open)
             {
@@ -63,8 +62,7 @@ namespace DataLayer
         }
        public SqlDataAdapter MyAdapterExecute(string sql)
         {
-            //Sua lai default
-            string cnstr = "Data Source=BAOBODOI\\DINHBAO;Initial Catalog=CollegeMS;Integrated Security=True;TrustServerCertificate=True";
+            string cnstr = "Data Source=.;Initial Catalog=CollegeMS;Integrated Security=True;TrustServerCertificate=True";
             try 
             {
                 return (new SqlDataAdapter(sql, cnstr));
@@ -72,16 +70,7 @@ namespace DataLayer
             catch (SqlException ex)
             {
                 throw ex;
-            }
-
-            
-        }
-
-
-        protected SqlConnection GetConnection()
-        {
-            return cn;
-            
+            }  
         }
 
     }

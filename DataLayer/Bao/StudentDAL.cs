@@ -19,15 +19,13 @@ namespace DataLayer
             List<StudentDTO> list = new List<StudentDTO>();
             string sql = "SELECT * FROM Students";
 
-            SqlConnection connection = GetConnection();
-
             try
             {
 
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
+                Connect();
 
-                SqlCommand cmd = new SqlCommand(sql, connection);
+
+                SqlCommand cmd = new SqlCommand(sql, cn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
 
@@ -55,27 +53,29 @@ namespace DataLayer
 
             finally
             {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
+                DisConnect();
             }
-
             return list;
-
         }
-
+        public DataTable getallstd()
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT * FROM Students";
+            MyAdapterExecute(query).Fill(dt);
+            return dt;
+        }
 
         public List<StudentDTO> SearchStudent(string keyword)
         {
             List<StudentDTO> kq = new List<StudentDTO>();
             string sql = "select *from Students where StName like @keyword ";
-            SqlConnection connection = GetConnection();
+            
 
             try
             {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
+                Connect();
 
-                SqlCommand cmd = new SqlCommand(sql, connection);
+                SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
 
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -101,8 +101,7 @@ namespace DataLayer
             }
             finally
             {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
+                DisConnect();
             }
 
             return kq;
@@ -114,15 +113,12 @@ namespace DataLayer
             string lastStudentId = string.Empty;
 
 
-            SqlConnection connection = GetConnection();
-
             try
             {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
+                Connect();
 
 
-                SqlCommand cmd = new SqlCommand(sql, connection);
+                SqlCommand cmd = new SqlCommand(sql, cn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
@@ -136,8 +132,7 @@ namespace DataLayer
             }
             finally
             {
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
+                DisConnect();
             }
 
             return lastStudentId;
@@ -147,14 +142,12 @@ namespace DataLayer
         {
             string sql = "INSERT INTO Students (StId,StName, StPhone, StEmail, StGender, StAddress, StPath, StBirth) " +
                          "VALUES (@StId,@StName, @StPhone, @StEmail, @StGender, @StAddress, @StPath, @StBirth)";
-            SqlConnection connection = GetConnection();
 
             try
             {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
+                Connect();
 
-                SqlCommand cmd = new SqlCommand(sql, connection);
+                SqlCommand cmd = new SqlCommand(sql,   cn );
                
                 cmd.Parameters.AddWithValue("@StId", student.StId);
                 cmd.Parameters.AddWithValue("@StName", student.StName);
@@ -164,7 +157,7 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@StAddress", student.StAddress);
                 cmd.Parameters.AddWithValue("@StPath", student.Stpath);
                 cmd.Parameters.AddWithValue("@StBirth", student.StBirth);
-
+             
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("Thêm học viên thành công.");
             }
@@ -174,11 +167,8 @@ namespace DataLayer
             }
             finally
             {
-
-                if (connection.State == ConnectionState.Open)
-                    connection.Close();
+                DisConnect();
             }
-
         }
 
     }

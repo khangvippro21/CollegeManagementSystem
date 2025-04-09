@@ -24,6 +24,10 @@ namespace BusinessLayer
             return studentdal.GetAllStudents();
 
         }
+        //public DataTable getallstudent() 
+        //{
+        //    return studentdal.getallstd();
+        //}
 
         public List<StudentDTO> SearchStudent(string name)
         {

@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using TransferObject;
 using DataLayer;
+using System.Data;
+using System.Data.SqlClient;
+
 
 
 namespace BusinessLayer
@@ -12,16 +15,11 @@ namespace BusinessLayer
     public class HocphiBL
     {
 
-        private HocphiDAL hocphiDAL;
+        HocphiDAL hocphiDAL = new HocphiDAL();
 
-        public HocphiBL()
+        public DataTable gethocphi()
         {
-            hocphiDAL = new HocphiDAL();
-        }
-
-        public List<HocphiDTO> GetAllTuitionInfo()
-        {
-            return hocphiDAL.GetAllTuitionInfo();
+            return hocphiDAL.gethocphi(); 
         }
 
     }
