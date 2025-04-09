@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="accountUS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="accountUS.Designer.cs">
+      <DependentUpon>accountUS.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashboardUS.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="UserMainForm.Designer.cs">
       <DependentUpon>UserMainForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="accountUS.resx">
+      <DependentUpon>accountUS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashboardUS.resx">
       <DependentUpon>dashboardUS.cs</DependentUpon>
     </EmbeddedResource>

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using TransferObject;
+using System.Security.Cryptography.X509Certificates;
 
 namespace DataLayer
 {
@@ -73,5 +74,25 @@ namespace DataLayer
             }   
         }
        
+        public int MyExecuteNonQuery(SqlCommand cmd)
+        {
+            int rowAffected;
+            try
+            {
+                Connect();
+                cmd.Connection = cn;
+                return cmd.ExecuteNonQuery();
+               
+            }
+            catch(SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect() ;
+            }
+            
+        }  
     }
 }

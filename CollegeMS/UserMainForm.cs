@@ -26,19 +26,31 @@ namespace CollegeMS
             DialogResult result = loginForm.ShowDialog();
             if (result == DialogResult.OK)
             {
-                this.Enabled=true;
+                this.Enabled = true;
                 this.Show();
             }
             else
             {
                 this.Close();
             }
+            dashboardUS1.Visible = true;
+            accountUS1.Visible = false;
         }
         private void UserMainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        
+        private void btQLTK_Click(object sender, EventArgs e)
+        {
+            accountUS1.Visible = true;
+            dashboardUS1.Visible = false;
+        }
+
+        private void btDashboard_Click(object sender, EventArgs e)
+        {
+            accountUS1.Visible = false;
+            dashboardUS1.Visible = true;
+        }
     }
 }
