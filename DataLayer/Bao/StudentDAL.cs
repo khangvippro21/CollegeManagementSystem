@@ -8,55 +8,12 @@ using System.Data.SqlClient;
 using TransferObject;
 using System.Xml.Linq;
 using System.Runtime.Remoting.Messaging;
+using System.Collections;
 
 namespace DataLayer
 {
     public class StudentDAL : DatabaseAccess
     {
-
-        public List<StudentDTO> GetAllStudents()
-        {
-            List<StudentDTO> list = new List<StudentDTO>();
-            string sql = "SELECT * FROM Students";
-
-            try
-            {
-
-                Connect();
-
-
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-
-                while (reader.Read())
-                {
-                    StudentDTO student = new StudentDTO(
-                        reader["StId"].ToString(),
-                        reader["StName"].ToString(),
-                        reader["StPhone"].ToString(),
-                        reader["StEmail"].ToString(),
-                        reader["StGender"].ToString(),
-                        reader["StAddress"].ToString(),
-                        reader["Stpath"].ToString(),
-                        Convert.ToDateTime(reader["StBirth"])
-                    );
-                    list.Add(student);
-                }
-                reader.Close();
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi lấy dữ liệu: " + ex.Message);
-            }
-
-            finally
-            {
-                DisConnect();
-            }
-            return list;
-        }
         public DataTable getallstd()
         {
             DataTable dt = new DataTable();
@@ -65,11 +22,10 @@ namespace DataLayer
             return dt;
         }
 
-        public List<StudentDTO> SearchStudent(string keyword)
+        public DataTable SearchStudent(string keyword)
         {
-            List<StudentDTO> kq = new List<StudentDTO>();
-            string sql = "select *from Students where StName like @keyword ";
-            
+            DataTable dt = new DataTable();
+            string sql = "SELECT * FROM Students WHERE StName LIKE @keyword";
 
             try
             {
@@ -77,23 +33,8 @@ namespace DataLayer
 
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    StudentDTO student = new StudentDTO(
-                        reader["StId"].ToString(),
-                        reader["StName"].ToString(),
-                        reader["StPhone"].ToString(),
-                        reader["StEmail"].ToString(),
-                        reader["StGender"].ToString(),
-                        reader["StAddress"].ToString(),
-                        reader["StPath"].ToString(),
-                        Convert.ToDateTime(reader["StBirth"])
-                    );
-                    kq.Add(student);
-                }
-                reader.Close();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
             }
             catch (Exception ex)
             {
@@ -103,8 +44,7 @@ namespace DataLayer
             {
                 DisConnect();
             }
-
-            return kq;
+            return dt;
         }
 
         public string GetLastStudentId()
@@ -145,9 +85,9 @@ namespace DataLayer
 
             try
             {
-                Connect();
+                //Connect();
 
-                SqlCommand cmd = new SqlCommand(sql,   cn );
+                SqlCommand cmd = new SqlCommand(sql);
                
                 cmd.Parameters.AddWithValue("@StId", student.StId);
                 cmd.Parameters.AddWithValue("@StName", student.StName);
@@ -157,9 +97,16 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@StAddress", student.StAddress);
                 cmd.Parameters.AddWithValue("@StPath", student.Stpath);
                 cmd.Parameters.AddWithValue("@StBirth", student.StBirth);
-             
-                cmd.ExecuteNonQuery();
-                Console.WriteLine("Thêm học viên thành công.");
+
+                int rows = MyExecuteNonQuery(cmd);
+                if (rows > 0)
+                {
+                    Console.WriteLine("Thêm học viên thành công.");
+                }
+                else
+                {
+                    Console.WriteLine("Không có học viên nào được thêm.");
+                }
             }
             catch (Exception ex)
             {
@@ -170,6 +117,23 @@ namespace DataLayer
                 DisConnect();
             }
         }
+
+
+        public void DeleteStudent(string studentId)
+        {
+            string sql = "DELETE FROM Students WHERE StId = @StId";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql);
+                cmd.Parameters.AddWithValue("@StId", studentId);
+                MyExecuteNonQuery(cmd); 
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi xóa học viên: " + ex.Message);
+            }
+        }
+
 
     }
 }

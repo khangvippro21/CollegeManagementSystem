@@ -38,8 +38,9 @@ namespace CollegeMS
         {
             try
             {
-                List<TransferObject.StudentDTO> students = studentbl.GetAllStudents();
+                DataTable students = studentbl.getallstudent();
                 dataGridViewStu.DataSource = students;
+                dataGridViewStu.Columns["StPath"].Visible = false;
                 if (dataGridViewStu.Columns.Count > 0)
                 {
                     dataGridViewStu.Columns["StId"].HeaderText = "Mã Học Viên";
@@ -58,8 +59,66 @@ namespace CollegeMS
                 MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message);
             }
         }
+        private void ClearInputFields()
+        {
+            txthoten.Clear();
+            txtsdt.Clear();
+            txtEmail.Clear();
+            cbgioitinh.SelectedIndex = -1;
+            txtDiachi.Clear();
+            txtsearchStu.Clear();
+            dtpStu.Value = DateTime.Now;
+        }
+        
+
         //sua cai nay
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void SearchStudents(string name)
+        {
+            try
+            {
+                DataTable students = studentbl.SearchStudent(name);
+                dataGridViewStu.DataSource = students;
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
+            }
+        }
+
+       
+
+
+        //tham khao cai nay
+        private void UserControlStudents_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                StudentBL a = new StudentBL();
+                dataGridViewStu.DataSource = a.getallstudent();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải danh sách student : " + ex.Message);
+
+            }
+        }
+
+        private void btnsearchStu_Click_1(object sender, EventArgs e)
+        {
+            string txtsearch = txtsearchStu.Text;
+            if (String.IsNullOrEmpty(txtsearch))
+            {
+                LoadStudentData();
+            }
+            else
+            {
+                SearchStudents(txtsearch);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             string name = txthoten.Text;
             string phone = txtsdt.Text;
@@ -78,68 +137,39 @@ namespace CollegeMS
                 MessageBox.Show("Thêm học viên thành công!");
                 LoadStudentData();
                 ClearInputFields();
-                tabControlStu.SelectedTab = searchStu;
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi thêm học viên: " + ex.Message);
             }
-
         }
-        private void ClearInputFields()
-        {
-            txthoten.Clear();
-            txtsdt.Clear();
-            txtEmail.Clear();
-            cbgioitinh.SelectedIndex = -1;
-            txtDiachi.Clear();
-            txtsearchStu.Clear();
-            dtpStu.Value = DateTime.Now;
-        }
-        //sua cai nay
-        private void btnsearchStu_Click(object sender, EventArgs e)
-        {
 
-            string txtsearch = txtsearchStu.Text;
-            if (String.IsNullOrEmpty(txtsearch))
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewStu.SelectedRows.Count > 0)
             {
-                LoadStudentData();
+                string id = dataGridViewStu.SelectedRows[0].Cells["StId"].Value.ToString();
+
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa học viên này?", "Xác nhận", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        studentbl.DeleteStudent(id); // Gọi BL
+                        dataGridViewStu.Rows.RemoveAt(dataGridViewStu.SelectedRows[0].Index); // Xóa UI
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi xóa: " + ex.Message);
+                    }
+                }
             }
             else
             {
-                SearchStudents(txtsearch);
+                MessageBox.Show("Vui lòng chọn một dòng để xóa.");
             }
         }
-
-        //sua cai nay
-        private void SearchStudents(string name)
-        {
-            try
-            {
-                List<StudentDTO> students = studentbl.SearchStudent(name);
-                dataGridViewStu.DataSource = students;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
-            }
-        }
-
-       
-        //tham khao cai nay
-        //private void UserControlStudents_Load(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        StudentBL a = new StudentBL();
-        //        dataGridViewStu.DataSource = a.getallstudent();
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("Lỗi khi tải danh sách student : " + ex.Message);
-
-        //    }
-        //}
     }
 }

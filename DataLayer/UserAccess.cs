@@ -126,6 +126,9 @@ namespace DataLayer
                 throw new Exception("Lỗi khi kiểm tra UserId: " + ex.Message);
             }
         }
+
+
+
     }
 
 }

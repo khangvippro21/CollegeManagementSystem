@@ -19,19 +19,17 @@ namespace BusinessLayer
             studentdal = new DataLayer.StudentDAL();
             userAccess = new DataLayer.UserAccess();
         }
-        public List<TransferObject.StudentDTO> GetAllStudents()
+        
+        public DataTable getallstudent()
         {
-            return studentdal.GetAllStudents();
-
+            return studentdal.getallstd();
         }
-        //public DataTable getallstudent() 
-        //{
-        //    return studentdal.getallstd();
-        //}
 
-        public List<StudentDTO> SearchStudent(string name)
+       
+        public DataTable SearchStudent(string keyword)
         {
-            return studentdal.SearchStudent(name);
+            return studentdal.SearchStudent(keyword);
+
         }
 
         public string GenerateNewStudentId()
@@ -67,6 +65,12 @@ namespace BusinessLayer
             {
                 throw new Exception("Tạo tài khoản thành công, nhưng lỗi khi thêm học viên vào bảng Students: " + ex.Message);
             }
+        }
+
+
+        public void DeleteStudent(string studentId)
+        {
+            studentdal.DeleteStudent(studentId); 
         }
     }
 }
