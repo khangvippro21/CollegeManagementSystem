@@ -70,6 +70,7 @@ namespace DataLayer
             catch (SqlException ex)
             {
                 throw ex;
+ Bao2
             }  
         }
 
@@ -92,8 +93,10 @@ namespace DataLayer
             }
             return rowsAffected;
 
+
+            }   
+ test
         }
 
     }
-
 }
