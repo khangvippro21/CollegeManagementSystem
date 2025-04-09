@@ -12,7 +12,7 @@ namespace DataLayer
 {
     public class DatabaseAccess
     {
-        private SqlConnection cn;
+        public SqlConnection cn;
 
         public DatabaseAccess()
         {
@@ -21,7 +21,7 @@ namespace DataLayer
             cn = new SqlConnection(cnStr);
         }
 
-        private void Connect()
+        public void Connect()
         {
             try
             {
@@ -35,7 +35,7 @@ namespace DataLayer
                 throw ex;
             }
         }
-        private void DisConnect()
+        public void DisConnect()
         {
             if (cn != null && cn.State == ConnectionState.Open)
             {
@@ -70,11 +70,8 @@ namespace DataLayer
             catch (SqlException ex)
             {
                 throw ex;
-            }
-            
-            
+            }   
         }
        
     }
-
 }
