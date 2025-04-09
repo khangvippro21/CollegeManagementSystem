@@ -46,8 +46,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.accountUS1 = new CollegeMS.accountUS();
+            this.accountUS2 = new CollegeMS.accountUS();
             this.dashboardUS1 = new CollegeMS.dashboardUS();
+            this.accountUS1 = new CollegeMS.accountUS();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -287,12 +288,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // accountUS1
+            // accountUS2
             // 
-            this.accountUS1.Location = new System.Drawing.Point(300, 179);
-            this.accountUS1.Name = "accountUS1";
-            this.accountUS1.Size = new System.Drawing.Size(1674, 964);
-            this.accountUS1.TabIndex = 10;
+            this.accountUS2.Location = new System.Drawing.Point(300, 181);
+            this.accountUS2.Name = "accountUS2";
+            this.accountUS2.Size = new System.Drawing.Size(1705, 773);
+            this.accountUS2.TabIndex = 10;
             // 
             // dashboardUS1
             // 
@@ -302,12 +303,19 @@
             this.dashboardUS1.Size = new System.Drawing.Size(1643, 935);
             this.dashboardUS1.TabIndex = 9;
             // 
+            // accountUS1
+            // 
+            this.accountUS1.Location = new System.Drawing.Point(300, 179);
+            this.accountUS1.Name = "accountUS1";
+            this.accountUS1.Size = new System.Drawing.Size(1674, 964);
+            this.accountUS1.TabIndex = 10;
+            // 
             // UserMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1589, 846);
-            this.Controls.Add(this.accountUS1);
+            this.Controls.Add(this.accountUS2);
             this.Controls.Add(this.dashboardUS1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -350,6 +358,7 @@
         private System.Windows.Forms.Button btQLGV;
         private dashboardUS dashboardUS1;
         private accountUS accountUS1;
+        private accountUS accountUS2;
     }
 }
 

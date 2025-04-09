@@ -76,7 +76,6 @@ namespace DataLayer
        
         public int MyExecuteNonQuery(SqlCommand cmd)
         {
-            int rowAffected;
             try
             {
                 Connect();
