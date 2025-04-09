@@ -17,7 +17,7 @@ namespace DataLayer
         public DatabaseAccess()
         {
             string cnStr =
-                "Data Source=BAOBODOI\\DINHBAO;Initial Catalog=colms;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+                "Data Source =.; Initial Catalog = CollegeMS; Integrated Security = True";
             cn = new SqlConnection(cnStr);
         }
 
@@ -60,18 +60,17 @@ namespace DataLayer
                 DisConnect();
             }
         }
-       public SqlDataAdapter MyAdapterExecute(string sql)
+        public SqlDataAdapter MyAdapterExecute(string sql)
         {
             //string cnstr = "Data Source=BAOBODOI\\DINHBAO;Initial Catalog=CollegeMS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
-            try 
+            try
             {
                 return (new SqlDataAdapter(sql, cn));
             }
             catch (SqlException ex)
             {
                 throw ex;
- Bao2
-            }  
+            }
         }
 
         public int MyExecuteNonQuery(SqlCommand cmd)
@@ -79,7 +78,7 @@ namespace DataLayer
             int rowsAffected = -1;
             try
             {
-                Connect(); 
+                Connect();
                 cmd.Connection = cn;
                 rowsAffected = cmd.ExecuteNonQuery();
             }
@@ -89,14 +88,11 @@ namespace DataLayer
             }
             finally
             {
-                DisConnect(); 
+                DisConnect();
             }
             return rowsAffected;
-
-
-            }   
- test
         }
-
     }
+
 }
+
