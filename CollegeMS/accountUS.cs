@@ -20,32 +20,32 @@ namespace CollegeMS
         {
             InitializeComponent();
         }
-
-        private void accountUS_Load(object sender, EventArgs e)
+        public void dataload()
         {
             UserBL a = new UserBL();
             DataTable dt = new DataTable();
             dt = a.viewUserTble();
             dataGridView1.DataSource = dt;
         }
-
-        private void button2_Click(object sender, DataGridViewCellEventArgs e)
+        private void accountUS_Load(object sender, EventArgs e)
         {
-            UserAccount a = new UserAccount();
-            UserBL userBL = new UserBL();
-            a.UserId = dataGridView1.Rows[e.RowIndex].ToString();
-            userBL.deleteUser(a);
+            dataload();
         }
+
         UserAccount acc = new UserAccount();
         private void button2_Click(object sender, EventArgs e)
         {
-            //UserBL userBL = new UserBL();
-            //userBL.deleteUser(acc);
-        }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {        
-            //string nameid = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            //acc.UserId = nameid;            
+            UserAccount a = new UserAccount();
+            UserBL userBL = new UserBL();
+            a.UserId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            if (MessageBox.Show(
+                "Do you want to delete user " + a.UserId,
+                "Warning! ",MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                userBL.deleteUser(a);
+                MessageBox.Show("Deleted !!!");
+            }
+            dataload();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -63,8 +63,12 @@ namespace CollegeMS
             {
                 MessageBox.Show("Tai khoan da ton tai !!");
             }
-            dataGridView1.DataSource = userBL.viewUserTble();
-            
+            dataload();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

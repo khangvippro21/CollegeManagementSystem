@@ -66,7 +66,7 @@
             this.panel4.Controls.Add(this.lbDatetime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(450, 103);
-            this.panel4.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panel4.Margin = new System.Windows.Forms.Padding(8);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1934, 172);
             this.panel4.TabIndex = 8;
@@ -83,12 +83,12 @@
             // lbloaichucnang
             // 
             this.lbloaichucnang.AutoSize = true;
-            this.lbloaichucnang.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbloaichucnang.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbloaichucnang.ForeColor = System.Drawing.Color.White;
             this.lbloaichucnang.Location = new System.Drawing.Point(626, 42);
             this.lbloaichucnang.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lbloaichucnang.Name = "lbloaichucnang";
-            this.lbloaichucnang.Size = new System.Drawing.Size(100, 36);
+            this.lbloaichucnang.Size = new System.Drawing.Size(165, 58);
             this.lbloaichucnang.TabIndex = 0;
             this.lbloaichucnang.Text = "?????";
             // 
@@ -105,7 +105,7 @@
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(450, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panel3.Margin = new System.Windows.Forms.Padding(8);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1934, 103);
             this.panel3.TabIndex = 7;
@@ -123,7 +123,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panel1.Margin = new System.Windows.Forms.Padding(8);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 1302);
             this.panel1.TabIndex = 6;
@@ -264,7 +264,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(8);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 266);
             this.panel2.TabIndex = 0;
@@ -284,7 +284,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(166, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(108, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

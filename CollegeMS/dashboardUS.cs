@@ -24,6 +24,11 @@ namespace CollegeMS
 
         private void dashboardUS_Load(object sender, EventArgs e)
         {
+            dataload();
+        }
+
+        public void dataload()
+        {
             //Chart
             AttendanceBL a = new AttendanceBL();
             DataTable dt = a.getData();
@@ -42,7 +47,7 @@ namespace CollegeMS
 
             lbNumhv.Text = st.NumofStd().ToString();
             lbNumgv.Text = le.NumofLe().ToString();
-            lbNumKh.Text = co.NumofCourse().ToString();  
+            lbNumKh.Text = co.NumofCourse().ToString();
             lbNumRv.Text = rv.NumofRview().ToString();
         }
     }

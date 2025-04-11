@@ -38,6 +38,7 @@ namespace CollegeMS
             userControlFee1.Visible = false;
             userControlStudents1.Visible = false;
             accountUS2.Visible = false;
+            lbloaichucnang.Text = btDashboard.Text;
         }
         
         private void btQLHV_Click(object sender, EventArgs e)
@@ -46,6 +47,7 @@ namespace CollegeMS
             userControlFee1.Visible = false;
             userControlStudents1.Visible = true;
             accountUS2.Visible = false;
+            lbloaichucnang.Text = btQLHV.Text;
         }
         //Moi them vao
         private void btDashboard_Click(object sender, EventArgs e)
@@ -54,6 +56,7 @@ namespace CollegeMS
             userControlFee1.Visible = false;
             userControlStudents1.Visible = false;
             accountUS2.Visible = false;
+            lbloaichucnang.Text = btDashboard.Text;
         }
 
         private void btQLHP_Click(object sender, EventArgs e)
@@ -62,19 +65,22 @@ namespace CollegeMS
             userControlFee1.Visible = true;
             userControlStudents1.Visible = false;
             accountUS2.Visible = false;
+            lbloaichucnang.Text = btQLHP.Text;
         }
-        private void UserMainForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btQLTK_Click(object sender, EventArgs e)
         {
             accountUS2.Visible = true;
             dashboardUS1.Visible = false;
             userControlFee1.Visible = false;
             userControlStudents1.Visible = false;
+            lbloaichucnang.Text = btQLTK.Text;
         }
+        private void UserMainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
 
 
     }

@@ -68,7 +68,6 @@ namespace DataLayer
             {
                 return false;
             }
-
             try
             {
                 SqlCommand cmd = new SqlCommand(insertUs, cn);
@@ -156,8 +155,6 @@ namespace DataLayer
                 throw new Exception("Lỗi khi tạo tài khoản: " + ex.Message);
             }
         }
-
-
         public bool UserExists(string userId)
         {
             string sql = "SELECT COUNT(*) FROM Users WHERE UserId = @UserId";
