@@ -47,6 +47,8 @@
             this.lbWelcome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.accountUS2 = new CollegeMS.accountUS();
+            this.userControlFee1 = new CollegeMS.UserControlFee();
+            this.userControlStudents1 = new CollegeMS.UserControlStudents();
             this.dashboardUS1 = new CollegeMS.dashboardUS();
             this.accountUS1 = new CollegeMS.accountUS();
             this.panel4.SuspendLayout();
@@ -63,9 +65,11 @@
             this.panel4.Controls.Add(this.lbloaichucnang);
             this.panel4.Controls.Add(this.lbDatetime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(200, 43);
             this.panel4.Location = new System.Drawing.Point(300, 67);
             this.panel4.Margin = new System.Windows.Forms.Padding(5);
             this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(661, 73);
             this.panel4.Size = new System.Drawing.Size(1289, 112);
             this.panel4.TabIndex = 8;
             // 
@@ -162,6 +166,7 @@
             this.btQLHP.Text = "               Quản lý học phí";
             this.btQLHP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btQLHP.UseVisualStyleBackColor = true;
+            this.btQLHP.Click += new System.EventHandler(this.btQLHP_Click);
             // 
             // btQLMH
             // 
@@ -174,8 +179,11 @@
             this.btQLMH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btQLMH.Location = new System.Drawing.Point(8, 413);
             this.btQLMH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btQLMH.Location = new System.Drawing.Point(5, 269);
+            this.btQLMH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btQLMH.Name = "btQLMH";
             this.btQLMH.Size = new System.Drawing.Size(292, 80);
+            this.btQLMH.Size = new System.Drawing.Size(195, 52);
             this.btQLMH.TabIndex = 12;
             this.btQLMH.Text = "               Quản lý môn học";
             this.btQLMH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,6 +224,7 @@
             this.btQLHV.Text = "               Quản lý học viên";
             this.btQLHV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btQLHV.UseVisualStyleBackColor = true;
+            this.btQLHV.Click += new System.EventHandler(this.btQLHV_Click);
             // 
             // btDashboard
             // 
@@ -288,6 +297,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // userControlFee1
+            // 
+            this.userControlFee1.BackColor = System.Drawing.Color.Transparent;
+            this.userControlFee1.Location = new System.Drawing.Point(200, 116);
+            this.userControlFee1.Name = "userControlFee1";
+            this.userControlFee1.Size = new System.Drawing.Size(1157, 592);
+            this.userControlFee1.TabIndex = 11;
+            // 
+            // userControlStudents1
+            // 
+            this.userControlStudents1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlStudents1.Location = new System.Drawing.Point(200, 116);
+            this.userControlStudents1.Name = "userControlStudents1";
+            this.userControlStudents1.Size = new System.Drawing.Size(661, 329);
+            this.userControlStudents1.TabIndex = 10;
+            // 
             // accountUS2
             // 
             this.accountUS2.Location = new System.Drawing.Point(300, 181);
@@ -312,8 +337,11 @@
             // 
             // UserMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(861, 445);
+            this.Controls.Add(this.userControlFee1);
+            this.Controls.Add(this.userControlStudents1);
             this.ClientSize = new System.Drawing.Size(1589, 846);
             this.Controls.Add(this.accountUS2);
             this.Controls.Add(this.dashboardUS1);
@@ -357,6 +385,8 @@
         private System.Windows.Forms.Button btQLMH;
         private System.Windows.Forms.Button btQLGV;
         private dashboardUS dashboardUS1;
+        private UserControlStudents userControlStudents1;
+        private UserControlFee userControlFee1;
         private accountUS accountUS1;
         private accountUS accountUS2;
     }

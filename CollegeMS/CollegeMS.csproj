@@ -85,6 +85,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlFee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlFee.Designer.cs">
+      <DependentUpon>UserControlFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlStudents.Designer.cs">
+      <DependentUpon>UserControlStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControlFee.resx">
+      <DependentUpon>UserControlFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlStudents.resx">
+      <DependentUpon>UserControlStudents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
     </EmbeddedResource>

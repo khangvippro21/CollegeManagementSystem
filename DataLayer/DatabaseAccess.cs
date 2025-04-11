@@ -17,8 +17,8 @@ namespace DataLayer
 
         public DatabaseAccess()
         {
-            string cnStr = 
-                "Data Source=.;Initial Catalog=CollegeMS;Integrated Security=True";
+            string cnStr =
+                "Data Source =.; Initial Catalog = CollegeMS; Integrated Security = True";
             cn = new SqlConnection(cnStr);
         }
 
@@ -61,12 +61,12 @@ namespace DataLayer
                 DisConnect();
             }
         }
-       public SqlDataAdapter MyAdapterExecute(string sql)
+        public SqlDataAdapter MyAdapterExecute(string sql)
         {
-            string cnstr = "Data Source=.;Initial Catalog=CollegeMS;Integrated Security=True";
-            try 
+            //string cnstr = "Data Source=BAOBODOI\\DINHBAO;Initial Catalog=CollegeMS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+            try
             {
-                return (new SqlDataAdapter(sql, cnstr));
+                return (new SqlDataAdapter(sql, cn));
             }
             catch (SqlException ex)
             {

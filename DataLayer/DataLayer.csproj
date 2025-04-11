@@ -41,13 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attendance.cs" />
+    <Compile Include="Khang\Attendance.cs" />
     <Compile Include="DatabaseAccess.cs" />
-    <Compile Include="FieldCount\CourseTble_access.cs" />
-    <Compile Include="FieldCount\LecturerTble_access.cs" />
-    <Compile Include="FieldCount\ReviewTble_access.cs" />
+    <Compile Include="Khang\CourseTble_access.cs" />
+    <Compile Include="Khang\LecturerTble_access.cs" />
+    <Compile Include="Khang\ReviewTble_access.cs" />
+    <Compile Include="Bao\HocphiDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FieldCount\StudentTble_access.cs" />
+    <Compile Include="Khang\StudentTble_access.cs" />
+    <Compile Include="Bao\StudentDAL.cs" />
     <Compile Include="UserAccess.cs" />
   </ItemGroup>
   <ItemGroup>
