@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataLayer;
-using DataLayer.FieldCount;
+using DataLayer.Khang;
 
-namespace BusinessLayer.FieldCount
+namespace BusinessLayer.Khang
 {
-    public class LeTble_BL
+    public class CoTble_BL
     {
-        public int NumofLe()
+        public int NumofCourse()
         {
 
-            LecturerTble_access a = new LecturerTble_access();
+            CourseTble_access a = new CourseTble_access();
             try
             {
-                return a.NumofLecturer();
+                return a.NumofCourse();
 
             }
             catch (Exception e)

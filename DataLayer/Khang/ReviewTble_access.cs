@@ -4,12 +4,12 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataLayer;
-namespace DataLayer.FieldCount
+
+namespace DataLayer.Khang
 {
-    public class LecturerTble_access:DatabaseAccess
+    public class ReviewTble_access:DatabaseAccess
     {
-        public int NumofLecturer()
+        public int NumofReview()
         {
             string sql = "select count(LeId) as NumofLecturer from Lecturers";
             return ((int)MyExecuteScalar(sql, CommandType.Text));
