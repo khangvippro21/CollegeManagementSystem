@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BusinessLayer.FieldCount;
-using DataLayer.FieldCount;
+using BusinessLayer.Khang;
+using DataLayer.Khang;
 using System.Threading.Tasks;
 
 namespace BusinessLayer

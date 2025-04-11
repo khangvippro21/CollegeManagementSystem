@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataLayer;
-namespace DataLayer.FieldCount
+namespace DataLayer.Khang
 {
     public class LecturerTble_access:DatabaseAccess
     {

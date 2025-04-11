@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataLayer;
-using DataLayer.FieldCount;
+using DataLayer.Khang;
 
-namespace BusinessLayer.FieldCount
+namespace BusinessLayer.Khang
 {
     public class LeTble_BL
     {

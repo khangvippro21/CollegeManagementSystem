@@ -1,5 +1,5 @@
 ﻿using BusinessLayer;
-using BusinessLayer.FieldCount;
+using BusinessLayer.Khang;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

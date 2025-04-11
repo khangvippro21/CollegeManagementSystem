@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using DataLayer;
 using System.Data;
 using System.Data.SqlClient;
-using DataLayer.FieldCount;
+using DataLayer.Khang;
 
-namespace DataLayer.FieldCount
+namespace DataLayer.Khang
 {
     public class StudentTble_access:DatabaseAccess
     {

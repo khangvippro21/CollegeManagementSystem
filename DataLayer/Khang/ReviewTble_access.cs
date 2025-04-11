@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataLayer.FieldCount
+namespace DataLayer.Khang
 {
     public class ReviewTble_access:DatabaseAccess
     {
