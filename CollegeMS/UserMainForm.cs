@@ -37,6 +37,7 @@ namespace CollegeMS
             dashboardUS1.Visible = true;
             userControlFee1.Visible = false;
             userControlStudents1.Visible = false;
+            accountUS2.Visible = false;
         }
         
         private void btQLHV_Click(object sender, EventArgs e)
@@ -44,7 +45,6 @@ namespace CollegeMS
             dashboardUS1.Visible = false;
             userControlFee1.Visible = false;
             userControlStudents1.Visible = true;
-            dashboardUS1.Visible = true;
             accountUS2.Visible = false;
         }
         //Moi them vao
@@ -53,6 +53,7 @@ namespace CollegeMS
             dashboardUS1.Visible = true;
             userControlFee1.Visible = false;
             userControlStudents1.Visible = false;
+            accountUS2.Visible = false;
         }
 
         private void btQLHP_Click(object sender, EventArgs e)
@@ -60,6 +61,7 @@ namespace CollegeMS
             dashboardUS1.Visible = false;
             userControlFee1.Visible = true;
             userControlStudents1.Visible = false;
+            accountUS2.Visible = false;
         }
         private void UserMainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -70,12 +72,10 @@ namespace CollegeMS
         {
             accountUS2.Visible = true;
             dashboardUS1.Visible = false;
+            userControlFee1.Visible = false;
+            userControlStudents1.Visible = false;
         }
 
-        private void btDashboard_Click(object sender, EventArgs e)
-        {
-            accountUS2.Visible = false;
-            dashboardUS1.Visible = true;
-        }
+
     }
 }

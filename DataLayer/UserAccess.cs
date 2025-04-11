@@ -86,14 +86,7 @@ namespace DataLayer
             {
                 throw ex;
             }
-
-
-
         }
-
-    }
-}
-
 
         public string GenerateNewUserId(string prefix)
         {
@@ -108,7 +101,6 @@ namespace DataLayer
             try
             {
                 Connect();
-
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
                     cmd.Parameters.AddWithValue("@Prefix", prefix);
@@ -134,10 +126,8 @@ namespace DataLayer
                     newIdNumber = lastIdNumber + 1;
                 }
             }
-
             return prefix + newIdNumber.ToString("D3");
         }
-
 
         public void CreateUser(string userId, string userPass, string userRole)
         {
@@ -147,7 +137,7 @@ namespace DataLayer
             }
 
             string sql = "INSERT INTO Users (UserId, UserPass, UserRole) VALUES (@UserId, @UserPass, @UserRole)";
-        
+
 
             try
             {
@@ -174,7 +164,7 @@ namespace DataLayer
 
             try
             {
-                Connect();
+
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
                     cmd.Parameters.AddWithValue("@UserId", userId);
@@ -187,10 +177,6 @@ namespace DataLayer
                 throw new Exception("Lỗi khi kiểm tra UserId: " + ex.Message);
             }
         }
-
-
-
     }
-
 }
 
