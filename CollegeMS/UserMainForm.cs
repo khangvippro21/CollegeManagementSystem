@@ -34,7 +34,7 @@ namespace CollegeMS
                 this.Close();
             }
             dashboardUS1.Visible = true;
-            accountUS1.Visible = false;
+            accountUS2.Visible = false;
         }
         private void UserMainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -43,13 +43,13 @@ namespace CollegeMS
 
         private void btQLTK_Click(object sender, EventArgs e)
         {
-            accountUS1.Visible = true;
+            accountUS2.Visible = true;
             dashboardUS1.Visible = false;
         }
 
         private void btDashboard_Click(object sender, EventArgs e)
         {
-            accountUS1.Visible = false;
+            accountUS2.Visible = false;
             dashboardUS1.Visible = true;
         }
     }
