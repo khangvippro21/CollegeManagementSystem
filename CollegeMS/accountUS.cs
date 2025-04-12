@@ -50,25 +50,27 @@ namespace CollegeMS
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UserBL userBL = new UserBL();
-            string UserId, UserPass;
-            UserId = textBox1.Text.Trim();
-            UserPass = textBox2.Text.Trim();
-            UserAccount acc = new UserAccount(UserId, UserPass);
-            if (userBL.insertUser(acc))
+            if (textBox1.Text == "")
             {
-                MessageBox.Show("Tao tai khoan thanh cong !!");
+                MessageBox.Show("Please fill input !!! ");
             }
             else
             {
-                MessageBox.Show("Tai khoan da ton tai !!");
+                UserBL userBL = new UserBL();
+                string UserId, UserPass;
+                UserId = textBox1.Text.Trim();
+                UserPass = textBox2.Text.Trim();
+                UserAccount acc = new UserAccount(UserId, UserPass);
+                if (userBL.insertUser(acc))
+                {
+                    MessageBox.Show("User created successfully !!!");
+                }
+                else
+                {
+                    MessageBox.Show("User already exists !!!");
+                }
+                dataload();
             }
-            dataload();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
