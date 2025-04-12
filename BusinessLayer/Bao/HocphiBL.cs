@@ -22,5 +22,11 @@ namespace BusinessLayer
             return hocphiDAL.gethocphi(); 
         }
 
+        public DataTable GetFeeDataByCourse()
+        {
+            
+            return hocphiDAL.GetTotalFeeByCourse();
+        }
+
     }
 }

@@ -13,6 +13,20 @@ namespace DataLayer
     public class HocphiDAL : DatabaseAccess
     {
 
+        public DataTable GetTotalFeeByCourse()
+        {
+            DataTable dt = new DataTable();
+            string query = @"
+        SELECT 
+            c.CName AS CourseName,
+            SUM(sc.Fee) AS TotalFee
+        FROM Courses c
+        JOIN Students_Courses sc ON c.CId = sc.CId
+        GROUP BY c.CName";
+            MyAdapterExecute(query).Fill(dt);
+            return dt;
+        }
+
         public DataTable gethocphi()
         {
             DataTable dt = new DataTable();

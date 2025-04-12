@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbsearchStu = new System.Windows.Forms.Label();
             this.btnsearchStu = new System.Windows.Forms.Button();
             this.txtsearchStu = new System.Windows.Forms.TextBox();
-            this.lbttin = new System.Windows.Forms.Label();
             this.dataGridViewStu = new System.Windows.Forms.DataGridView();
             this.pnXoaSuaStu = new System.Windows.Forms.Panel();
             this.btThem = new System.Windows.Forms.Button();
@@ -70,7 +71,7 @@
             this.btnsearchStu.BackColor = System.Drawing.Color.White;
             this.btnsearchStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsearchStu.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnsearchStu.Location = new System.Drawing.Point(553, 67);
+            this.btnsearchStu.Location = new System.Drawing.Point(460, 67);
             this.btnsearchStu.Name = "btnsearchStu";
             this.btnsearchStu.Size = new System.Drawing.Size(68, 31);
             this.btnsearchStu.TabIndex = 7;
@@ -80,32 +81,42 @@
             // 
             // txtsearchStu
             // 
-            this.txtsearchStu.Location = new System.Drawing.Point(240, 73);
+            this.txtsearchStu.Location = new System.Drawing.Point(146, 73);
             this.txtsearchStu.Name = "txtsearchStu";
             this.txtsearchStu.Size = new System.Drawing.Size(294, 20);
             this.txtsearchStu.TabIndex = 6;
             // 
-            // lbttin
-            // 
-            this.lbttin.AutoSize = true;
-            this.lbttin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbttin.Location = new System.Drawing.Point(86, 77);
-            this.lbttin.Name = "lbttin";
-            this.lbttin.Size = new System.Drawing.Size(148, 16);
-            this.lbttin.TabIndex = 5;
-            this.lbttin.Text = "Nhập thông tin học viên:";
-            // 
             // dataGridViewStu
             // 
+            this.dataGridViewStu.AllowUserToAddRows = false;
             this.dataGridViewStu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewStu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewStu.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewStu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewStu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewStu.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewStu.EnableHeadersVisualStyles = false;
             this.dataGridViewStu.Location = new System.Drawing.Point(12, 149);
             this.dataGridViewStu.Name = "dataGridViewStu";
             this.dataGridViewStu.RowHeadersWidth = 62;
-            this.dataGridViewStu.Size = new System.Drawing.Size(764, 257);
+            this.dataGridViewStu.Size = new System.Drawing.Size(691, 250);
             this.dataGridViewStu.TabIndex = 8;
+            this.dataGridViewStu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStu_CellContentClick);
             // 
             // pnXoaSuaStu
             // 
@@ -126,7 +137,7 @@
             this.pnXoaSuaStu.Controls.Add(this.label4);
             this.pnXoaSuaStu.Controls.Add(this.label3);
             this.pnXoaSuaStu.Controls.Add(this.label2);
-            this.pnXoaSuaStu.Location = new System.Drawing.Point(782, 149);
+            this.pnXoaSuaStu.Location = new System.Drawing.Point(709, 149);
             this.pnXoaSuaStu.Name = "pnXoaSuaStu";
             this.pnXoaSuaStu.Size = new System.Drawing.Size(440, 417);
             this.pnXoaSuaStu.TabIndex = 9;
@@ -297,7 +308,6 @@
             this.Controls.Add(this.dataGridViewStu);
             this.Controls.Add(this.btnsearchStu);
             this.Controls.Add(this.txtsearchStu);
-            this.Controls.Add(this.lbttin);
             this.Controls.Add(this.lbsearchStu);
             this.Name = "UserControlStudents";
             this.Size = new System.Drawing.Size(1061, 548);
@@ -314,7 +324,6 @@
         private System.Windows.Forms.Label lbsearchStu;
         private System.Windows.Forms.Button btnsearchStu;
         private System.Windows.Forms.TextBox txtsearchStu;
-        private System.Windows.Forms.Label lbttin;
         private System.Windows.Forms.DataGridView dataGridViewStu;
         private System.Windows.Forms.Panel pnXoaSuaStu;
         private System.Windows.Forms.TextBox txtPic;
