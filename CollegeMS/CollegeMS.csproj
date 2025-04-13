@@ -85,6 +85,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCStuBcao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCStuBcao.Designer.cs">
+      <DependentUpon>UCStuBcao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCStuDKKH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCStuDKKH.Designer.cs">
+      <DependentUpon>UCStuDKKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlFee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +143,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UCStuBcao.resx">
+      <DependentUpon>UCStuBcao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCStuDKKH.resx">
+      <DependentUpon>UCStuDKKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlFee.resx">
       <DependentUpon>UserControlFee.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +309,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Feedback Hub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Erase.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

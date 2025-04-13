@@ -80,8 +80,5 @@ namespace CollegeMS
             Application.Exit();
         }
 
-        
-
-
     }
 }
