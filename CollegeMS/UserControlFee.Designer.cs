@@ -122,6 +122,7 @@
             this.chartHocphi.Size = new System.Drawing.Size(558, 323);
             this.chartHocphi.TabIndex = 3;
             this.chartHocphi.Text = "chart1";
+            this.chartHocphi.Click += new System.EventHandler(this.chartHocphi_Click);
             // 
             // UserControlFee
             // 

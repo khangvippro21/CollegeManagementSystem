@@ -134,6 +134,37 @@ namespace DataLayer
             }
         }
 
+        public bool UpdateStudent(StudentDTO student)
+        {
+            string sql = @"UPDATE Students 
+                   SET StName = @StName,
+                       StPhone = @StPhone,
+                       StEmail = @StEmail,
+                       StGender = @StGender,
+                       StAddress = @StAddress,
+                       StPath = @StPath,
+                       StBirth = @StBirth
+                   WHERE StId = @StId"; 
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql);
+                cmd.Parameters.AddWithValue("@StName", student.StName);
+                cmd.Parameters.AddWithValue("@StPhone", student.StPhone);
+                cmd.Parameters.AddWithValue("@StEmail", student.StEmail);
+                cmd.Parameters.AddWithValue("@StGender", student.StGender);
+                cmd.Parameters.AddWithValue("@StAddress", student.StAddress);
+                cmd.Parameters.AddWithValue("@StPath", student.Stpath);
+                cmd.Parameters.AddWithValue("@StBirth", student.StBirth);
+                cmd.Parameters.AddWithValue("@StId", student.StId); 
+
+                return MyExecuteNonQuery(cmd) > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi cập nhật học viên: " + ex.Message);
+            }
+        }
 
     }
 }

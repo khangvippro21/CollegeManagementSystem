@@ -28,27 +28,37 @@ namespace CollegeMS
         {
             HocphiBL hocphiBbl = new HocphiBL();
             DataTable data = hocphiBbl.GetFeeDataByCourse();
-        
+
             chartHocphi.Series.Clear();
+            chartHocphi.Titles.Clear();
+            chartHocphi.Legends.Clear();
+
+            chartHocphi.Legends.Add(new Legend("Legend"));
+
             Series series = new Series("Học phí")
             {
-                ChartType = SeriesChartType.Bar
+                ChartType = SeriesChartType.Pie,
+                IsValueShownAsLabel = false,
+                LegendText = "#VALX"
             };
 
-          
             foreach (DataRow row in data.Rows)
             {
                 string coursesname = row["CourseName"].ToString();
                 double totalfee = Convert.ToDouble(row["TotalFee"]);
-                series.Points.AddXY(coursesname, totalfee);
+                DataPoint point = new DataPoint(0, totalfee)
+                {
+                    AxisLabel = "", // Không hiện tên trên miếng
+                    Label = "",     // Không hiện label
+                    LabelForeColor = Color.Transparent // ❗ Ẩn hẳn chữ bằng cách này
+                };
+                point.LegendText = coursesname; // Dùng cho legend
+                series.Points.Add(point);
             }
 
             chartHocphi.Series.Add(series);
             chartHocphi.Titles.Add("Tổng học phí theo môn học");
-            chartHocphi.ChartAreas[0].AxisX.Title = "Môn học";
-            chartHocphi.ChartAreas[0].AxisY.Title = "Tổng học phí (VNĐ)";
         }
-
         private void UserControlFee_Load(object sender, EventArgs e)
         {
             try
@@ -62,6 +72,11 @@ namespace CollegeMS
                 MessageBox.Show("Lỗi khi tải danh sách học phí: " + ex.Message);
 
             }
+        }
+
+        private void chartHocphi_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

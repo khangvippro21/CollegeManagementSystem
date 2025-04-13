@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
 using TransferObject;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CollegeMS
 {
@@ -16,7 +18,7 @@ namespace CollegeMS
     {
 
 
-
+        private string selectedStudentId = "";
 
         private UserMainForm prform;
         private DataGridView dgvStudents;
@@ -154,7 +156,32 @@ namespace CollegeMS
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+ 
+        private void dataGridViewStu_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(dataGridViewStu.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(),
+                    dataGridViewStu.DefaultCellStyle.Font,
+                    b,
+                    e.RowBounds.Location.X + 10,
+                    e.RowBounds.Location.Y + 4);
+            }
+        }
+
+        private void btHuy_Click(object sender, EventArgs e)
+        {
+            txthoten.Clear();
+            txtsdt.Clear();
+            txtEmail.Clear();
+            cbgioitinh.SelectedIndex = -1;
+            txtDiachi.Clear();
+            txtsearchStu.Clear();
+            dtpStu.Value = DateTime.Now;
+            txtPic.Clear();
+        }
+
+        private void btXoa_Click_1(object sender, EventArgs e)
         {
             if (dataGridViewStu.SelectedRows.Count > 0)
             {
@@ -180,20 +207,73 @@ namespace CollegeMS
                 MessageBox.Show("Vui lòng chọn một dòng để xóa.");
             }
         }
-        private void dataGridViewStu_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
-        {
-            using (SolidBrush b = new SolidBrush(dataGridViewStu.RowHeadersDefaultCellStyle.ForeColor))
-            {
-                e.Graphics.DrawString((e.RowIndex + 1).ToString(),
-                    dataGridViewStu.DefaultCellStyle.Font,
-                    b,
-                    e.RowBounds.Location.X + 10,
-                    e.RowBounds.Location.Y + 4);
-            }
-        }
+
         private void dataGridViewStu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewStu.Rows[e.RowIndex];
 
+                selectedStudentId = row.Cells["StId"].Value.ToString();
+                txthoten.Text = row.Cells["StName"].Value.ToString();
+                txtsdt.Text = row.Cells["StPhone"].Value.ToString();
+                txtEmail.Text = row.Cells["StEmail"].Value.ToString();
+                cbgioitinh.Text = row.Cells["StGender"].Value.ToString();
+                txtDiachi.Text = row.Cells["StAddress"].Value.ToString();
+                txtPic.Text = row.Cells["StPath"].Value.ToString();
+                dtpStu.Value = Convert.ToDateTime(row.Cells["StBirth"].Value);
+            }
+        }
+
+        private void btSua_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(selectedStudentId))
+    {
+                MessageBox.Show("Vui lòng chọn học viên cần sửa trước.");
+                return;
+            }
+
+            // Lấy dữ liệu từ form
+            string name = txthoten.Text;
+            string phone = txtsdt.Text;
+            string email = txtEmail.Text;
+            string gender = cbgioitinh.SelectedItem != null ? cbgioitinh.SelectedItem.ToString() : "";
+            string address = txtDiachi.Text;
+            DateTime birth = dtpStu.Value;
+            string path = txtPic.Text;
+
+            // Tạo đối tượng StudentDTO với ID đã chọn
+            StudentDTO student = new StudentDTO(
+                selectedStudentId,
+                name,
+                phone,
+                email,
+                gender,
+                address,
+                path,
+                birth
+            );
+
+            try
+            {
+                // Gọi BLL để update
+                studentbl.UpdateStudent(student);
+                MessageBox.Show("Cập nhật học viên thành công!");
+
+                // Refresh dữ liệu
+                LoadStudentData();
+                ClearInputFields();
+                selectedStudentId = ""; // reset lại ID sau khi sửa
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật học viên: " + ex.Message);
+            }
+        }
+
+        private void cbgioitinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbgioitinh.DropDownStyle = ComboBoxStyle.DropDownList;
         }
     }
 }
