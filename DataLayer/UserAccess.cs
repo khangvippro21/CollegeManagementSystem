@@ -87,6 +87,30 @@ namespace DataLayer
             }
         }
 
+        public bool changePass(UserAccount a)
+        {
+            string changePass = @"UPDATE Users
+                                SET UserPass = '" + a.UserPass + "'" +
+                                "WHERE UserId = '" + a.UserId + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(changePass, cn);
+
+                if (MyExecuteNonQuery(cmd) > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         public string GenerateNewUserId(string prefix)
         {
             string sql = @"
@@ -174,6 +198,8 @@ namespace DataLayer
                 throw new Exception("Lỗi khi kiểm tra UserId: " + ex.Message);
             }
         }
+
+
     }
 }
 

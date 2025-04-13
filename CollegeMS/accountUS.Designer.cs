@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,8 +38,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtUsername2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNewpass2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -64,29 +72,20 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(843, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(39, 411);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(832, 951);
+            this.dataGridView1.Size = new System.Drawing.Size(1618, 528);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(403, 46);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Danh sách tài khoản";
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(426, 185);
+            this.button2.Location = new System.Drawing.Point(545, 261);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(185, 69);
             this.button2.TabIndex = 3;
@@ -97,7 +96,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button3.Location = new System.Drawing.Point(182, 185);
+            this.button3.Location = new System.Drawing.Point(301, 261);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(185, 69);
             this.button3.TabIndex = 4;
@@ -107,22 +106,22 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(42, 105);
+            this.panel1.Location = new System.Drawing.Point(39, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(765, 304);
+            this.panel1.Size = new System.Drawing.Size(765, 346);
             this.panel1.TabIndex = 5;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(156, 107);
+            this.textBox2.Location = new System.Drawing.Point(184, 122);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(546, 35);
             this.textBox2.TabIndex = 3;
@@ -130,7 +129,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(156, 25);
+            this.textBox1.Location = new System.Drawing.Point(184, 40);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(546, 35);
             this.textBox1.TabIndex = 2;
@@ -138,45 +137,131 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(24, 110);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(43, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 29);
+            this.label3.Size = new System.Drawing.Size(135, 29);
             this.label3.TabIndex = 1;
             this.label3.Text = "Password:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(24, 26);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(43, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 29);
+            this.label2.Size = new System.Drawing.Size(139, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Username:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.txtUsername2);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.txtNewpass2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.txtNewPass);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(881, 48);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(776, 346);
+            this.panel2.TabIndex = 7;
+            // 
+            // txtUsername2
+            // 
+            this.txtUsername2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUsername2.Location = new System.Drawing.Point(61, 63);
+            this.txtUsername2.Name = "txtUsername2";
+            this.txtUsername2.ReadOnly = true;
+            this.txtUsername2.Size = new System.Drawing.Size(648, 35);
+            this.txtUsername2.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(56, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 29);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Username:";
+            // 
+            // txtNewpass2
+            // 
+            this.txtNewpass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNewpass2.Location = new System.Drawing.Point(61, 204);
+            this.txtNewpass2.Name = "txtNewpass2";
+            this.txtNewpass2.Size = new System.Drawing.Size(648, 35);
+            this.txtNewpass2.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Location = new System.Drawing.Point(524, 261);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(185, 69);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Đổi mật khẩu";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtNewPass
+            // 
+            this.txtNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtNewPass.Location = new System.Drawing.Point(61, 134);
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.Size = new System.Drawing.Size(648, 35);
+            this.txtNewPass.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(56, 172);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Type again:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(56, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(193, 29);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "New password:";
             // 
             // accountUS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "accountUS";
-            this.Size = new System.Drawing.Size(1705, 1095);
+            this.Size = new System.Drawing.Size(1705, 995);
             this.Load += new System.EventHandler(this.accountUS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
@@ -184,5 +269,13 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtNewpass2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtNewPass;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtUsername2;
+        private System.Windows.Forms.Label label5;
     }
 }
