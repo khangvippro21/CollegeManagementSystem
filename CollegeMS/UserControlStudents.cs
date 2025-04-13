@@ -14,6 +14,10 @@ namespace CollegeMS
 {
     public partial class UserControlStudents : UserControl
     {
+
+
+
+
         private UserMainForm prform;
         private DataGridView dgvStudents;
         protected StudentBL studentbl;
@@ -21,6 +25,7 @@ namespace CollegeMS
         public UserControlStudents()
         {
             InitializeComponent();
+            dataGridViewStu.RowPostPaint += dataGridViewStu_RowPostPaint;
             this.Dock = DockStyle.Fill;
             studentbl = new StudentBL();
             LoadStudentData();
@@ -92,6 +97,8 @@ namespace CollegeMS
         //tham khao cai nay
         private void UserControlStudents_Load(object sender, EventArgs e)
         {
+            //dataGridViewStu.RowPostPaint += dataGridViewStu_RowPostPaint;
+
             try
             {
                 StudentBL a = new StudentBL();
@@ -103,6 +110,8 @@ namespace CollegeMS
                 MessageBox.Show("Lỗi khi tải danh sách student : " + ex.Message);
 
             }
+
+
         }
 
         private void btnsearchStu_Click_1(object sender, EventArgs e)
@@ -170,6 +179,21 @@ namespace CollegeMS
             {
                 MessageBox.Show("Vui lòng chọn một dòng để xóa.");
             }
+        }
+        private void dataGridViewStu_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(dataGridViewStu.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(),
+                    dataGridViewStu.DefaultCellStyle.Font,
+                    b,
+                    e.RowBounds.Location.X + 10,
+                    e.RowBounds.Location.Y + 4);
+            }
+        }
+        private void dataGridViewStu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
