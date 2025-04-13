@@ -233,7 +233,7 @@ namespace CollegeMS
                 return;
             }
 
-            // Lấy dữ liệu từ form
+            
             string name = txthoten.Text;
             string phone = txtsdt.Text;
             string email = txtEmail.Text;
@@ -242,7 +242,7 @@ namespace CollegeMS
             DateTime birth = dtpStu.Value;
             string path = txtPic.Text;
 
-            // Tạo đối tượng StudentDTO với ID đã chọn
+            
             StudentDTO student = new StudentDTO(
                 selectedStudentId,
                 name,
@@ -256,14 +256,14 @@ namespace CollegeMS
 
             try
             {
-                // Gọi BLL để update
+                
                 studentbl.UpdateStudent(student);
                 MessageBox.Show("Cập nhật học viên thành công!");
 
-                // Refresh dữ liệu
+              
                 LoadStudentData();
                 ClearInputFields();
-                selectedStudentId = ""; // reset lại ID sau khi sửa
+                selectedStudentId = ""; 
             }
             catch (Exception ex)
             {
@@ -274,6 +274,11 @@ namespace CollegeMS
         private void cbgioitinh_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbgioitinh.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void pnXoaSuaStu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

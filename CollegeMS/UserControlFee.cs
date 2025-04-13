@@ -21,6 +21,7 @@ namespace CollegeMS
         {
             InitializeComponent();
             LoadChart();
+            LoadChart2();
             
         }
 
@@ -55,10 +56,65 @@ namespace CollegeMS
                 point.LegendText = coursesname; // Dùng cho legend
                 series.Points.Add(point);
             }
-
+            
             chartHocphi.Series.Add(series);
             chartHocphi.Titles.Add("Tổng học phí theo môn học");
+          
+            
         }
+
+        private void LoadChart2()
+        {
+            HocphiBL hocphiBbl = new HocphiBL();
+            DataTable data = hocphiBbl.GetFeeDataByCourse(); 
+
+         
+            chart1.Series.Clear();
+            chart1.Titles.Clear();
+            chart1.Legends.Clear();
+
+          
+            chart1.Legends.Add(new Legend("Legend")
+            {
+                Title = "Các môn học",
+                Docking = Docking.Bottom, 
+                Alignment = StringAlignment.Center 
+            });
+
+           
+            Series series = new Series("Tổng Học Phí")
+            {
+                ChartType = SeriesChartType.Column, 
+                IsValueShownAsLabel = true, 
+                Color = Color.Blue 
+            };
+
+            foreach (DataRow row in data.Rows)
+            {
+                string courseName = row["CourseName"].ToString(); 
+                double totalFee = Convert.ToDouble(row["TotalFee"]); 
+
+                series.Points.AddXY(courseName, totalFee); 
+            }
+
+           
+            chart1.Series.Add(series);
+
+            
+            chart1.Titles.Add(new Title("Biểu đồ Tổng Học Phí theo Môn Học")
+            {
+                Font = new Font("Arial", 14, FontStyle.Bold),
+                ForeColor = Color.DarkBlue
+            });
+
+            
+            chart1.ChartAreas[0].AxisX.Title = "Môn học";
+            chart1.ChartAreas[0].AxisY.Title = "Tổng học phí (VNĐ)";
+            chart1.ChartAreas[0].AxisX.Interval = 1; 
+            chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -45; 
+        }
+
+
         private void UserControlFee_Load(object sender, EventArgs e)
         {
             try
@@ -74,10 +130,7 @@ namespace CollegeMS
             }
         }
 
-        private void chartHocphi_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
 
