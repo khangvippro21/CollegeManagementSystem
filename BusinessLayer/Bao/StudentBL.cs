@@ -67,6 +67,10 @@ namespace BusinessLayer
             }
         }
 
+        public bool UpdateStudent(StudentDTO student)
+        {
+            return studentdal.UpdateStudent(student);
+        }
 
         public void DeleteStudent(string studentId)
         {

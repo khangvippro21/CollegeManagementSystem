@@ -66,7 +66,7 @@
             this.panel4.Controls.Add(this.lbDatetime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(248, 67);
-            this.panel4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(665, 112);
             this.panel4.TabIndex = 8;
@@ -105,7 +105,7 @@
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(248, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(665, 67);
             this.panel3.TabIndex = 7;
@@ -123,7 +123,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(248, 487);
             this.panel1.TabIndex = 6;
@@ -137,7 +137,7 @@
             this.btQLTK.ForeColor = System.Drawing.Color.White;
             this.btQLTK.Image = ((System.Drawing.Image)(resources.GetObject("btQLTK.Image")));
             this.btQLTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLTK.Location = new System.Drawing.Point(8, 516);
+            this.btQLTK.Location = new System.Drawing.Point(8, 544);
             this.btQLTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btQLTK.Name = "btQLTK";
             this.btQLTK.Size = new System.Drawing.Size(240, 80);
@@ -156,7 +156,7 @@
             this.btQLHP.ForeColor = System.Drawing.Color.White;
             this.btQLHP.Image = ((System.Drawing.Image)(resources.GetObject("btQLHP.Image")));
             this.btQLHP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLHP.Location = new System.Drawing.Point(8, 436);
+            this.btQLHP.Location = new System.Drawing.Point(8, 464);
             this.btQLHP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btQLHP.Name = "btQLHP";
             this.btQLHP.Size = new System.Drawing.Size(240, 80);
@@ -176,9 +176,9 @@
             this.btQLMH.Image = ((System.Drawing.Image)(resources.GetObject("btQLMH.Image")));
             this.btQLMH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btQLMH.Location = new System.Drawing.Point(8, 384);
-            this.btQLMH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btQLMH.Margin = new System.Windows.Forms.Padding(2);
             this.btQLMH.Name = "btQLMH";
-            this.btQLMH.Size = new System.Drawing.Size(240, 52);
+            this.btQLMH.Size = new System.Drawing.Size(240, 80);
             this.btQLMH.TabIndex = 12;
             this.btQLMH.Text = "               Quản lý môn học";
             this.btQLMH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -265,7 +265,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(248, 144);
             this.panel2.TabIndex = 0;
@@ -285,7 +285,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(111, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(72, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -300,7 +300,6 @@
             this.userControlFee1.Name = "userControlFee1";
             this.userControlFee1.Size = new System.Drawing.Size(1157, 592);
             this.userControlFee1.TabIndex = 11;
-           
             // 
             // userControlStudents1
             // 

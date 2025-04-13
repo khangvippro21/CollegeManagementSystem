@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bao\BaocaoBL.cs" />
     <Compile Include="Khang\AttendanceBL.cs" />
     <Compile Include="Khang\CoTble_BL.cs" />
     <Compile Include="Khang\LeTble_BL.cs" />
