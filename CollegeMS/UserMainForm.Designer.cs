@@ -46,10 +46,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.userControlFee1 = new CollegeMS.UserControlFee();
             this.userControlStudents1 = new CollegeMS.UserControlStudents();
             this.accountUS2 = new CollegeMS.accountUS();
+            this.userControlFee1 = new CollegeMS.UserControlFee();
             this.dashboardUS1 = new CollegeMS.dashboardUS();
+            this.userControlQLMH1 = new CollegeMS.UserControlQLMH();
+            this.userControlQLGV2 = new CollegeMS.UserControlQLGV();
+            this.userControlQLGV1 = new CollegeMS.UserControlQLGV();
             this.accountUS1 = new CollegeMS.accountUS();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -125,7 +128,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(331, 1071);
+            this.panel1.Size = new System.Drawing.Size(331, 1058);
             this.panel1.TabIndex = 6;
             // 
             // btQLTK
@@ -183,6 +186,7 @@
             this.btQLMH.Text = "               Quản lý môn học";
             this.btQLMH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btQLMH.UseVisualStyleBackColor = true;
+            this.btQLMH.Click += new System.EventHandler(this.btQLMH_Click);
             // 
             // btQLGV
             // 
@@ -201,6 +205,7 @@
             this.btQLGV.Text = "               Quản lý giảng viên";
             this.btQLGV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btQLGV.UseVisualStyleBackColor = true;
+            this.btQLGV.Click += new System.EventHandler(this.btQLGV_Click);
             // 
             // btQLHV
             // 
@@ -247,7 +252,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 177);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(11, 894);
+            this.panel5.Size = new System.Drawing.Size(11, 881);
             this.panel5.TabIndex = 0;
             // 
             // panelSlide
@@ -292,38 +297,67 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // userControlFee1
-            // 
-            this.userControlFee1.Location = new System.Drawing.Point(332, 221);
-            this.userControlFee1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControlFee1.Name = "userControlFee1";
-            this.userControlFee1.Size = new System.Drawing.Size(1755, 918);
-            this.userControlFee1.TabIndex = 11;
-            // 
             // userControlStudents1
             // 
-            this.userControlStudents1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlStudents1.Location = new System.Drawing.Point(331, 220);
-            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.userControlStudents1.AllowDrop = true;
+            this.userControlStudents1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlStudents1.AutoSize = true;
+            this.userControlStudents1.Location = new System.Drawing.Point(331, 221);
+            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.userControlStudents1.Name = "userControlStudents1";
-            this.userControlStudents1.Size = new System.Drawing.Size(1593, 851);
-            this.userControlStudents1.TabIndex = 10;
+            this.userControlStudents1.Size = new System.Drawing.Size(2712, 1071);
+            this.userControlStudents1.TabIndex = 14;
             // 
             // accountUS2
             // 
-            this.accountUS2.Location = new System.Drawing.Point(400, 223);
+            this.accountUS2.Location = new System.Drawing.Point(331, 220);
             this.accountUS2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.accountUS2.Name = "accountUS2";
             this.accountUS2.Size = new System.Drawing.Size(2273, 951);
             this.accountUS2.TabIndex = 10;
             // 
+            // userControlFee1
+            // 
+            this.userControlFee1.BackColor = System.Drawing.Color.Transparent;
+            this.userControlFee1.Location = new System.Drawing.Point(331, 220);
+            this.userControlFee1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.userControlFee1.Name = "userControlFee1";
+            this.userControlFee1.Size = new System.Drawing.Size(1755, 918);
+            this.userControlFee1.TabIndex = 11;
+            // 
             // dashboardUS1
             // 
-            this.dashboardUS1.Location = new System.Drawing.Point(400, 223);
+            this.dashboardUS1.Location = new System.Drawing.Point(331, 220);
             this.dashboardUS1.Margin = new System.Windows.Forms.Padding(1);
             this.dashboardUS1.Name = "dashboardUS1";
             this.dashboardUS1.Size = new System.Drawing.Size(2191, 1151);
             this.dashboardUS1.TabIndex = 9;
+            // 
+            // userControlQLMH1
+            // 
+            this.userControlQLMH1.Location = new System.Drawing.Point(331, 220);
+            this.userControlQLMH1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlQLMH1.Name = "userControlQLMH1";
+            this.userControlQLMH1.Size = new System.Drawing.Size(1930, 938);
+            this.userControlQLMH1.TabIndex = 13;
+            // 
+            // userControlQLGV2
+            // 
+            this.userControlQLGV2.Location = new System.Drawing.Point(336, 221);
+            this.userControlQLGV2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlQLGV2.Name = "userControlQLGV2";
+            this.userControlQLGV2.Size = new System.Drawing.Size(1924, 838);
+            this.userControlQLGV2.TabIndex = 15;
+            // 
+            // userControlQLGV1
+            // 
+            this.userControlQLGV1.Location = new System.Drawing.Point(372, 275);
+            this.userControlQLGV1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlQLGV1.Name = "userControlQLGV1";
+            this.userControlQLGV1.Size = new System.Drawing.Size(1758, 1268);
+            this.userControlQLGV1.TabIndex = 12;
             // 
             // accountUS1
             // 
@@ -337,15 +371,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1071);
-            this.Controls.Add(this.userControlFee1);
-            this.Controls.Add(this.userControlStudents1);
-            this.Controls.Add(this.accountUS2);
-            this.Controls.Add(this.dashboardUS1);
+            this.ClientSize = new System.Drawing.Size(1924, 1058);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.Controls.Add(this.userControlQLGV2);
+            this.Controls.Add(this.userControlStudents1);
+            this.Controls.Add(this.accountUS2);
+            this.Controls.Add(this.userControlFee1);
+            this.Controls.Add(this.dashboardUS1);
+            this.Controls.Add(this.userControlQLMH1);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "UserMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
@@ -359,6 +395,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -382,10 +419,13 @@
         private System.Windows.Forms.Button btQLMH;
         private System.Windows.Forms.Button btQLGV;
         private dashboardUS dashboardUS1;
-        private UserControlStudents userControlStudents1;
         private accountUS accountUS1;
         private accountUS accountUS2;
         private UserControlFee userControlFee1;
+        private UserControlQLGV userControlQLGV1;
+        private UserControlQLMH userControlQLMH1;
+        private UserControlStudents userControlStudents1;
+        private UserControlQLGV userControlQLGV2;
     }
 }
 

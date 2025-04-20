@@ -103,6 +103,12 @@
     <Compile Include="UserControlFee.Designer.cs">
       <DependentUpon>UserControlFee.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlQLGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlQLGV.Designer.cs">
+      <DependentUpon>UserControlQLGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlStudents.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,12 @@
     </Compile>
     <Compile Include="UserMainForm.Designer.cs">
       <DependentUpon>UserMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserQLMH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserQLMH.Designer.cs">
+      <DependentUpon>UserQLMH.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="accountUS.resx">
       <DependentUpon>accountUS.cs</DependentUpon>
@@ -152,11 +164,17 @@
     <EmbeddedResource Include="UserControlFee.resx">
       <DependentUpon>UserControlFee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlQLGV.resx">
+      <DependentUpon>UserControlQLGV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlStudents.resx">
       <DependentUpon>UserControlStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserQLMH.resx">
+      <DependentUpon>UserQLMH.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
