@@ -70,10 +70,10 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewFee.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewFee.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewFee.EnableHeadersVisualStyles = false;
             this.dataGridViewFee.GridColor = System.Drawing.Color.LightGray;
-            this.dataGridViewFee.Location = new System.Drawing.Point(0, 248);
+            this.dataGridViewFee.Location = new System.Drawing.Point(7, 473);
+            this.dataGridViewFee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewFee.Name = "dataGridViewFee";
             this.dataGridViewFee.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -87,52 +87,57 @@
             this.dataGridViewFee.RowHeadersVisible = false;
             this.dataGridViewFee.RowHeadersWidth = 62;
             this.dataGridViewFee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewFee.Size = new System.Drawing.Size(1022, 306);
+            this.dataGridViewFee.Size = new System.Drawing.Size(1656, 438);
             this.dataGridViewFee.TabIndex = 0;
             // 
             // chartHocphi
             // 
-            this.chartHocphi.BackColor = System.Drawing.Color.Gray;
+            this.chartHocphi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.chartHocphi.BorderlineColor = System.Drawing.Color.Transparent;
             chartArea1.Name = "ChartArea1";
             this.chartHocphi.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartHocphi.Legends.Add(legend1);
-            this.chartHocphi.Location = new System.Drawing.Point(18, 3);
+            this.chartHocphi.Location = new System.Drawing.Point(1056, 0);
+            this.chartHocphi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartHocphi.Name = "chartHocphi";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartHocphi.Series.Add(series1);
-            this.chartHocphi.Size = new System.Drawing.Size(418, 273);
+            this.chartHocphi.Size = new System.Drawing.Size(607, 469);
             this.chartHocphi.TabIndex = 4;
             this.chartHocphi.Text = "chart1";
             // 
             // chart1
             // 
-            this.chart1.BackColor = System.Drawing.Color.Gray;
+            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             chartArea2.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(475, 3);
+            this.chart1.Location = new System.Drawing.Point(3, 2);
+            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
             series2.ChartArea = "ChartArea1";
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(544, 273);
+            this.chart1.Size = new System.Drawing.Size(1047, 467);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
             // 
             // UserControlFee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.chartHocphi);
             this.Controls.Add(this.dataGridViewFee);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserControlFee";
-            this.Size = new System.Drawing.Size(1022, 554);
+            this.Size = new System.Drawing.Size(1795, 918);
             this.Load += new System.EventHandler(this.UserControlFee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartHocphi)).EndInit();

@@ -65,19 +65,19 @@
             this.panel4.Controls.Add(this.lbloaichucnang);
             this.panel4.Controls.Add(this.lbDatetime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(248, 67);
-            this.panel4.Margin = new System.Windows.Forms.Padding(5);
+            this.panel4.Location = new System.Drawing.Point(331, 82);
+            this.panel4.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(665, 112);
+            this.panel4.Size = new System.Drawing.Size(1593, 138);
             this.panel4.TabIndex = 8;
             // 
             // lbDatetime2
             // 
             this.lbDatetime2.AutoSize = true;
-            this.lbDatetime2.Location = new System.Drawing.Point(-161, 48);
-            this.lbDatetime2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbDatetime2.Location = new System.Drawing.Point(-215, 59);
+            this.lbDatetime2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lbDatetime2.Name = "lbDatetime2";
-            this.lbDatetime2.Size = new System.Drawing.Size(0, 13);
+            this.lbDatetime2.Size = new System.Drawing.Size(0, 16);
             this.lbDatetime2.TabIndex = 2;
             // 
             // lbloaichucnang
@@ -85,29 +85,29 @@
             this.lbloaichucnang.AutoSize = true;
             this.lbloaichucnang.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbloaichucnang.ForeColor = System.Drawing.Color.White;
-            this.lbloaichucnang.Location = new System.Drawing.Point(417, 27);
-            this.lbloaichucnang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbloaichucnang.Location = new System.Drawing.Point(556, 33);
+            this.lbloaichucnang.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lbloaichucnang.Name = "lbloaichucnang";
-            this.lbloaichucnang.Size = new System.Drawing.Size(112, 39);
+            this.lbloaichucnang.Size = new System.Drawing.Size(142, 49);
             this.lbloaichucnang.TabIndex = 0;
             this.lbloaichucnang.Text = "?????";
             // 
             // lbDatetime
             // 
             this.lbDatetime.AutoSize = true;
-            this.lbDatetime.Location = new System.Drawing.Point(-169, 48);
-            this.lbDatetime.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbDatetime.Location = new System.Drawing.Point(-225, 59);
+            this.lbDatetime.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lbDatetime.Name = "lbDatetime";
-            this.lbDatetime.Size = new System.Drawing.Size(0, 13);
+            this.lbDatetime.Size = new System.Drawing.Size(0, 16);
             this.lbDatetime.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(248, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5);
+            this.panel3.Location = new System.Drawing.Point(331, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(665, 67);
+            this.panel3.Size = new System.Drawing.Size(1593, 82);
             this.panel3.TabIndex = 7;
             // 
             // panel1
@@ -123,9 +123,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(248, 487);
+            this.panel1.Size = new System.Drawing.Size(331, 1071);
             this.panel1.TabIndex = 6;
             // 
             // btQLTK
@@ -137,10 +137,10 @@
             this.btQLTK.ForeColor = System.Drawing.Color.White;
             this.btQLTK.Image = ((System.Drawing.Image)(resources.GetObject("btQLTK.Image")));
             this.btQLTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLTK.Location = new System.Drawing.Point(8, 544);
-            this.btQLTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btQLTK.Location = new System.Drawing.Point(11, 667);
+            this.btQLTK.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btQLTK.Name = "btQLTK";
-            this.btQLTK.Size = new System.Drawing.Size(240, 80);
+            this.btQLTK.Size = new System.Drawing.Size(320, 98);
             this.btQLTK.TabIndex = 14;
             this.btQLTK.Text = "               Quản lý tài khoản";
             this.btQLTK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,10 +156,10 @@
             this.btQLHP.ForeColor = System.Drawing.Color.White;
             this.btQLHP.Image = ((System.Drawing.Image)(resources.GetObject("btQLHP.Image")));
             this.btQLHP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLHP.Location = new System.Drawing.Point(8, 464);
-            this.btQLHP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btQLHP.Location = new System.Drawing.Point(11, 569);
+            this.btQLHP.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btQLHP.Name = "btQLHP";
-            this.btQLHP.Size = new System.Drawing.Size(240, 80);
+            this.btQLHP.Size = new System.Drawing.Size(320, 98);
             this.btQLHP.TabIndex = 13;
             this.btQLHP.Text = "               Quản lý học phí";
             this.btQLHP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,10 +175,10 @@
             this.btQLMH.ForeColor = System.Drawing.Color.White;
             this.btQLMH.Image = ((System.Drawing.Image)(resources.GetObject("btQLMH.Image")));
             this.btQLMH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLMH.Location = new System.Drawing.Point(8, 384);
-            this.btQLMH.Margin = new System.Windows.Forms.Padding(2);
+            this.btQLMH.Location = new System.Drawing.Point(11, 471);
+            this.btQLMH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btQLMH.Name = "btQLMH";
-            this.btQLMH.Size = new System.Drawing.Size(240, 80);
+            this.btQLMH.Size = new System.Drawing.Size(320, 98);
             this.btQLMH.TabIndex = 12;
             this.btQLMH.Text = "               Quản lý môn học";
             this.btQLMH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -193,10 +193,10 @@
             this.btQLGV.ForeColor = System.Drawing.Color.White;
             this.btQLGV.Image = ((System.Drawing.Image)(resources.GetObject("btQLGV.Image")));
             this.btQLGV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLGV.Location = new System.Drawing.Point(8, 304);
-            this.btQLGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btQLGV.Location = new System.Drawing.Point(11, 373);
+            this.btQLGV.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btQLGV.Name = "btQLGV";
-            this.btQLGV.Size = new System.Drawing.Size(240, 80);
+            this.btQLGV.Size = new System.Drawing.Size(320, 98);
             this.btQLGV.TabIndex = 11;
             this.btQLGV.Text = "               Quản lý giảng viên";
             this.btQLGV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,10 +211,10 @@
             this.btQLHV.ForeColor = System.Drawing.Color.White;
             this.btQLHV.Image = ((System.Drawing.Image)(resources.GetObject("btQLHV.Image")));
             this.btQLHV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLHV.Location = new System.Drawing.Point(8, 224);
-            this.btQLHV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btQLHV.Location = new System.Drawing.Point(11, 275);
+            this.btQLHV.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btQLHV.Name = "btQLHV";
-            this.btQLHV.Size = new System.Drawing.Size(240, 80);
+            this.btQLHV.Size = new System.Drawing.Size(320, 98);
             this.btQLHV.TabIndex = 10;
             this.btQLHV.Text = "               Quản lý học viên";
             this.btQLHV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,10 +230,10 @@
             this.btDashboard.ForeColor = System.Drawing.Color.White;
             this.btDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btDashboard.Image")));
             this.btDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btDashboard.Location = new System.Drawing.Point(8, 144);
-            this.btDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btDashboard.Location = new System.Drawing.Point(11, 177);
+            this.btDashboard.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btDashboard.Name = "btDashboard";
-            this.btDashboard.Size = new System.Drawing.Size(240, 80);
+            this.btDashboard.Size = new System.Drawing.Size(320, 98);
             this.btDashboard.TabIndex = 9;
             this.btDashboard.Text = "               Dashboard";
             this.btDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,19 +244,19 @@
             // 
             this.panel5.Controls.Add(this.panelSlide);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 144);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(0, 177);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(8, 343);
+            this.panel5.Size = new System.Drawing.Size(11, 894);
             this.panel5.TabIndex = 0;
             // 
             // panelSlide
             // 
             this.panelSlide.BackColor = System.Drawing.Color.White;
             this.panelSlide.Location = new System.Drawing.Point(0, 0);
-            this.panelSlide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelSlide.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panelSlide.Name = "panelSlide";
-            this.panelSlide.Size = new System.Drawing.Size(8, 80);
+            this.panelSlide.Size = new System.Drawing.Size(11, 98);
             this.panelSlide.TabIndex = 9;
             // 
             // panel2
@@ -265,80 +265,79 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(248, 144);
+            this.panel2.Size = new System.Drawing.Size(331, 177);
             this.panel2.TabIndex = 0;
             // 
             // lbWelcome
             // 
             this.lbWelcome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWelcome.ForeColor = System.Drawing.Color.White;
-            this.lbWelcome.Location = new System.Drawing.Point(60, 102);
-            this.lbWelcome.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbWelcome.Location = new System.Drawing.Point(80, 126);
+            this.lbWelcome.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lbWelcome.Name = "lbWelcome";
-            this.lbWelcome.Size = new System.Drawing.Size(177, 48);
+            this.lbWelcome.Size = new System.Drawing.Size(236, 59);
             this.lbWelcome.TabIndex = 1;
             this.lbWelcome.Text = "WELCOME!";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(111, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox1.Location = new System.Drawing.Point(148, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 78);
+            this.pictureBox1.Size = new System.Drawing.Size(96, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // userControlFee1
             // 
-            this.userControlFee1.BackColor = System.Drawing.Color.Transparent;
-            this.userControlFee1.Location = new System.Drawing.Point(248, 179);
-            this.userControlFee1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userControlFee1.Location = new System.Drawing.Point(332, 221);
+            this.userControlFee1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControlFee1.Name = "userControlFee1";
-            this.userControlFee1.Size = new System.Drawing.Size(1157, 592);
+            this.userControlFee1.Size = new System.Drawing.Size(1755, 918);
             this.userControlFee1.TabIndex = 11;
             // 
             // userControlStudents1
             // 
             this.userControlStudents1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlStudents1.Location = new System.Drawing.Point(248, 179);
-            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.userControlStudents1.Location = new System.Drawing.Point(331, 220);
+            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.userControlStudents1.Name = "userControlStudents1";
-            this.userControlStudents1.Size = new System.Drawing.Size(665, 308);
+            this.userControlStudents1.Size = new System.Drawing.Size(1593, 851);
             this.userControlStudents1.TabIndex = 10;
             // 
             // accountUS2
             // 
-            this.accountUS2.Location = new System.Drawing.Point(300, 181);
-            this.accountUS2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.accountUS2.Location = new System.Drawing.Point(400, 223);
+            this.accountUS2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.accountUS2.Name = "accountUS2";
-            this.accountUS2.Size = new System.Drawing.Size(1705, 773);
+            this.accountUS2.Size = new System.Drawing.Size(2273, 951);
             this.accountUS2.TabIndex = 10;
             // 
             // dashboardUS1
             // 
-            this.dashboardUS1.Location = new System.Drawing.Point(300, 181);
-            this.dashboardUS1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dashboardUS1.Location = new System.Drawing.Point(400, 223);
+            this.dashboardUS1.Margin = new System.Windows.Forms.Padding(1);
             this.dashboardUS1.Name = "dashboardUS1";
-            this.dashboardUS1.Size = new System.Drawing.Size(1643, 935);
+            this.dashboardUS1.Size = new System.Drawing.Size(2191, 1151);
             this.dashboardUS1.TabIndex = 9;
             // 
             // accountUS1
             // 
             this.accountUS1.Location = new System.Drawing.Point(300, 179);
-            this.accountUS1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.accountUS1.Margin = new System.Windows.Forms.Padding(2);
             this.accountUS1.Name = "accountUS1";
             this.accountUS1.Size = new System.Drawing.Size(1674, 964);
             this.accountUS1.TabIndex = 10;
             // 
             // UserMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 487);
+            this.ClientSize = new System.Drawing.Size(1924, 1071);
             this.Controls.Add(this.userControlFee1);
             this.Controls.Add(this.userControlStudents1);
             this.Controls.Add(this.accountUS2);
@@ -346,7 +345,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "UserMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
@@ -384,9 +383,9 @@
         private System.Windows.Forms.Button btQLGV;
         private dashboardUS dashboardUS1;
         private UserControlStudents userControlStudents1;
-        private UserControlFee userControlFee1;
         private accountUS accountUS1;
         private accountUS accountUS2;
+        private UserControlFee userControlFee1;
     }
 }
 
