@@ -39,5 +39,12 @@ namespace CollegeMS
         {
             Application.Exit();
         }
+
+        private void btndkkh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }
 }

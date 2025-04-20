@@ -17,8 +17,8 @@ namespace DataLayer
 
         public DatabaseAccess()
         {
-            string cnStr =
-                "Data Source =.; Initial Catalog = CollegeMS; Integrated Security = True";
+            string cnStr = "Data Source=.;Initial Catalog=CollegeMS;Integrated Security=True";
+                
             cn = new SqlConnection(cnStr);
         }
 

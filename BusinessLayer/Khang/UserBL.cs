@@ -41,17 +41,38 @@ namespace BusinessLayer
         public bool deleteUser(UserAccount acc)
         {
             UserAccess userAccess = new UserAccess();
-            return userAccess.deleteuser(acc);
+            try
+            {
+                return userAccess.deleteuser(acc);
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
         }
+
 
         public bool insertUser(UserAccount acc)
         {
+            UserAccess userAccess = new UserAccess();
             try
             {
-                UserAccess userAccess = new UserAccess();
                 return userAccess.insertuser(acc);
             }
             catch(SqlException e)
+            {
+                throw e;
+            }
+        }
+
+        public bool changePass(UserAccount acc)
+        {
+            UserAccess userAccess = new UserAccess();
+            try
+            {
+                return userAccess.changePass(acc);
+            }
+            catch (SqlException e)
             {
                 throw e;
             }

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferObject;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CollegeMS
@@ -26,6 +27,12 @@ namespace CollegeMS
             DataTable dt = new DataTable();
             dt = a.viewUserTble();
             dataGridView1.DataSource = dt;
+            if (dataGridView1.Rows.Count > 0)
+            {
+                dataGridView1.ClearSelection();
+                dataGridView1.Rows[0].Selected = true;
+            }
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
         }
         private void accountUS_Load(object sender, EventArgs e)
         {
@@ -70,6 +77,47 @@ namespace CollegeMS
                     MessageBox.Show("User already exists !!!");
                 }
                 dataload();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserBL userBL = new UserBL();
+            string UserId, UserPass;
+            UserId = txtUsername2.Text.Trim();
+            if (txtNewPass.Text == "" || txtNewpass2.Text == "")
+            {
+                MessageBox.Show("Please fill all inputs !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtNewPass.Text == txtNewpass2.Text)
+            {
+                UserPass = txtNewpass2.Text.Trim();
+                UserAccount acc = new UserAccount(UserId, UserPass);
+                if (userBL.changePass(acc))
+                {
+                    MessageBox.Show("Password changed successfully !!!");
+                }
+                dataload();
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNewpass2.Focus();
+                return;
+            }
+            
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                txtUsername2.Text = dataGridView1.SelectedRows[0].Cells[0].Value?.ToString();
+            }
+            else
+            {
+                txtUsername2.Text = "";
             }
         }
     }
