@@ -280,5 +280,85 @@ namespace CollegeMS
         {
 
         }
+
+        private void btnsearchStu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsearchStu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxStu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPic_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDiachi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsdt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txthoten_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpStu_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
