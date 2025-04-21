@@ -187,24 +187,26 @@ namespace CollegeMS
             }
         }
 
-        private void dgvGV_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                selectedId = dgvGV.SelectedRows[0].Cells[0].Value.ToString();
-                tbTenGV.Text = dgvGV.SelectedRows[0].Cells[1].Value.ToString();
-                tbSDTGV.Text = dgvGV.SelectedRows[0].Cells[2].Value.ToString();
-                tbEmailGV.Text = dgvGV.SelectedRows[0].Cells[3].Value.ToString();
-                cbGioiTinhGV.Text = dgvGV.SelectedRows[0].Cells[4].Value.ToString();
-                tbDiaChiGV.Text = dgvGV.SelectedRows[0].Cells[5].Value.ToString();
-                tbHinhAnh.Text = dgvGV.SelectedRows[0].Cells[6].Value.ToString();
-                dtpNgaySinhGV.Value = Convert.ToDateTime(dgvGV.SelectedRows[0].Cells[7].Value.ToString());
-            }
-        }
 
         private void btHuy_Click(object sender, EventArgs e)
         {
             ClearInputFields();
+        }
+
+        private void dgvGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvGV.Rows[e.RowIndex];
+                selectedId = row.Cells[0].Value.ToString();
+                tbTenGV.Text = row.Cells[1].Value.ToString();
+                tbSDTGV.Text = row.Cells[2].Value.ToString();
+                tbEmailGV.Text = row.Cells[3].Value.ToString();
+                cbGioiTinhGV.Text = row.Cells[4].Value.ToString();
+                tbDiaChiGV.Text = row.Cells[5].Value.ToString();
+                tbHinhAnh.Text =row.Cells[6].Value.ToString();
+                dtpNgaySinhGV.Value = Convert.ToDateTime(row.Cells[7].Value.ToString());
+            }
         }
     }
 }

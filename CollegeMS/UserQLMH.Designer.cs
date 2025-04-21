@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvMH = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btThemMH = new System.Windows.Forms.Button();
             this.z = new System.Windows.Forms.Label();
             this.btSuaMH = new System.Windows.Forms.Button();
@@ -48,23 +49,10 @@
             this.btTimMH = new System.Windows.Forms.Button();
             this.tbMoTaMH = new System.Windows.Forms.TextBox();
             this.pnXoaSuaStu = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).BeginInit();
+            this.dgvMH = new System.Windows.Forms.DataGridView();
             this.pnXoaSuaStu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvMH
-            // 
-            this.dgvMH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvMH.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvMH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMH.Location = new System.Drawing.Point(3, 376);
-            this.dgvMH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvMH.Name = "dgvMH";
-            this.dgvMH.RowHeadersWidth = 62;
-            this.dgvMH.RowTemplate.Height = 28;
-            this.dgvMH.Size = new System.Drawing.Size(1748, 564);
-            this.dgvMH.TabIndex = 37;
             // 
             // btThemMH
             // 
@@ -78,10 +66,10 @@
             this.btThemMH.ForeColor = System.Drawing.Color.White;
             this.btThemMH.Image = global::CollegeMS.Properties.Resources.Add;
             this.btThemMH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btThemMH.Location = new System.Drawing.Point(435, 294);
-            this.btThemMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThemMH.Location = new System.Drawing.Point(489, 368);
+            this.btThemMH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btThemMH.Name = "btThemMH";
-            this.btThemMH.Size = new System.Drawing.Size(157, 50);
+            this.btThemMH.Size = new System.Drawing.Size(177, 62);
             this.btThemMH.TabIndex = 10;
             this.btThemMH.Text = " Thêm";
             this.btThemMH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -93,9 +81,9 @@
             this.z.AutoSize = true;
             this.z.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.z.ForeColor = System.Drawing.Color.White;
-            this.z.Location = new System.Drawing.Point(307, 25);
+            this.z.Location = new System.Drawing.Point(345, 31);
             this.z.Name = "z";
-            this.z.Size = new System.Drawing.Size(120, 25);
+            this.z.Size = new System.Drawing.Size(144, 29);
             this.z.TabIndex = 89;
             this.z.Text = "Mã môn học";
             // 
@@ -111,10 +99,10 @@
             this.btSuaMH.ForeColor = System.Drawing.Color.White;
             this.btSuaMH.Image = global::CollegeMS.Properties.Resources.Edit;
             this.btSuaMH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSuaMH.Location = new System.Drawing.Point(653, 294);
-            this.btSuaMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSuaMH.Location = new System.Drawing.Point(735, 368);
+            this.btSuaMH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btSuaMH.Name = "btSuaMH";
-            this.btSuaMH.Size = new System.Drawing.Size(157, 50);
+            this.btSuaMH.Size = new System.Drawing.Size(177, 62);
             this.btSuaMH.TabIndex = 36;
             this.btSuaMH.Text = "Cập nhật";
             this.btSuaMH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,9 +114,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(307, 75);
+            this.label10.Location = new System.Drawing.Point(345, 94);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(127, 25);
+            this.label10.Size = new System.Drawing.Size(154, 29);
             this.label10.TabIndex = 91;
             this.label10.Text = "Tên môn học";
             // 
@@ -137,9 +125,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(307, 124);
+            this.label9.Location = new System.Drawing.Point(345, 155);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 25);
+            this.label9.Size = new System.Drawing.Size(111, 29);
             this.label9.TabIndex = 92;
             this.label9.Text = "Số tín chỉ";
             // 
@@ -148,10 +136,10 @@
             this.tbMaMH.BackColor = System.Drawing.Color.White;
             this.tbMaMH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbMaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMaMH.Location = new System.Drawing.Point(450, 23);
+            this.tbMaMH.Location = new System.Drawing.Point(506, 29);
             this.tbMaMH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMaMH.Name = "tbMaMH";
-            this.tbMaMH.Size = new System.Drawing.Size(343, 30);
+            this.tbMaMH.Size = new System.Drawing.Size(386, 35);
             this.tbMaMH.TabIndex = 90;
             // 
             // tbTenMH
@@ -159,10 +147,10 @@
             this.tbTenMH.BackColor = System.Drawing.Color.White;
             this.tbTenMH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbTenMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTenMH.Location = new System.Drawing.Point(450, 74);
+            this.tbTenMH.Location = new System.Drawing.Point(506, 92);
             this.tbTenMH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbTenMH.Name = "tbTenMH";
-            this.tbTenMH.Size = new System.Drawing.Size(343, 30);
+            this.tbTenMH.Size = new System.Drawing.Size(386, 35);
             this.tbTenMH.TabIndex = 97;
             // 
             // tbSoTinChi
@@ -170,10 +158,10 @@
             this.tbSoTinChi.BackColor = System.Drawing.Color.White;
             this.tbSoTinChi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSoTinChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSoTinChi.Location = new System.Drawing.Point(447, 122);
+            this.tbSoTinChi.Location = new System.Drawing.Point(503, 152);
             this.tbSoTinChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbSoTinChi.Name = "tbSoTinChi";
-            this.tbSoTinChi.Size = new System.Drawing.Size(346, 30);
+            this.tbSoTinChi.Size = new System.Drawing.Size(389, 35);
             this.tbSoTinChi.TabIndex = 98;
             // 
             // btXoaMH
@@ -188,10 +176,10 @@
             this.btXoaMH.ForeColor = System.Drawing.Color.White;
             this.btXoaMH.Image = global::CollegeMS.Properties.Resources.Trash;
             this.btXoaMH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btXoaMH.Location = new System.Drawing.Point(868, 294);
-            this.btXoaMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btXoaMH.Location = new System.Drawing.Point(976, 368);
+            this.btXoaMH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btXoaMH.Name = "btXoaMH";
-            this.btXoaMH.Size = new System.Drawing.Size(157, 50);
+            this.btXoaMH.Size = new System.Drawing.Size(177, 62);
             this.btXoaMH.TabIndex = 37;
             this.btXoaMH.Text = "   Xóa";
             this.btXoaMH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,10 +198,10 @@
             this.btHuyMH.ForeColor = System.Drawing.Color.White;
             this.btHuyMH.Image = global::CollegeMS.Properties.Resources.Erase;
             this.btHuyMH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btHuyMH.Location = new System.Drawing.Point(1071, 294);
-            this.btHuyMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btHuyMH.Location = new System.Drawing.Point(1205, 368);
+            this.btHuyMH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btHuyMH.Name = "btHuyMH";
-            this.btHuyMH.Size = new System.Drawing.Size(157, 50);
+            this.btHuyMH.Size = new System.Drawing.Size(177, 62);
             this.btHuyMH.TabIndex = 38;
             this.btHuyMH.Text = "  Hủy";
             this.btHuyMH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -225,10 +213,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(943, 30);
+            this.label8.Location = new System.Drawing.Point(1061, 38);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label8.Size = new System.Drawing.Size(128, 25);
+            this.label8.Size = new System.Drawing.Size(154, 29);
             this.label8.TabIndex = 93;
             this.label8.Text = "Ngày bắt đầu";
             // 
@@ -237,19 +225,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(307, 178);
+            this.label3.Location = new System.Drawing.Point(345, 222);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 25);
+            this.label3.Size = new System.Drawing.Size(72, 29);
             this.label3.TabIndex = 99;
             this.label3.Text = "Mô tả";
             // 
             // dtpNgayBatDau
             // 
             this.dtpNgayBatDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayBatDau.Location = new System.Drawing.Point(1104, 25);
+            this.dtpNgayBatDau.Location = new System.Drawing.Point(1242, 31);
             this.dtpNgayBatDau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpNgayBatDau.Name = "dtpNgayBatDau";
-            this.dtpNgayBatDau.Size = new System.Drawing.Size(344, 30);
+            this.dtpNgayBatDau.Size = new System.Drawing.Size(386, 35);
             this.dtpNgayBatDau.TabIndex = 95;
             // 
             // label7
@@ -257,29 +245,29 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(940, 126);
+            this.label7.Location = new System.Drawing.Point(1058, 158);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 25);
+            this.label7.Size = new System.Drawing.Size(157, 29);
             this.label7.TabIndex = 94;
             this.label7.Text = "Ngày kết thúc";
             // 
             // tbTimMH
             // 
             this.tbTimMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTimMH.Location = new System.Drawing.Point(447, 235);
-            this.tbTimMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTimMH.Location = new System.Drawing.Point(503, 294);
+            this.tbTimMH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbTimMH.Multiline = true;
             this.tbTimMH.Name = "tbTimMH";
-            this.tbTimMH.Size = new System.Drawing.Size(495, 31);
+            this.tbTimMH.Size = new System.Drawing.Size(556, 38);
             this.tbTimMH.TabIndex = 39;
             // 
             // dtpNgayKetThuc
             // 
             this.dtpNgayKetThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayKetThuc.Location = new System.Drawing.Point(1104, 124);
+            this.dtpNgayKetThuc.Location = new System.Drawing.Point(1242, 155);
             this.dtpNgayKetThuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpNgayKetThuc.Name = "dtpNgayKetThuc";
-            this.dtpNgayKetThuc.Size = new System.Drawing.Size(344, 30);
+            this.dtpNgayKetThuc.Size = new System.Drawing.Size(386, 35);
             this.dtpNgayKetThuc.TabIndex = 96;
             // 
             // btTimMH
@@ -287,10 +275,10 @@
             this.btTimMH.BackColor = System.Drawing.Color.White;
             this.btTimMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTimMH.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btTimMH.Location = new System.Drawing.Point(312, 235);
-            this.btTimMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btTimMH.Location = new System.Drawing.Point(351, 294);
+            this.btTimMH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btTimMH.Name = "btTimMH";
-            this.btTimMH.Size = new System.Drawing.Size(85, 32);
+            this.btTimMH.Size = new System.Drawing.Size(96, 40);
             this.btTimMH.TabIndex = 40;
             this.btTimMH.Text = "TÌM";
             this.btTimMH.UseVisualStyleBackColor = false;
@@ -301,10 +289,10 @@
             this.tbMoTaMH.BackColor = System.Drawing.Color.White;
             this.tbMoTaMH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbMoTaMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMoTaMH.Location = new System.Drawing.Point(447, 176);
+            this.tbMoTaMH.Location = new System.Drawing.Point(503, 220);
             this.tbMoTaMH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMoTaMH.Name = "tbMoTaMH";
-            this.tbMoTaMH.Size = new System.Drawing.Size(346, 30);
+            this.tbMoTaMH.Size = new System.Drawing.Size(389, 35);
             this.tbMoTaMH.TabIndex = 100;
             // 
             // pnXoaSuaStu
@@ -330,30 +318,62 @@
             this.pnXoaSuaStu.Controls.Add(this.btThemMH);
             this.pnXoaSuaStu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnXoaSuaStu.Location = new System.Drawing.Point(0, 0);
-            this.pnXoaSuaStu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnXoaSuaStu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnXoaSuaStu.Name = "pnXoaSuaStu";
-            this.pnXoaSuaStu.Size = new System.Drawing.Size(1754, 370);
+            this.pnXoaSuaStu.Size = new System.Drawing.Size(1973, 462);
             this.pnXoaSuaStu.TabIndex = 36;
+            // 
+            // dgvMH
+            // 
+            this.dgvMH.AllowUserToAddRows = false;
+            this.dgvMH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMH.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMH.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvMH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMH.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMH.EnableHeadersVisualStyles = false;
+            this.dgvMH.Location = new System.Drawing.Point(0, 460);
+            this.dgvMH.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.dgvMH.Name = "dgvMH";
+            this.dgvMH.RowHeadersWidth = 62;
+            this.dgvMH.Size = new System.Drawing.Size(1922, 611);
+            this.dgvMH.TabIndex = 38;
+            this.dgvMH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMH_CellContentClick_1);
             // 
             // UserControlQLMH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvMH);
             this.Controls.Add(this.pnXoaSuaStu);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserControlQLMH";
-            this.Size = new System.Drawing.Size(1754, 999);
+            this.Size = new System.Drawing.Size(1973, 1249);
             this.Load += new System.EventHandler(this.UserControlQLMH_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).EndInit();
             this.pnXoaSuaStu.ResumeLayout(false);
             this.pnXoaSuaStu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMH)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvMH;
         private System.Windows.Forms.Button btThemMH;
         private System.Windows.Forms.Label z;
         private System.Windows.Forms.Button btSuaMH;
@@ -373,5 +393,6 @@
         private System.Windows.Forms.Button btTimMH;
         private System.Windows.Forms.TextBox tbMoTaMH;
         private System.Windows.Forms.Panel pnXoaSuaStu;
+        private System.Windows.Forms.DataGridView dgvMH;
     }
 }

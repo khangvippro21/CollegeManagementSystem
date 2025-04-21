@@ -139,18 +139,6 @@ namespace CollegeMS
             dtpNgayKetThuc.Value=DateTime.Today;
         }
 
-        private void dgvMH_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if(dgvMH.Rows.Count > 0)
-            {
-                tbMaMH.Text = dgvMH.SelectedRows[0].Cells[0].Value.ToString();
-              tbTenMH.Text = dgvMH.SelectedRows[0].Cells[1].Value.ToString();
-               tbMoTaMH.Text = dgvMH.SelectedRows[0].Cells[2].Value.ToString();
-              tbSoTinChi.Text =dgvMH.SelectedRows[0].Cells[3].Value.ToString();
-              dtpNgayBatDau.Value =Convert.ToDateTime(dgvMH.SelectedRows[0].Cells[4].Value);
-              dtpNgayKetThuc.Value = Convert.ToDateTime(dgvMH.SelectedRows[0].Cells[5].Value);
-            }
-        }
 
         private void btSuaMH_Click_1(object sender, EventArgs e)
         {
@@ -171,6 +159,21 @@ namespace CollegeMS
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi sửa môn học: " + ex.Message);
+            }
+        }
+
+
+        private void dgvMH_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvMH.Rows[e.RowIndex];
+                tbMaMH.Text = row.Cells[0].Value.ToString();
+                tbTenMH.Text = row.Cells[1].Value.ToString();
+                tbMoTaMH.Text = row.Cells[2].Value.ToString();
+                tbSoTinChi.Text = row.Cells[3].Value.ToString();
+                dtpNgayBatDau.Value = Convert.ToDateTime(row.Cells[4].Value);
+                dtpNgayKetThuc.Value = Convert.ToDateTime(row.Cells[5].Value);
             }
         }
     }
