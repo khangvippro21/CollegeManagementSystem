@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO; 
 using BusinessLayer;
 using TransferObject;
 using System.Xml.Linq;
@@ -58,6 +59,25 @@ namespace CollegeMS
                     dataGridViewStu.Columns["StAddress"].HeaderText = "Địa Chỉ";
                     dataGridViewStu.Columns["Stpath"].HeaderText = "Đường Dẫn";
                     dataGridViewStu.Columns["StBirth"].HeaderText = "Ngày Sinh";
+
+                    string imagePath = txtPic.Text;
+                    try
+                    {
+                        if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+                        {
+                            pictureBoxStu.Image = Image.FromFile(imagePath);
+                            pictureBoxStu.SizeMode = PictureBoxSizeMode.StretchImage; // Tuỳ chỉnh hiển thị
+                        }
+                        else
+                        {
+                            pictureBoxStu.Image = null; // Clear ảnh nếu không tồn tại
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Không thể tải ảnh: " + ex.Message);
+                        pictureBoxStu.Image = null;
+                    }
                 }
 
             }
@@ -222,8 +242,28 @@ namespace CollegeMS
                 txtDiachi.Text = row.Cells["StAddress"].Value.ToString();
                 txtPic.Text = row.Cells["StPath"].Value.ToString();
                 dtpStu.Value = Convert.ToDateTime(row.Cells["StBirth"].Value);
+
+                string imagePath = txtPic.Text;
+                try
+                {
+                    if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+                    {
+                        pictureBoxStu.Image = Image.FromFile(imagePath);
+                        pictureBoxStu.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    else
+                    {
+                        pictureBoxStu.Image = null; // Clear nếu ảnh không tồn tại
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể tải ảnh: " + ex.Message);
+                    pictureBoxStu.Image = null;
+                }
             }
         }
+        
 
         private void btSua_Click(object sender, EventArgs e)
         {
@@ -276,89 +316,17 @@ namespace CollegeMS
             cbgioitinh.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private void pnXoaSuaStu_Paint(object sender, PaintEventArgs e)
+        private void btnChonAnh_Click(object sender, EventArgs e)
         {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
 
-        }
-
-        private void btnsearchStu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtsearchStu_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBoxStu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPic_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDiachi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtsdt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txthoten_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpStu_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtPic.Text = ofd.FileName;
+                pictureBoxStu.Image = Image.FromFile(ofd.FileName);
+                pictureBoxStu.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
     }
 }

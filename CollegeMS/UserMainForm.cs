@@ -124,6 +124,9 @@ namespace CollegeMS
             panelSlide.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 144);
         }
 
+        private void accountUS2_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
