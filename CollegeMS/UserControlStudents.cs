@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO; 
 using BusinessLayer;
 using TransferObject;
 using System.Xml.Linq;
@@ -41,7 +42,7 @@ namespace CollegeMS
             LoadStudentData();
         }
         //sua cai nay
-       public void LoadStudentData()
+        public void LoadStudentData()
         {
             try
             {
@@ -58,6 +59,25 @@ namespace CollegeMS
                     dataGridViewStu.Columns["StAddress"].HeaderText = "Địa Chỉ";
                     dataGridViewStu.Columns["Stpath"].HeaderText = "Đường Dẫn";
                     dataGridViewStu.Columns["StBirth"].HeaderText = "Ngày Sinh";
+
+                    string imagePath = txtPic.Text;
+                    try
+                    {
+                        if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+                        {
+                            pictureBoxStu.Image = Image.FromFile(imagePath);
+                            pictureBoxStu.SizeMode = PictureBoxSizeMode.StretchImage; // Tuỳ chỉnh hiển thị
+                        }
+                        else
+                        {
+                            pictureBoxStu.Image = null; // Clear ảnh nếu không tồn tại
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Không thể tải ảnh: " + ex.Message);
+                        pictureBoxStu.Image = null;
+                    }
                 }
 
             }
@@ -76,7 +96,7 @@ namespace CollegeMS
             txtsearchStu.Clear();
             dtpStu.Value = DateTime.Now;
         }
-        
+
 
         //sua cai nay
         private void SearchStudents(string name)
@@ -85,7 +105,7 @@ namespace CollegeMS
             {
                 DataTable students = studentbl.SearchStudent(name);
                 dataGridViewStu.DataSource = students;
-                
+
             }
             catch (Exception ex)
             {
@@ -93,7 +113,7 @@ namespace CollegeMS
             }
         }
 
-       
+
 
 
         //tham khao cai nay
@@ -156,7 +176,7 @@ namespace CollegeMS
             }
         }
 
- 
+
         private void dataGridViewStu_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             using (SolidBrush b = new SolidBrush(dataGridViewStu.RowHeadersDefaultCellStyle.ForeColor))
@@ -222,18 +242,40 @@ namespace CollegeMS
                 txtDiachi.Text = row.Cells["StAddress"].Value.ToString();
                 txtPic.Text = row.Cells["StPath"].Value.ToString();
                 dtpStu.Value = Convert.ToDateTime(row.Cells["StBirth"].Value);
+
+                string fileName = txtPic.Text;
+                string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Anhthe", fileName);
+
+                try
+                {
+                    if (!string.IsNullOrEmpty(fileName) && File.Exists(fullPath))
+                    {
+                        pictureBoxStu.Image = Image.FromFile(fullPath);
+                        pictureBoxStu.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    else
+                    {
+                        pictureBoxStu.Image = null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể tải ảnh: " + ex.Message);
+                    pictureBoxStu.Image = null;
+                }
             }
         }
 
+
         private void btSua_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(selectedStudentId))
-    {
+            if (string.IsNullOrEmpty(selectedStudentId))
+            {
                 MessageBox.Show("Vui lòng chọn học viên cần sửa trước.");
                 return;
             }
 
-            
+
             string name = txthoten.Text;
             string phone = txtsdt.Text;
             string email = txtEmail.Text;
@@ -242,7 +284,7 @@ namespace CollegeMS
             DateTime birth = dtpStu.Value;
             string path = txtPic.Text;
 
-            
+
             StudentDTO student = new StudentDTO(
                 selectedStudentId,
                 name,
@@ -256,14 +298,14 @@ namespace CollegeMS
 
             try
             {
-                
+
                 studentbl.UpdateStudent(student);
                 MessageBox.Show("Cập nhật học viên thành công!");
 
-              
+
                 LoadStudentData();
                 ClearInputFields();
-                selectedStudentId = ""; 
+                selectedStudentId = "";
             }
             catch (Exception ex)
             {
@@ -276,89 +318,40 @@ namespace CollegeMS
             cbgioitinh.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private void pnXoaSuaStu_Paint(object sender, PaintEventArgs e)
+        private void btnChonAnh_Click(object sender, EventArgs e)
         {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
 
-        }
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string originalFileName = Path.GetFileName(ofd.FileName);
+                string destFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Anhthe");
 
-        private void btnsearchStu_Click(object sender, EventArgs e)
-        {
+                if (!Directory.Exists(destFolder))
+                    Directory.CreateDirectory(destFolder);
 
-        }
+                string destFilePath = Path.Combine(destFolder, originalFileName);
 
-        private void txtsearchStu_TextChanged(object sender, EventArgs e)
-        {
+                try
+                {
+                    File.Copy(ofd.FileName, destFilePath, true); // Cho phép overwrite
+                    txtPic.Text = originalFileName; // Lưu tên file
 
-        }
+                    pictureBoxStu.Image = Image.FromFile(destFilePath);
+                    pictureBoxStu.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi sao chép ảnh: " + ex.Message);
+                }
 
-        private void pictureBoxStu_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void txtPic_TextChanged(object sender, EventArgs e)
-        {
+            }
 
-        }
-
-        private void txtDiachi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtsdt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txthoten_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpStu_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
 
         }
     }
 }
+
