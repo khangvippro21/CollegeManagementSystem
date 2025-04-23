@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -19,7 +20,7 @@ namespace CollegeMS
     {
         GiangVienBL giangvienbl = new GiangVienBL();
         DataTable dt = new DataTable();
-        string selectedId="";
+        string selectedId = "";
         public UserControlQLGV()
         {
             InitializeComponent();
@@ -54,6 +55,9 @@ namespace CollegeMS
                     dgvGV.Columns["Lepath"].HeaderText = "Đường Dẫn";
                     dgvGV.Columns["LeBirth"].HeaderText = "Ngày Sinh";
                 }
+                string img = tbHinhAnh.Text;
+                string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+                string fullPath = Path.Combine(projectRoot, "AnhThe", "GiaoVien", img);
 
             }
             catch (Exception ex)
@@ -204,9 +208,57 @@ namespace CollegeMS
                 tbEmailGV.Text = row.Cells[3].Value.ToString();
                 cbGioiTinhGV.Text = row.Cells[4].Value.ToString();
                 tbDiaChiGV.Text = row.Cells[5].Value.ToString();
-                tbHinhAnh.Text =row.Cells[6].Value.ToString();
+                tbHinhAnh.Text = row.Cells[6].Value.ToString();
                 dtpNgaySinhGV.Value = Convert.ToDateTime(row.Cells[7].Value.ToString());
+                string fileName = tbHinhAnh.Text;
+                string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+                string fullPath = Path.Combine(projectRoot, "AnhThe", "GiaoVien", fileName);
+                try
+                {
+                    if (!string.IsNullOrEmpty(fileName) && File.Exists(fullPath))
+                    {
+                        pictureBoxGV.Image = Image.FromFile(fullPath);
+                        pictureBoxGV.SizeMode = PictureBoxSizeMode.Zoom;
+                    }
+                    else
+                    {
+                        pictureBoxGV.Image = null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể tải ảnh: " + ex.Message);
+                    pictureBoxGV.Image = null;
+                }
+            }
+        }
+
+        private void btChonAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string originalFileName = Path.GetFileName(ofd.FileName);
+                string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+                string destFolder = Path.Combine(projectRoot, "AnhThe", "GiaoVien");
+                if (!Directory.Exists(destFolder))
+                    Directory.CreateDirectory(destFolder);
+                string destFilePath = Path.Combine(destFolder, originalFileName);
+                try
+                {
+                    File.Copy(ofd.FileName, destFilePath, true);
+                    tbHinhAnh.Text = originalFileName; 
+                    pictureBoxGV.Image = Image.FromFile(destFilePath);
+                    pictureBoxGV.SizeMode = PictureBoxSizeMode.Zoom;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi sao chép ảnh: " + ex.Message);
+                }
+
             }
         }
     }
-}
+} 
