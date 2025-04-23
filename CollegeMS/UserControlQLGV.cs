@@ -55,6 +55,9 @@ namespace CollegeMS
                     dgvGV.Columns["Lepath"].HeaderText = "Đường Dẫn";
                     dgvGV.Columns["LeBirth"].HeaderText = "Ngày Sinh";
                 }
+                string img = tbHinhAnh.Text;
+                string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+                string fullPath = Path.Combine(projectRoot, "AnhThe", "GiaoVien", img);
 
             }
             catch (Exception ex)
@@ -209,14 +212,13 @@ namespace CollegeMS
                 dtpNgaySinhGV.Value = Convert.ToDateTime(row.Cells[7].Value.ToString());
                 string fileName = tbHinhAnh.Text;
                 string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
-                string fullPath = Path.Combine(projectRoot, "Resources", "Anhthe", fileName);
-
+                string fullPath = Path.Combine(projectRoot, "AnhThe", "GiaoVien", fileName);
                 try
                 {
                     if (!string.IsNullOrEmpty(fileName) && File.Exists(fullPath))
                     {
                         pictureBoxGV.Image = Image.FromFile(fullPath);
-                        pictureBoxGV.SizeMode = PictureBoxSizeMode.StretchImage;
+                        pictureBoxGV.SizeMode = PictureBoxSizeMode.Zoom;
                     }
                     else
                     {
@@ -240,19 +242,16 @@ namespace CollegeMS
             {
                 string originalFileName = Path.GetFileName(ofd.FileName);
                 string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
-                string destFolder = Path.Combine(projectRoot, "Resources", "Anhthe");
+                string destFolder = Path.Combine(projectRoot, "AnhThe", "GiaoVien");
                 if (!Directory.Exists(destFolder))
                     Directory.CreateDirectory(destFolder);
-
                 string destFilePath = Path.Combine(destFolder, originalFileName);
-
                 try
                 {
-                    File.Copy(ofd.FileName, destFilePath, true); // Cho phép overwrite
-                    tbHinhAnh.Text = originalFileName; // Lưu tên file
-
+                    File.Copy(ofd.FileName, destFilePath, true);
+                    tbHinhAnh.Text = originalFileName; 
                     pictureBoxGV.Image = Image.FromFile(destFilePath);
-                    pictureBoxGV.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBoxGV.SizeMode = PictureBoxSizeMode.Zoom;
                 }
                 catch (Exception ex)
                 {

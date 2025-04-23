@@ -24,7 +24,6 @@ namespace CollegeMS
         private UserMainForm prform;
         private DataGridView dgvStudents;
         protected StudentBL studentbl;
-        //sua cai nay
         public UserControlStudents()
         {
             InitializeComponent();
@@ -33,22 +32,13 @@ namespace CollegeMS
             studentbl = new StudentBL();
             LoadStudentData();
         }
-        //sua cai nay
-        public UserControlStudents(UserMainForm parentForm)
-        {
-            InitializeComponent();
-            this.Dock = DockStyle.Fill;
-            studentbl = new StudentBL();
-            LoadStudentData();
-        }
-        //sua cai nay
         public void LoadStudentData()
         {
             try
             {
                 DataTable students = studentbl.getallstudent();
                 dataGridViewStu.DataSource = students;
-                dataGridViewStu.Columns["StPath"].Visible = false;
+                dataGridViewStu.Columns["Stpath"].Visible = false;
                 if (dataGridViewStu.Columns.Count > 0)
                 {
                     dataGridViewStu.Columns["StId"].HeaderText = "Mã Học Viên";
@@ -61,16 +51,18 @@ namespace CollegeMS
                     dataGridViewStu.Columns["StBirth"].HeaderText = "Ngày Sinh";
 
                     string imagePath = txtPic.Text;
+                    string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+                    string fullPath = Path.Combine(projectRoot, "AnhThe", "HocVien", imagePath);
                     try
                     {
                         if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
                         {
                             pictureBoxStu.Image = Image.FromFile(imagePath);
-                            pictureBoxStu.SizeMode = PictureBoxSizeMode.StretchImage; // Tuỳ chỉnh hiển thị
+                            pictureBoxStu.SizeMode = PictureBoxSizeMode.Zoom;
                         }
                         else
                         {
-                            pictureBoxStu.Image = null; // Clear ảnh nếu không tồn tại
+                            pictureBoxStu.Image = null;
                         }
                     }
                     catch (Exception ex)
@@ -78,6 +70,10 @@ namespace CollegeMS
                         MessageBox.Show("Không thể tải ảnh: " + ex.Message);
                         pictureBoxStu.Image = null;
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Loi khi tai du lieu !");
                 }
 
             }
@@ -96,9 +92,6 @@ namespace CollegeMS
             txtsearchStu.Clear();
             dtpStu.Value = DateTime.Now;
         }
-
-
-        //sua cai nay
         private void SearchStudents(string name)
         {
             try
@@ -112,43 +105,6 @@ namespace CollegeMS
                 MessageBox.Show("Lỗi khi tìm kiếm: " + ex.Message);
             }
         }
-
-
-
-
-        //tham khao cai nay
-        private void UserControlStudents_Load(object sender, EventArgs e)
-        {
-            //dataGridViewStu.RowPostPaint += dataGridViewStu_RowPostPaint;
-
-            try
-            {
-                StudentBL a = new StudentBL();
-                dataGridViewStu.DataSource = a.getallstudent();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi tải danh sách student : " + ex.Message);
-
-            }
-
-
-        }
-
-        private void btnsearchStu_Click_1(object sender, EventArgs e)
-        {
-            string txtsearch = txtsearchStu.Text;
-            if (String.IsNullOrEmpty(txtsearch))
-            {
-                LoadStudentData();
-            }
-            else
-            {
-                SearchStudents(txtsearch);
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string name = txthoten.Text;
@@ -245,7 +201,7 @@ namespace CollegeMS
 
                 string fileName = txtPic.Text;
                 string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
-                string fullPath = Path.Combine(projectRoot, "Resources", "Anhthe", fileName);
+                string fullPath = Path.Combine(projectRoot, "AnhThe", "HocVien", fileName);
 
                 try
                 {
@@ -299,11 +255,8 @@ namespace CollegeMS
 
             try
             {
-
                 studentbl.UpdateStudent(student);
                 MessageBox.Show("Cập nhật học viên thành công!");
-
-
                 LoadStudentData();
                 ClearInputFields();
                 selectedStudentId = "";
@@ -321,38 +274,43 @@ namespace CollegeMS
 
         private void btnChonAnh_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+            OpenFileDialog o = new OpenFileDialog();
+            o.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
 
-            if (ofd.ShowDialog() == DialogResult.OK)
+            if (o.ShowDialog() == DialogResult.OK)
             {
-                string originalFileName = Path.GetFileName(ofd.FileName);
-                string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
-                string destFolder = Path.Combine(projectRoot, "Resources", "Anhthe");
-
-                if (!Directory.Exists(destFolder))
-                    Directory.CreateDirectory(destFolder);
-
-                string destFilePath = Path.Combine(destFolder, originalFileName);
-
+                string img = Path.GetFileName(o.FileName);
+                string folder = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+                string file = Path.Combine(folder, "AnhThe", "HocVien");
+                if (!Directory.Exists(file))
+                    Directory.CreateDirectory(folder);
+                string destFilePath = Path.Combine(file, img);
                 try
                 {
-                    File.Copy(ofd.FileName, destFilePath, true); // Cho phép overwrite
-                    txtPic.Text = originalFileName; // Lưu tên file
-
+                    File.Copy(o.FileName, destFilePath, true);
+                    txtPic.Text = file;
                     pictureBoxStu.Image = Image.FromFile(destFilePath);
-                    pictureBoxStu.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBoxStu.SizeMode = PictureBoxSizeMode.Zoom;
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi khi sao chép ảnh: " + ex.Message);
                 }
-
-
-
             }
+        }
 
-
+        private void btnsearchStu_Click(object sender, EventArgs e)
+        {
+            string txtsearch = txtsearchStu.Text;
+            if (String.IsNullOrEmpty(txtsearch))
+            {
+                LoadStudentData();
+            }
+            else
+            {
+                SearchStudents(txtsearch);
+            }
         }
     }
 }
