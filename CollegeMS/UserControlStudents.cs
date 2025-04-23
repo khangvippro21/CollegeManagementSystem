@@ -327,6 +327,22 @@ namespace CollegeMS
                 pictureBoxStu.Image = Image.FromFile(ofd.FileName);
                 pictureBoxStu.SizeMode = PictureBoxSizeMode.StretchImage;
             }
+
+            File.Copy(txtPic.Text, Path.Combine(@"D:\LTCSDL\DoAnCuoiKy\CollegeManagementSystem\CollegeMS\Resources\Anhthe", Path.GetFileName(txtPic.Text)), true);
+
+        }
+
+        private void pictureBoxStu_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                txtPic.Text = ofd.FileName;
+                pictureBoxStu.Image = Image.FromFile(ofd.FileName);
+                pictureBoxStu.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
     }
 }
