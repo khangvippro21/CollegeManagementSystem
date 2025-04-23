@@ -58,7 +58,7 @@ namespace CollegeMS
             }
             
             chartHocphi.Series.Add(series);
-            chartHocphi.Titles.Add("Tổng học phí theo môn học");
+            chartHocphi.Titles.Add("Tỉ lệ học phí từng môn học");
           
             
         }
@@ -101,7 +101,7 @@ namespace CollegeMS
             chart1.Series.Add(series);
 
             
-            chart1.Titles.Add(new Title("Biểu đồ Tổng Học Phí theo Môn Học")
+            chart1.Titles.Add(new Title("Tổng học phí theo môn học")
             {
                 Font = new Font("Arial", 14, FontStyle.Bold),
                 ForeColor = Color.DarkBlue
