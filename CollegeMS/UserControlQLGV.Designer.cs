@@ -52,8 +52,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnXoaSuaStu = new System.Windows.Forms.Panel();
-            this.dgvGV = new System.Windows.Forms.DataGridView();
             this.btChonAnh = new System.Windows.Forms.Button();
+            this.dgvGV = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGV)).BeginInit();
             this.pnXoaSuaStu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGV)).BeginInit();
@@ -151,7 +151,7 @@
             // pictureBoxGV
             // 
             this.pictureBoxGV.BackColor = System.Drawing.Color.White;
-            this.pictureBoxGV.Location = new System.Drawing.Point(1576, 5);
+            this.pictureBoxGV.Location = new System.Drawing.Point(1591, 5);
             this.pictureBoxGV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBoxGV.Name = "pictureBoxGV";
             this.pictureBoxGV.Size = new System.Drawing.Size(266, 300);
@@ -366,6 +366,16 @@
             this.pnXoaSuaStu.Size = new System.Drawing.Size(1917, 429);
             this.pnXoaSuaStu.TabIndex = 28;
             // 
+            // btChonAnh
+            // 
+            this.btChonAnh.Location = new System.Drawing.Point(1673, 325);
+            this.btChonAnh.Name = "btChonAnh";
+            this.btChonAnh.Size = new System.Drawing.Size(105, 38);
+            this.btChonAnh.TabIndex = 41;
+            this.btChonAnh.Text = "Chọn ảnh";
+            this.btChonAnh.UseVisualStyleBackColor = true;
+            this.btChonAnh.Click += new System.EventHandler(this.btChonAnh_Click);
+            // 
             // dgvGV
             // 
             this.dgvGV.AllowUserToAddRows = false;
@@ -400,16 +410,6 @@
             this.dgvGV.Size = new System.Drawing.Size(1917, 576);
             this.dgvGV.TabIndex = 27;
             this.dgvGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGV_CellContentClick);
-            // 
-            // btChonAnh
-            // 
-            this.btChonAnh.Location = new System.Drawing.Point(1670, 323);
-            this.btChonAnh.Name = "btChonAnh";
-            this.btChonAnh.Size = new System.Drawing.Size(105, 38);
-            this.btChonAnh.TabIndex = 41;
-            this.btChonAnh.Text = "Chọn ảnh";
-            this.btChonAnh.UseVisualStyleBackColor = true;
-            this.btChonAnh.Click += new System.EventHandler(this.btChonAnh_Click);
             // 
             // UserControlQLGV
             // 

@@ -244,7 +244,8 @@ namespace CollegeMS
                 dtpStu.Value = Convert.ToDateTime(row.Cells["StBirth"].Value);
 
                 string fileName = txtPic.Text;
-                string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Anhthe", fileName);
+                string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+                string fullPath = Path.Combine(projectRoot, "Resources", "Anhthe", fileName);
 
                 try
                 {
@@ -326,7 +327,8 @@ namespace CollegeMS
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 string originalFileName = Path.GetFileName(ofd.FileName);
-                string destFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Anhthe");
+                string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+                string destFolder = Path.Combine(projectRoot, "Resources", "Anhthe");
 
                 if (!Directory.Exists(destFolder))
                     Directory.CreateDirectory(destFolder);
