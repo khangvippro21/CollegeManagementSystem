@@ -288,7 +288,7 @@ namespace CollegeMS
                 try
                 {
                     File.Copy(o.FileName, destFilePath, true);
-                    txtPic.Text = file;
+                    txtPic.Text = img;
                     pictureBoxStu.Image = Image.FromFile(destFilePath);
                     pictureBoxStu.SizeMode = PictureBoxSizeMode.Zoom;
 
