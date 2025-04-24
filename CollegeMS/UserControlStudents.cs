@@ -290,7 +290,7 @@ namespace CollegeMS
                     File.Copy(o.FileName, destFilePath, true);
                     txtPic.Text = img;
                     pictureBoxStu.Image = Image.FromFile(destFilePath);
-                    pictureBoxStu.SizeMode = PictureBoxSizeMode.Zoom;
+                    pictureBoxStu.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 }
                 catch (Exception ex)

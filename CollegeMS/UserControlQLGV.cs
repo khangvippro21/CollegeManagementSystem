@@ -218,7 +218,7 @@ namespace CollegeMS
                     if (!string.IsNullOrEmpty(fileName) && File.Exists(fullPath))
                     {
                         pictureBoxGV.Image = Image.FromFile(fullPath);
-                        pictureBoxGV.SizeMode = PictureBoxSizeMode.Zoom;
+                        pictureBoxGV.SizeMode = PictureBoxSizeMode.StretchImage;
                     }
                     else
                     {
@@ -251,7 +251,7 @@ namespace CollegeMS
                     File.Copy(ofd.FileName, destFilePath, true);
                     tbHinhAnh.Text = originalFileName; 
                     pictureBoxGV.Image = Image.FromFile(destFilePath);
-                    pictureBoxGV.SizeMode = PictureBoxSizeMode.Zoom;
+                    pictureBoxGV.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
                 catch (Exception ex)
                 {
