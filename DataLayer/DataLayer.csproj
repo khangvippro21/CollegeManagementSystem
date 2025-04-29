@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bao\BaocaoDAL.cs" />
+    <Compile Include="DKKHDAL.cs" />
     <Compile Include="Nghia\GiangVienAccess.cs" />
     <Compile Include="Khang\Attendance.cs" />
     <Compile Include="DatabaseAccess.cs" />

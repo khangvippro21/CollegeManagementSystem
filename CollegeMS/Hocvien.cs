@@ -42,7 +42,10 @@ namespace CollegeMS
 
         private void btndkkh_Click(object sender, EventArgs e)
         {
-
+            UCStuDKKH dkkhControl = new UCStuDKKH();
+            pncontentStu.Controls.Clear();
+            pncontentStu.Controls.Add(dkkhControl);
+            dkkhControl.Dock = DockStyle.Fill;
         }
 
      
