@@ -38,5 +38,22 @@ namespace CollegeMS
         {
             Application.Exit();
         }
+
+        private void btthoat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Enabled = false;
+            loginForm loginForm = new loginForm();
+            DialogResult result = loginForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                this.Enabled = true;
+                this.Show();
+            }
+            else
+            {
+                this.Close();
+            }
+        }
     }
 }

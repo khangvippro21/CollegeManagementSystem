@@ -33,6 +33,8 @@ namespace CollegeMS
                     dgvMH.Columns["CCredits"].HeaderText = "Số Tín Chỉ";
                     dgvMH.Columns["StartDate"].HeaderText = "Ngày Bắt Đầu";
                     dgvMH.Columns["EndDate"].HeaderText = "Ngày Kết Thúc";
+                    dgvMH.Columns["FeePerCredit"].HeaderText = "Học Phí Từng Tín Chỉ";
+                    dgvMH.Columns["Fee"].HeaderText = "Học Phí Môn Học";
                 }
 
             }
@@ -113,7 +115,9 @@ namespace CollegeMS
             int credits = int.Parse(tbSoTinChi.Text);
             DateTime start = dtpNgayBatDau.Value;
             DateTime end = dtpNgayKetThuc.Value;
-            MonHocDTO monhoc = new MonHocDTO(id, name, desc, credits, start, end);
+            int feePerCredit = int.Parse(tbPerCredit.Text);
+            int fee = feePerCredit * credits;
+            MonHocDTO monhoc = new MonHocDTO(id, name, desc, credits, start, end, fee,feePerCredit);
 
             try
             {
@@ -137,6 +141,7 @@ namespace CollegeMS
             tbMoTaMH.Clear();
             dtpNgayBatDau.Value = DateTime.Today;
             dtpNgayKetThuc.Value=DateTime.Today;
+            tbPerCredit.Clear();
         }
 
 
@@ -149,6 +154,8 @@ namespace CollegeMS
             course1.CCredits = int.Parse(tbSoTinChi.Text);
             course1.StartDate = dtpNgayBatDau.Value;
             course1.EndDate = dtpNgayKetThuc.Value;
+            course1.FeePerCredit=int.Parse(tbPerCredit.Text);
+            course1.Fee = course1.FeePerCredit * course1.CCredits;
             try
             {
                 monhocbl.UpdateCourse(course1);
@@ -174,6 +181,7 @@ namespace CollegeMS
                 tbSoTinChi.Text = row.Cells[3].Value.ToString();
                 dtpNgayBatDau.Value = Convert.ToDateTime(row.Cells[4].Value);
                 dtpNgayKetThuc.Value = Convert.ToDateTime(row.Cells[5].Value);
+                tbPerCredit.Text=row.Cells[6].Value.ToString();
             }
         }
     }

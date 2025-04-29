@@ -61,8 +61,8 @@ namespace DataLayer
         }
         public void InsertMH(MonHocDTO monHoc)
         {
-            string sql = "INSERT INTO Courses (CId, CName, CDescription, CCredits, StartDate, EndDate) " +
-                         "VALUES (@CId,@CName, @CDescription, @CCredits, @StartDate, @EndDate)";
+            string sql = "INSERT INTO Courses (CId, CName, CDescription, CCredits, StartDate, EndDate, Fee, FeePerCredit) " +
+                         "VALUES (@CId,@CName, @CDescription, @CCredits, @StartDate, @EndDate, @Fee, @FeePerCredit)";
             SqlConnection connection = cn;
             SqlCommand cmd = null;
 
@@ -77,6 +77,9 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@CCredits", monHoc.CCredits);
                 cmd.Parameters.AddWithValue("@StartDate", monHoc.StartDate);
                 cmd.Parameters.AddWithValue("@EndDate", monHoc.EndDate);
+                cmd.Parameters.AddWithValue("@Fee", monHoc.Fee);
+                cmd.Parameters.AddWithValue("@FeePerCredit", monHoc.FeePerCredit);
+
 
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("Thêm môn học thành công.");
@@ -101,7 +104,9 @@ namespace DataLayer
                             CDescription = @CDescription, 
                             CCredits = @CCredits, 
                             StartDate = @StartDate, 
-                            EndDate = @EndDate 
+                            EndDate = @EndDate,
+                            Fee=@Fee,
+                            FeePerCredit=@FeePerCredit
                             WHERE CId = @CId";
             SqlConnection connection = cn;
             SqlCommand cmd = new SqlCommand(sql, cn);
@@ -113,6 +118,10 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@CCredits", course.CCredits);
                 cmd.Parameters.AddWithValue("@StartDate", course.StartDate);
                 cmd.Parameters.AddWithValue("@EndDate", course.EndDate);
+                cmd.Parameters.AddWithValue("@Fee", course.Fee);
+                cmd.Parameters.AddWithValue("@FeePerCredit", course.FeePerCredit);
+
+
                 rows = MyExecuteNonQuery(cmd);
                 if (rows > 0)
                 {
