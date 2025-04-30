@@ -24,6 +24,7 @@ namespace CollegeMS
         private UserMainForm prform;
         private DataGridView dgvStudents;
         protected StudentBL studentbl;
+        private StudentDTO student;
         public UserControlStudents()
         {
             InitializeComponent();
@@ -120,8 +121,11 @@ namespace CollegeMS
             try
             {
 
-                studentbl.InsertStudent(newStudent);
-                MessageBox.Show("Thêm học viên thành công!");
+                int result = studentbl.InsertStudent(newStudent);
+                if (result > 0)
+                    MessageBox.Show("Thêm học viên thành công!");
+                else
+                    MessageBox.Show("Không thêm được học viên.");
                 LoadStudentData();
                 ClearInputFields();
 
@@ -169,7 +173,12 @@ namespace CollegeMS
                 {
                     try
                     {
-                        studentbl.DeleteStudent(id); // Gọi BL
+                       int kq= studentbl.DeleteStudent(id);
+                        if (kq > 0)
+                            MessageBox.Show("Xóa học viên thành công!");
+                        else
+                            MessageBox.Show("Không tìm thấy học viên để xóa.");
+
                         dataGridViewStu.Rows.RemoveAt(dataGridViewStu.SelectedRows[0].Index); // Xóa UI
                     }
                     catch (Exception ex)

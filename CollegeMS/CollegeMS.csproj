@@ -53,6 +53,7 @@
     <Compile Include="accountUS.Designer.cs">
       <DependentUpon>accountUS.cs</DependentUpon>
     </Compile>
+    <Compile Include="chung\SessionManager.cs" />
     <Compile Include="dashboardUS.cs">
       <SubType>UserControl</SubType>
     </Compile>
