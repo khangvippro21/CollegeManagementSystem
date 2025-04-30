@@ -50,10 +50,8 @@ namespace CollegeMS
                 {
                     col.ReadOnly = true;
                 }
-
-
                 dgvDKKH.AutoGenerateColumns = false;
-               dgvDKKH.AllowUserToAddRows= false;
+                dgvDKKH.AllowUserToAddRows= false;
             }
         }
 

@@ -98,6 +98,12 @@
     <Compile Include="UCStuDKKH.Designer.cs">
       <DependentUpon>UCStuDKKH.cs</DependentUpon>
     </Compile>
+    <Compile Include="USDangkylichday.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USDangkylichday.Designer.cs">
+      <DependentUpon>USDangkylichday.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlFee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCStuDKKH.resx">
       <DependentUpon>UCStuDKKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USDangkylichday.resx">
+      <DependentUpon>USDangkylichday.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlFee.resx">
       <DependentUpon>UserControlFee.cs</DependentUpon>

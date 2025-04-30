@@ -46,6 +46,7 @@
     <Compile Include="GiangVienBL.cs" />
     <Compile Include="Khang\AttendanceBL.cs" />
     <Compile Include="Khang\CoTble_BL.cs" />
+    <Compile Include="Khang\LecturersCoursesBL.cs" />
     <Compile Include="Khang\LeTble_BL.cs" />
     <Compile Include="Khang\RvTble_BL.cs" />
     <Compile Include="Bao\HocphiBL.cs" />
