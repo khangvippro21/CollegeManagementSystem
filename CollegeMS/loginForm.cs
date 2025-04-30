@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using BusinessLayer.chung;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,6 +52,7 @@ namespace CollegeMS
             }
             if (b)
             {
+                SessionManager.Instance.UserId = UserId;
                 switch (acc.UserRole)
                 {
                     case "Student":

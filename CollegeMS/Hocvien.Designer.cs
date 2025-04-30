@@ -48,6 +48,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbloaichucnang = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.pncontentStu = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 450);
+            this.panel1.Size = new System.Drawing.Size(200, 499);
             this.panel1.TabIndex = 2;
             // 
             // btthoat
@@ -181,7 +182,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 113);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(8, 337);
+            this.panel5.Size = new System.Drawing.Size(8, 386);
             this.panel5.TabIndex = 9;
             // 
             // panel9
@@ -251,7 +252,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(200, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(600, 43);
+            this.panel3.Size = new System.Drawing.Size(660, 43);
             this.panel3.TabIndex = 3;
             // 
             // lbDatetime2
@@ -279,7 +280,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(200, 43);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(600, 73);
+            this.panel4.Size = new System.Drawing.Size(660, 73);
             this.panel4.TabIndex = 4;
             // 
             // lbloaichucnang
@@ -293,15 +294,20 @@
             this.lbloaichucnang.TabIndex = 0;
             this.lbloaichucnang.Text = "?????";
             // 
-            // backgroundWorker1
+            // pncontentStu
             // 
-            
+            this.pncontentStu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pncontentStu.Location = new System.Drawing.Point(200, 116);
+            this.pncontentStu.Name = "pncontentStu";
+            this.pncontentStu.Size = new System.Drawing.Size(660, 383);
+            this.pncontentStu.TabIndex = 5;
             // 
             // Hocvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(860, 499);
+            this.Controls.Add(this.pncontentStu);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -341,5 +347,6 @@
         private System.Windows.Forms.Button btBaocaosuco;
         private System.Windows.Forms.Button btthoat;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Panel pncontentStu;
     }
 }

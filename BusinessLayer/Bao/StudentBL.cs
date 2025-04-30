@@ -14,6 +14,7 @@ namespace BusinessLayer
     {
         private DataLayer.StudentDAL studentdal;
         private DataLayer.UserAccess userAccess;
+        private StudentDTO studentDTO;
         public StudentBL()
         {
             studentdal = new DataLayer.StudentDAL();
@@ -40,7 +41,7 @@ namespace BusinessLayer
         }
 
 
-        public void InsertStudent(StudentDTO student)
+        public int InsertStudent( StudentDTO student)
         {
             if (student == null) throw new ArgumentNullException(nameof(student));
             if (string.IsNullOrEmpty(student.StName)) throw new ArgumentException("Tên học viên không được để trống.", nameof(student.StName));
@@ -59,7 +60,7 @@ namespace BusinessLayer
 
             try
             {
-                studentdal.InsertStudent(student);
+                return studentdal.InsertStudent(student);
             }
             catch (Exception ex)
             {
@@ -67,14 +68,14 @@ namespace BusinessLayer
             }
         }
 
-        public bool UpdateStudent(StudentDTO student)
+        public int UpdateStudent(StudentDTO student)
         {
             return studentdal.UpdateStudent(student);
         }
 
-        public void DeleteStudent(string studentId)
+        public int DeleteStudent(string studentId)
         {
-            studentdal.DeleteStudent(studentId); 
+            return studentdal.DeleteStudent(studentId); 
         }
     }
 }

@@ -31,13 +31,13 @@ namespace DataLayer
         {
             DataTable dt = new DataTable();
             string query = @"
-                    SELECT 
-                    s.StName,
-                    c.CName,
-                    sc.Fee
-                FROM Students s
-                JOIN Students_Courses sc ON s.StId = sc.StId
-                JOIN Courses c ON sc.CId = c.CId";
+                SELECT 
+                s.StName,
+                c.CName,
+                sc.Fee
+            FROM Students s
+            JOIN Students_Courses sc ON s.StId = sc.StId
+            JOIN Courses c ON sc.CId = c.CId";
             MyAdapterExecute(query).Fill(dt);
             return dt;
         }

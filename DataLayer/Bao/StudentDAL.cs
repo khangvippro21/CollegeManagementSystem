@@ -78,7 +78,7 @@ namespace DataLayer
             return lastStudentId;
         }
 
-        public void InsertStudent(StudentDTO student)
+        public int InsertStudent(StudentDTO student)
         {
             string sql = "INSERT INTO Students (StId,StName, StPhone, StEmail, StGender, StAddress, StPath, StBirth) " +
                          "VALUES (@StId,@StName, @StPhone, @StEmail, @StGender, @StAddress, @StPath, @StBirth)";
@@ -99,6 +99,7 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@StBirth", student.StBirth);
 
                 int rows = MyExecuteNonQuery(cmd);
+                
                 if (rows > 0)
                 {
                     Console.WriteLine("Thêm học viên thành công.");
@@ -107,6 +108,7 @@ namespace DataLayer
                 {
                     Console.WriteLine("Không có học viên nào được thêm.");
                 }
+                return rows;
             }
             catch (Exception ex)
             {
@@ -119,14 +121,15 @@ namespace DataLayer
         }
 
 
-        public void DeleteStudent(string studentId)
+        public int DeleteStudent(string studentId)
         {
             string sql = "DELETE FROM Students WHERE StId = @StId";
             try
             {
                 SqlCommand cmd = new SqlCommand(sql);
                 cmd.Parameters.AddWithValue("@StId", studentId);
-                MyExecuteNonQuery(cmd); 
+                int rowsAffected = MyExecuteNonQuery(cmd);
+                return rowsAffected;
             }
             catch (Exception ex)
             {
@@ -134,7 +137,7 @@ namespace DataLayer
             }
         }
 
-        public bool UpdateStudent(StudentDTO student)
+        public int UpdateStudent(StudentDTO student)
         {
             string sql = @"UPDATE Students 
                    SET StName = @StName,
@@ -156,9 +159,10 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@StAddress", student.StAddress);
                 cmd.Parameters.AddWithValue("@StPath", student.Stpath);
                 cmd.Parameters.AddWithValue("@StBirth", student.StBirth);
-                cmd.Parameters.AddWithValue("@StId", student.StId); 
+                cmd.Parameters.AddWithValue("@StId", student.StId);
 
-                return MyExecuteNonQuery(cmd) > 0;
+                int rowsAffected = MyExecuteNonQuery(cmd); 
+                return rowsAffected;
             }
             catch (Exception ex)
             {
