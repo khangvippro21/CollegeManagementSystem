@@ -66,6 +66,12 @@
     <Compile Include="Lecturer\Giangvien.Designer.cs">
       <DependentUpon>Giangvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lecturer\USdsHocVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer\USdsHocVien.Designer.cs">
+      <DependentUpon>USdsHocVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\Hocvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\Giangvien.resx">
       <DependentUpon>Giangvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\USdsHocVien.resx">
+      <DependentUpon>USdsHocVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\Hocvien.resx">
       <DependentUpon>Hocvien.cs</DependentUpon>

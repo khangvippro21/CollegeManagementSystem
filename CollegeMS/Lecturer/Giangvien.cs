@@ -55,5 +55,23 @@ namespace CollegeMS
                 this.Close();
             }
         }
+
+        private void Giangvien_Load(object sender, EventArgs e)
+        {
+            usDangkylichday1.Visible = false;
+            uSdsHocVien1.Visible = false;
+        }
+
+        private void btndkkh_Click(object sender, EventArgs e)
+        {
+            usDangkylichday1.Visible = true;
+            uSdsHocVien1.Visible = false;
+        }
+
+        private void btdsHv_Click(object sender, EventArgs e)
+        {
+            uSdsHocVien1.Visible = true;
+            usDangkylichday1.Visible = false;
+        }
     }
 }

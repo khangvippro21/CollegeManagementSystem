@@ -49,6 +49,7 @@
     <Compile Include="MonHocDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentDTO.cs" />
+    <Compile Include="StudentsCourses.cs" />
     <Compile Include="UserAccount.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

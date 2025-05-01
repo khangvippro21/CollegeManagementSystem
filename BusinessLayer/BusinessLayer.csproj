@@ -50,6 +50,7 @@
     <Compile Include="Khang\LeTble_BL.cs" />
     <Compile Include="Khang\RvTble_BL.cs" />
     <Compile Include="Bao\HocphiBL.cs" />
+    <Compile Include="Khang\StudentsCoursesBL.cs" />
     <Compile Include="MonHocBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Khang\StudentTble_BL.cs" />
