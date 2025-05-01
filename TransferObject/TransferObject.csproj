@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaocaoDTO.cs" />
-    <Compile Include="DKKH.cs" />
     <Compile Include="GiangVien.cs" />
     <Compile Include="HocphiDTO.cs" />
     <Compile Include="LecturersCourses.cs" />
