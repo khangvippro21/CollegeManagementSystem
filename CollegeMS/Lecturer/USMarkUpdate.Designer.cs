@@ -34,18 +34,20 @@
             this.dgvHocvien = new System.Windows.Forms.DataGridView();
             this.dgvMonhoc = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtStdId = new System.Windows.Forms.TextBox();
             this.btSave = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMark = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtHoten = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtStdId = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocvien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonhoc)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -62,7 +64,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(913, 122);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(3, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 24);
             this.label2.TabIndex = 8;
@@ -83,7 +86,7 @@
             this.dgvHocvien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHocvien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvHocvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHocvien.Location = new System.Drawing.Point(917, 174);
+            this.dgvHocvien.Location = new System.Drawing.Point(812, 165);
             this.dgvHocvien.Name = "dgvHocvien";
             this.dgvHocvien.ReadOnly = true;
             this.dgvHocvien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -114,10 +117,29 @@
             this.panel1.Controls.Add(this.txtMark);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtHoten);
-            this.panel1.Location = new System.Drawing.Point(214, 619);
+            this.panel1.Location = new System.Drawing.Point(109, 610);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(564, 346);
             this.panel1.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(49, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 25);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Mã sinh viên";
+            // 
+            // txtStdId
+            // 
+            this.txtStdId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStdId.Location = new System.Drawing.Point(216, 47);
+            this.txtStdId.Name = "txtStdId";
+            this.txtStdId.ReadOnly = true;
+            this.txtStdId.Size = new System.Drawing.Size(293, 29);
+            this.txtStdId.TabIndex = 5;
             // 
             // btSave
             // 
@@ -174,38 +196,29 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.dgvMonhoc);
-            this.panel2.Location = new System.Drawing.Point(214, 122);
+            this.panel2.Location = new System.Drawing.Point(109, 113);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(564, 419);
             this.panel2.TabIndex = 11;
             // 
-            // label6
+            // panel3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(49, 47);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 25);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Mã sinh viên";
-            // 
-            // txtStdId
-            // 
-            this.txtStdId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStdId.Location = new System.Drawing.Point(216, 47);
-            this.txtStdId.Name = "txtStdId";
-            this.txtStdId.ReadOnly = true;
-            this.txtStdId.Size = new System.Drawing.Size(293, 29);
-            this.txtStdId.TabIndex = 5;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(812, 113);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(743, 843);
+            this.panel3.TabIndex = 12;
             // 
             // USMarkUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvHocvien);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
             this.Name = "USMarkUpdate";
             this.Size = new System.Drawing.Size(1870, 1086);
             this.Load += new System.EventHandler(this.USMarkUpdate_Load);
@@ -215,8 +228,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -236,5 +250,6 @@
         private System.Windows.Forms.TextBox txtMark;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtStdId;
+        private System.Windows.Forms.Panel panel3;
     }
 }

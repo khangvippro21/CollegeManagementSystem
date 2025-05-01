@@ -66,12 +66,6 @@
     <Compile Include="Lecturer\Giangvien.Designer.cs">
       <DependentUpon>Giangvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lecturer\USdsHocVien.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Lecturer\USdsHocVien.Designer.cs">
-      <DependentUpon>USdsHocVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="Lecturer\USMarkUpdate.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,9 +148,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\Giangvien.resx">
       <DependentUpon>Giangvien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Lecturer\USdsHocVien.resx">
-      <DependentUpon>USdsHocVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\USMarkUpdate.resx">
       <DependentUpon>USMarkUpdate.cs</DependentUpon>

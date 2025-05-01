@@ -46,6 +46,16 @@ namespace CollegeMS
             monHocTrong = lcBL.getData_AllCourses();
             dgvMonhocTrong.DataSource = monHocTrong;
 
+            if (dgvMonhocTrong.Columns.Count > 0)
+            {
+                dgvMonhocTrong.Columns["Cid"].HeaderText = "Mã Môn";
+                dgvMonhocTrong.Columns["CName"].HeaderText = "Tên Môn Học";
+                dgvMonhocTrong.Columns["CDescription"].HeaderText = "Mô Tả";
+                dgvMonhocTrong.Columns["CCredits"].HeaderText = "Số Tín Chỉ";
+                dgvMonhocTrong.Columns["StartDate"].HeaderText = "Ngày Bắt Đầu";
+                dgvMonhocTrong.Columns["EndDate"].HeaderText = "Ngày Kết Thúc";
+                dgvMonhocTrong.Columns["LecturerName"].HeaderText = "Giảng Viên";
+            }
             if (!HasColumn(dgvMonhocTrong, "Select"))
             {
                 DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn
@@ -75,6 +85,16 @@ namespace CollegeMS
             monHoc = new DataTable();
             monHoc = lcBL.getData(UserId);
             dgvMonhoc.DataSource = monHoc;
+
+            if (dgvMonhoc.Columns.Count > 0)
+            {
+                dgvMonhoc.Columns["Cid"].HeaderText = "Mã Môn";
+                dgvMonhoc.Columns["CName"].HeaderText = "Tên Môn Học";
+                dgvMonhoc.Columns["CDescription"].HeaderText = "Mô Tả";
+                dgvMonhoc.Columns["CCredits"].HeaderText = "Số Tín Chỉ";
+                dgvMonhoc.Columns["StartDate"].HeaderText = "Ngày Bắt Đầu";
+                dgvMonhoc.Columns["EndDate"].HeaderText = "Ngày Kết Thúc";
+            }
 
             if (!HasColumn(dgvMonhoc, "Select"))
             {

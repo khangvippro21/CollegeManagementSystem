@@ -59,27 +59,17 @@ namespace CollegeMS
         private void Giangvien_Load(object sender, EventArgs e)
         {
             usDangkylichday1.Visible = false;
-            uSdsHocVien2.Visible = false;
             usMarkUpdate1.Visible = false;
         }
 
         private void btndkkh_Click(object sender, EventArgs e)
         {
             usDangkylichday1.Visible = true;
-            uSdsHocVien2.Visible = false;
             usMarkUpdate1.Visible = false;
         }
 
-        private void btdsHv_Click(object sender, EventArgs e)
+        private void btNhapdiem_Click(object sender, EventArgs e)
         {
-            uSdsHocVien2.Visible = true;
-            usDangkylichday1.Visible = false;
-            usMarkUpdate1.Visible = false;
-        }
-
-        private void btdanhgia_Click(object sender, EventArgs e)
-        {
-            uSdsHocVien2.Visible = false;
             usDangkylichday1.Visible = false;
             usMarkUpdate1.Visible = true;
         }

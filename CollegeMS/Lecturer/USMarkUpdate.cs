@@ -37,6 +37,16 @@ namespace CollegeMS.Lecturer
             monhoc = new DataTable();
             monhoc = lcBL.getData(userid);
             dgvMonhoc.DataSource = monhoc;
+
+            if (dgvMonhoc.Columns.Count > 0)
+            {
+                dgvMonhoc.Columns["Cid"].HeaderText = "Mã Môn";
+                dgvMonhoc.Columns["CName"].HeaderText = "Tên Môn Học";
+                dgvMonhoc.Columns["CDescription"].HeaderText = "Mô Tả";
+                dgvMonhoc.Columns["CCredits"].HeaderText = "Số Tín Chỉ";
+                dgvMonhoc.Columns["StartDate"].HeaderText = "Ngày Bắt Đầu";
+                dgvMonhoc.Columns["EndDate"].HeaderText = "Ngày Kết Thúc";
+            }
         }
         private void load_StudInCourse()
         {
@@ -46,6 +56,17 @@ namespace CollegeMS.Lecturer
             hocvien = new DataTable();
             hocvien = scBL.getStudInCourse(courseId);
             dgvHocvien.DataSource = hocvien;
+            if (dgvHocvien.Columns.Count > 0)
+            {
+                dgvHocvien.Columns["StId"].HeaderText = "Mã sinh viên";
+                dgvHocvien.Columns["StName"].HeaderText = "Tên sinh viên";
+                dgvHocvien.Columns["StGender"].HeaderText = "Giới tính";
+                dgvHocvien.Columns["StEmail"].HeaderText = "Email";
+                dgvHocvien.Columns["StBirth"].HeaderText = "Ngày sinh";
+                dgvHocvien.Columns["StPhone"].HeaderText = "Số điện thoại";
+                dgvHocvien.Columns["Mark"].HeaderText = "Điểm";
+            }
+            dgvHocvien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void dgvMonhoc_SelectionChanged_1(object sender, EventArgs e)
         {
@@ -72,7 +93,7 @@ namespace CollegeMS.Lecturer
             {
                 txtStdId.Text = dgvHocvien.SelectedRows[0].Cells[0].Value.ToString();
                 txtHoten.Text = dgvHocvien.SelectedRows[0].Cells[1].Value.ToString();
-                txtMark.Text = dgvHocvien.SelectedRows[0].Cells[7].Value.ToString(); 
+                txtMark.Text = dgvHocvien.SelectedRows[0].Cells[6].Value.ToString(); 
             }
             else
             {

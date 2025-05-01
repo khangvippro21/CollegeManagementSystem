@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 723);
+            this.panel1.Size = new System.Drawing.Size(204, 723);
             this.panel1.TabIndex = 2;
             // 
             // btthoat
@@ -225,7 +225,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(198, 113);
+            this.panel2.Size = new System.Drawing.Size(204, 113);
             this.panel2.TabIndex = 0;
             // 
             // lbWelcome
@@ -251,9 +251,9 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(198, 0);
+            this.panel3.Location = new System.Drawing.Point(204, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1038, 28);
+            this.panel3.Size = new System.Drawing.Size(1032, 28);
             this.panel3.TabIndex = 3;
             // 
             // lbDatetime2
@@ -279,9 +279,9 @@
             this.panel4.Controls.Add(this.lbloaichucnang);
             this.panel4.Controls.Add(this.lbDatetime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(198, 28);
+            this.panel4.Location = new System.Drawing.Point(204, 28);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1038, 85);
+            this.panel4.Size = new System.Drawing.Size(1032, 85);
             this.panel4.TabIndex = 4;
             // 
             // lbloaichucnang
@@ -298,10 +298,10 @@
             // pncontentStu
             // 
             this.pncontentStu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pncontentStu.Location = new System.Drawing.Point(198, 113);
-            this.pncontentStu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pncontentStu.Location = new System.Drawing.Point(204, 113);
+            this.pncontentStu.Margin = new System.Windows.Forms.Padding(2);
             this.pncontentStu.Name = "pncontentStu";
-            this.pncontentStu.Size = new System.Drawing.Size(1038, 610);
+            this.pncontentStu.Size = new System.Drawing.Size(1032, 610);
             this.pncontentStu.TabIndex = 5;
             // 
             // Hocvien

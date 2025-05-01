@@ -14,7 +14,7 @@ namespace DataLayer.Khang
     {
         public DataTable getStudInCourse(string coID)
         {
-            string sql = "select s.StId, s.StName, s.StGender, s.StEmail, s.StGender, s.StBirth, s.StPhone, sc.Mark\r\n" +
+            string sql = "select s.StId, s.StName, s.StGender, s.StEmail, s.StBirth, s.StPhone, sc.Mark\r\n" +
                 "from Students s join Students_Courses sc \r\non s.StId = sc.StId join Courses c on sc.CId = c.CId\r\n" +
                 "where c.CId = '" + coID +"'";
             DataTable dt = new DataTable();

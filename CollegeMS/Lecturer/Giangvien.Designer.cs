@@ -31,11 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btthoat = new System.Windows.Forms.Button();
             this.btBaocaosuco = new System.Windows.Forms.Button();
-            this.btdanhgia = new System.Windows.Forms.Button();
-            this.btdsHv = new System.Windows.Forms.Button();
+            this.btNhapdiem = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btndkkh = new System.Windows.Forms.Button();
@@ -48,9 +46,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbloaichucnang = new System.Windows.Forms.Label();
             this.usMarkUpdate1 = new CollegeMS.Lecturer.USMarkUpdate();
-            this.uSdsHocVien2 = new CollegeMS.Lecturer.USdsHocVien();
             this.usDangkylichday1 = new CollegeMS.USDangkylichday();
-            this.uSdsHocVien1 = new CollegeMS.Lecturer.USdsHocVien();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -63,8 +59,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(3)))), ((int)(((byte)(125)))));
             this.panel1.Controls.Add(this.btthoat);
             this.panel1.Controls.Add(this.btBaocaosuco);
-            this.panel1.Controls.Add(this.btdanhgia);
-            this.panel1.Controls.Add(this.btdsHv);
+            this.panel1.Controls.Add(this.btNhapdiem);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.btndkkh);
             this.panel1.Controls.Add(this.panel2);
@@ -86,7 +81,7 @@
             this.btthoat.ForeColor = System.Drawing.Color.White;
             this.btthoat.Image = global::CollegeMS.Properties.Resources.Import2;
             this.btthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btthoat.Location = new System.Drawing.Point(14, 338);
+            this.btthoat.Location = new System.Drawing.Point(14, 285);
             this.btthoat.Name = "btthoat";
             this.btthoat.Size = new System.Drawing.Size(202, 38);
             this.btthoat.TabIndex = 13;
@@ -107,7 +102,7 @@
             this.btBaocaosuco.ForeColor = System.Drawing.Color.White;
             this.btBaocaosuco.Image = global::CollegeMS.Properties.Resources.Error1;
             this.btBaocaosuco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBaocaosuco.Location = new System.Drawing.Point(14, 279);
+            this.btBaocaosuco.Location = new System.Drawing.Point(14, 226);
             this.btBaocaosuco.Name = "btBaocaosuco";
             this.btBaocaosuco.Size = new System.Drawing.Size(202, 38);
             this.btBaocaosuco.TabIndex = 12;
@@ -115,52 +110,30 @@
             this.btBaocaosuco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btBaocaosuco.UseVisualStyleBackColor = true;
             // 
-            // btdanhgia
+            // btNhapdiem
             // 
-            this.btdanhgia.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btdanhgia.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btdanhgia.FlatAppearance.BorderSize = 0;
-            this.btdanhgia.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btdanhgia.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btdanhgia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btdanhgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btdanhgia.ForeColor = System.Drawing.Color.White;
-            this.btdanhgia.Image = global::CollegeMS.Properties.Resources.Scorecard1;
-            this.btdanhgia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btdanhgia.Location = new System.Drawing.Point(14, 220);
-            this.btdanhgia.Name = "btdanhgia";
-            this.btdanhgia.Size = new System.Drawing.Size(202, 38);
-            this.btdanhgia.TabIndex = 11;
-            this.btdanhgia.Text = "              Nhập điểm";
-            this.btdanhgia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btdanhgia.UseVisualStyleBackColor = true;
-            this.btdanhgia.Click += new System.EventHandler(this.btdanhgia_Click);
-            // 
-            // btdsHv
-            // 
-            this.btdsHv.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btdsHv.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btdsHv.FlatAppearance.BorderSize = 0;
-            this.btdsHv.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btdsHv.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btdsHv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btdsHv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btdsHv.ForeColor = System.Drawing.Color.White;
-            this.btdsHv.Image = global::CollegeMS.Properties.Resources.Account1;
-            this.btdsHv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btdsHv.Location = new System.Drawing.Point(14, 166);
-            this.btdsHv.Name = "btdsHv";
-            this.btdsHv.Size = new System.Drawing.Size(202, 38);
-            this.btdsHv.TabIndex = 10;
-            this.btdsHv.Text = "             Thông tin học viên";
-            this.btdsHv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btdsHv.UseVisualStyleBackColor = true;
-            this.btdsHv.Click += new System.EventHandler(this.btdsHv_Click);
+            this.btNhapdiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btNhapdiem.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btNhapdiem.FlatAppearance.BorderSize = 0;
+            this.btNhapdiem.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btNhapdiem.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btNhapdiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btNhapdiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNhapdiem.ForeColor = System.Drawing.Color.White;
+            this.btNhapdiem.Image = global::CollegeMS.Properties.Resources.Scorecard1;
+            this.btNhapdiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btNhapdiem.Location = new System.Drawing.Point(14, 167);
+            this.btNhapdiem.Name = "btNhapdiem";
+            this.btNhapdiem.Size = new System.Drawing.Size(202, 38);
+            this.btNhapdiem.TabIndex = 11;
+            this.btNhapdiem.Text = "              Nhập điểm";
+            this.btNhapdiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btNhapdiem.UseVisualStyleBackColor = true;
+            this.btNhapdiem.Click += new System.EventHandler(this.btNhapdiem_Click);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.panel9);
-            this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
@@ -172,25 +145,17 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(0, 166);
+            this.panel9.Location = new System.Drawing.Point(3, 113);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(8, 38);
+            this.panel9.Size = new System.Drawing.Size(10, 38);
             this.panel9.TabIndex = 14;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(0, 53);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(8, 38);
-            this.panel8.TabIndex = 1;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(0, 105);
+            this.panel7.Location = new System.Drawing.Point(1, 54);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(8, 38);
+            this.panel7.Size = new System.Drawing.Size(10, 38);
             this.panel7.TabIndex = 1;
             // 
             // panel6
@@ -301,6 +266,7 @@
             // 
             // usMarkUpdate1
             // 
+            this.usMarkUpdate1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.usMarkUpdate1.Location = new System.Drawing.Point(216, 113);
             this.usMarkUpdate1.Name = "usMarkUpdate1";
             this.usMarkUpdate1.Size = new System.Drawing.Size(1870, 1086);
@@ -308,11 +274,7 @@
             // 
             // uSdsHocVien2
             // 
-            this.uSdsHocVien2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.uSdsHocVien2.Location = new System.Drawing.Point(216, 113);
-            this.uSdsHocVien2.Name = "uSdsHocVien2";
-            this.uSdsHocVien2.Size = new System.Drawing.Size(1781, 1061);
-            this.uSdsHocVien2.TabIndex = 7;
+
             // 
             // usDangkylichday1
             // 
@@ -324,11 +286,7 @@
             // 
             // uSdsHocVien1
             // 
-            this.uSdsHocVien1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.uSdsHocVien1.Location = new System.Drawing.Point(220, 120);
-            this.uSdsHocVien1.Name = "uSdsHocVien1";
-            this.uSdsHocVien1.Size = new System.Drawing.Size(1776, 977);
-            this.uSdsHocVien1.TabIndex = 7;
+
             // 
             // Giangvien
             // 
@@ -336,7 +294,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1919, 1097);
             this.Controls.Add(this.usMarkUpdate1);
-            this.Controls.Add(this.uSdsHocVien2);
             this.Controls.Add(this.usDangkylichday1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -372,14 +329,11 @@
         private System.Windows.Forms.Label lbloaichucnang;
         private System.Windows.Forms.Button btthoat;
         private System.Windows.Forms.Button btBaocaosuco;
-        private System.Windows.Forms.Button btdanhgia;
-        private System.Windows.Forms.Button btdsHv;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btNhapdiem;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel9;
         private USDangkylichday usDangkylichday1;
-        private Lecturer.USdsHocVien uSdsHocVien1;
-        private Lecturer.USdsHocVien uSdsHocVien2;
+
         private Lecturer.USMarkUpdate usMarkUpdate1;
     }
 }
