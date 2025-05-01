@@ -8,7 +8,7 @@ namespace TransferObject
 {
     public class StudentsCourses
     {
-        public StudentsCourses(string stId, string cId, string fee, string mark)
+        public StudentsCourses(string stId, string cId, decimal fee, decimal mark)
         {
             StId = stId;
             CId = cId;
@@ -18,7 +18,7 @@ namespace TransferObject
 
         public string StId { get; set; }
         public string CId { get; set; }
-        public string Fee { get; set; }
-        public string Mark { get; set;}
+        public decimal Fee { get; set; }
+        public decimal Mark { get; set;}
     }
 }

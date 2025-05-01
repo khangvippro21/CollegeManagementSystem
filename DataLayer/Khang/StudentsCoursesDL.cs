@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using TransferObject;
+using System.Security.Cryptography;
 
 namespace DataLayer.Khang
 {
@@ -21,6 +22,20 @@ namespace DataLayer.Khang
             {
                 MyAdapterExecute(sql).Fill(dt);
                 return dt;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+        public int nhapDiemHocVien(string stId, decimal diem) 
+        {
+            string sql = @"UPDATE Students_Courses
+                          SET Mark = '" + diem + "'" +
+                          "WHERE StId = '" + stId + "'";
+            try
+            {
+                return MyExecuteNonQuery(sql, CommandType.Text);
             }
             catch (SqlException ex)
             {

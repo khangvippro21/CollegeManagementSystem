@@ -72,6 +72,12 @@
     <Compile Include="Lecturer\USdsHocVien.Designer.cs">
       <DependentUpon>USdsHocVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lecturer\USMarkUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer\USMarkUpdate.Designer.cs">
+      <DependentUpon>USMarkUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\Hocvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\USdsHocVien.resx">
       <DependentUpon>USdsHocVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\USMarkUpdate.resx">
+      <DependentUpon>USMarkUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\Hocvien.resx">
       <DependentUpon>Hocvien.cs</DependentUpon>
@@ -358,6 +367,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Erase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tick Box.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

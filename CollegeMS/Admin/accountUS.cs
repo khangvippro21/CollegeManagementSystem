@@ -102,7 +102,7 @@ namespace CollegeMS
             }
             else
             {
-                MessageBox.Show("Passwords do not match !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Password does not match !!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNewpass2.Focus();
                 return;
             }

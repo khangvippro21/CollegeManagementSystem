@@ -47,8 +47,10 @@
             this.lbDatetime = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbloaichucnang = new System.Windows.Forms.Label();
-            this.uSdsHocVien1 = new CollegeMS.Lecturer.USdsHocVien();
+            this.usMarkUpdate1 = new CollegeMS.Lecturer.USMarkUpdate();
+            this.uSdsHocVien2 = new CollegeMS.Lecturer.USdsHocVien();
             this.usDangkylichday1 = new CollegeMS.USDangkylichday();
+            this.uSdsHocVien1 = new CollegeMS.Lecturer.USdsHocVien();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -132,6 +134,7 @@
             this.btdanhgia.Text = "              Nhập điểm";
             this.btdanhgia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btdanhgia.UseVisualStyleBackColor = true;
+            this.btdanhgia.Click += new System.EventHandler(this.btdanhgia_Click);
             // 
             // btdsHv
             // 
@@ -296,13 +299,20 @@
             this.lbloaichucnang.TabIndex = 0;
             this.lbloaichucnang.Text = "?????";
             // 
-            // uSdsHocVien1
+            // usMarkUpdate1
             // 
-            this.uSdsHocVien1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.uSdsHocVien1.Location = new System.Drawing.Point(220, 120);
-            this.uSdsHocVien1.Name = "uSdsHocVien1";
-            this.uSdsHocVien1.Size = new System.Drawing.Size(1776, 977);
-            this.uSdsHocVien1.TabIndex = 7;
+            this.usMarkUpdate1.Location = new System.Drawing.Point(216, 113);
+            this.usMarkUpdate1.Name = "usMarkUpdate1";
+            this.usMarkUpdate1.Size = new System.Drawing.Size(1870, 1086);
+            this.usMarkUpdate1.TabIndex = 8;
+            // 
+            // uSdsHocVien2
+            // 
+            this.uSdsHocVien2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.uSdsHocVien2.Location = new System.Drawing.Point(216, 113);
+            this.uSdsHocVien2.Name = "uSdsHocVien2";
+            this.uSdsHocVien2.Size = new System.Drawing.Size(1781, 1061);
+            this.uSdsHocVien2.TabIndex = 7;
             // 
             // usDangkylichday1
             // 
@@ -312,12 +322,21 @@
             this.usDangkylichday1.Size = new System.Drawing.Size(1717, 975);
             this.usDangkylichday1.TabIndex = 6;
             // 
+            // uSdsHocVien1
+            // 
+            this.uSdsHocVien1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.uSdsHocVien1.Location = new System.Drawing.Point(220, 120);
+            this.uSdsHocVien1.Name = "uSdsHocVien1";
+            this.uSdsHocVien1.Size = new System.Drawing.Size(1776, 977);
+            this.uSdsHocVien1.TabIndex = 7;
+            // 
             // Giangvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1919, 1097);
-            this.Controls.Add(this.uSdsHocVien1);
+            this.Controls.Add(this.usMarkUpdate1);
+            this.Controls.Add(this.uSdsHocVien2);
             this.Controls.Add(this.usDangkylichday1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -360,5 +379,7 @@
         private System.Windows.Forms.Panel panel9;
         private USDangkylichday usDangkylichday1;
         private Lecturer.USdsHocVien uSdsHocVien1;
+        private Lecturer.USdsHocVien uSdsHocVien2;
+        private Lecturer.USMarkUpdate usMarkUpdate1;
     }
 }

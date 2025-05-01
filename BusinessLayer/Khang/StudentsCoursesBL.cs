@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using DataLayer;
 using System.Threading.Tasks;
 using DataLayer.Khang;
+using System.Security.Cryptography;
 
 namespace BusinessLayer.Khang
 {
@@ -23,6 +24,17 @@ namespace BusinessLayer.Khang
             try
             {
                 return scDL.getStudInCourse(coID);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+        public int nhapDiemHocVien(string stid, decimal diem)
+        {
+            try
+            {
+                return scDL.nhapDiemHocVien(stid, diem);
             }
             catch (SqlException ex)
             {
