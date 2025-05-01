@@ -14,8 +14,11 @@ namespace TransferObject
             public int CCredits { get; set; }
             public DateTime StartDate { get; set; }
             public DateTime EndDate { get; set; }
+            
+            public int Fee { get; set; }
+            public int FeePerCredit { get; set; }
 
-        public MonHocDTO(string cId, string cName, string cDescription, int cCredits, DateTime startDate, DateTime endDate)
+        public MonHocDTO(string cId, string cName, string cDescription, int cCredits, DateTime startDate, DateTime endDate, int fee, int feePerCredit)
         {
             CId = cId;
             CName = cName;
@@ -23,6 +26,8 @@ namespace TransferObject
             CCredits = cCredits;
             StartDate = startDate;
             EndDate = endDate;
+            Fee = fee;
+            FeePerCredit = feePerCredit;
         }
         public MonHocDTO() 
         { }

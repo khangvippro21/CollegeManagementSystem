@@ -68,7 +68,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 1145);
+            this.panel1.Size = new System.Drawing.Size(200, 1097);
             this.panel1.TabIndex = 3;
             // 
             // btthoat
@@ -85,11 +85,12 @@
             this.btthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btthoat.Location = new System.Drawing.Point(14, 338);
             this.btthoat.Name = "btthoat";
-            this.btthoat.Size = new System.Drawing.Size(182, 37);
+            this.btthoat.Size = new System.Drawing.Size(181, 38);
             this.btthoat.TabIndex = 13;
             this.btthoat.Text = "              Thoát";
             this.btthoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btthoat.UseVisualStyleBackColor = true;
+            this.btthoat.Click += new System.EventHandler(this.btthoat_Click);
             // 
             // btBaocaosuco
             // 
@@ -105,7 +106,7 @@
             this.btBaocaosuco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btBaocaosuco.Location = new System.Drawing.Point(14, 279);
             this.btBaocaosuco.Name = "btBaocaosuco";
-            this.btBaocaosuco.Size = new System.Drawing.Size(182, 37);
+            this.btBaocaosuco.Size = new System.Drawing.Size(181, 38);
             this.btBaocaosuco.TabIndex = 12;
             this.btBaocaosuco.Text = "              Báo cáo sự cố";
             this.btBaocaosuco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,9 +124,9 @@
             this.btdanhgia.ForeColor = System.Drawing.Color.White;
             this.btdanhgia.Image = global::CollegeMS.Properties.Resources.Scorecard1;
             this.btdanhgia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btdanhgia.Location = new System.Drawing.Point(14, 219);
+            this.btdanhgia.Location = new System.Drawing.Point(14, 220);
             this.btdanhgia.Name = "btdanhgia";
-            this.btdanhgia.Size = new System.Drawing.Size(182, 37);
+            this.btdanhgia.Size = new System.Drawing.Size(181, 38);
             this.btdanhgia.TabIndex = 11;
             this.btdanhgia.Text = "              Nhập điểm";
             this.btdanhgia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,7 +146,7 @@
             this.bthocphi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bthocphi.Location = new System.Drawing.Point(14, 166);
             this.bthocphi.Name = "bthocphi";
-            this.bthocphi.Size = new System.Drawing.Size(182, 37);
+            this.bthocphi.Size = new System.Drawing.Size(181, 38);
             this.bthocphi.TabIndex = 10;
             this.bthocphi.Text = "             Thông tin học viên";
             this.bthocphi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,7 +161,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 113);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(8, 1032);
+            this.panel5.Size = new System.Drawing.Size(8, 984);
             this.panel5.TabIndex = 9;
             // 
             // panel9
@@ -168,31 +169,31 @@
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Location = new System.Drawing.Point(0, 166);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(8, 37);
+            this.panel9.Size = new System.Drawing.Size(8, 38);
             this.panel9.TabIndex = 14;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(0, 54);
+            this.panel8.Location = new System.Drawing.Point(0, 53);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(8, 37);
+            this.panel8.Size = new System.Drawing.Size(8, 38);
             this.panel8.TabIndex = 1;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(0, 106);
+            this.panel7.Location = new System.Drawing.Point(0, 105);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(8, 37);
+            this.panel7.Size = new System.Drawing.Size(8, 38);
             this.panel7.TabIndex = 1;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(2, 0);
+            this.panel6.Location = new System.Drawing.Point(1, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(8, 37);
+            this.panel6.Size = new System.Drawing.Size(8, 38);
             this.panel6.TabIndex = 0;
             // 
             // btndkkh
@@ -209,7 +210,7 @@
             this.btndkkh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndkkh.Location = new System.Drawing.Point(14, 113);
             this.btndkkh.Name = "btndkkh";
-            this.btndkkh.Size = new System.Drawing.Size(182, 37);
+            this.btndkkh.Size = new System.Drawing.Size(181, 38);
             this.btndkkh.TabIndex = 1;
             this.btndkkh.Text = "             Đăng kí lịch dạy";
             this.btndkkh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,7 +230,7 @@
             // 
             this.lbWelcome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWelcome.ForeColor = System.Drawing.Color.White;
-            this.lbWelcome.Location = new System.Drawing.Point(40, 67);
+            this.lbWelcome.Location = new System.Drawing.Point(40, 66);
             this.lbWelcome.Name = "lbWelcome";
             this.lbWelcome.Size = new System.Drawing.Size(118, 32);
             this.lbWelcome.TabIndex = 1;
@@ -240,7 +241,7 @@
             this.pictureBox1.Image = global::CollegeMS.Properties.Resources.Student_Center;
             this.pictureBox1.Location = new System.Drawing.Point(74, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -250,7 +251,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(200, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1654, 43);
+            this.panel3.Size = new System.Drawing.Size(1719, 43);
             this.panel3.TabIndex = 4;
             // 
             // lbDatetime2
@@ -264,7 +265,7 @@
             // lbDatetime
             // 
             this.lbDatetime.AutoSize = true;
-            this.lbDatetime.Location = new System.Drawing.Point(-112, 31);
+            this.lbDatetime.Location = new System.Drawing.Point(-113, 31);
             this.lbDatetime.Name = "lbDatetime";
             this.lbDatetime.Size = new System.Drawing.Size(0, 13);
             this.lbDatetime.TabIndex = 1;
@@ -278,7 +279,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(200, 43);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1654, 73);
+            this.panel4.Size = new System.Drawing.Size(1719, 73);
             this.panel4.TabIndex = 5;
             // 
             // lbloaichucnang
@@ -294,17 +295,17 @@
             // 
             // usDangkylichday1
             // 
-            this.usDangkylichday1.Location = new System.Drawing.Point(200, 117);
-            this.usDangkylichday1.Margin = new System.Windows.Forms.Padding(2);
+            this.usDangkylichday1.Location = new System.Drawing.Point(202, 120);
+            this.usDangkylichday1.Margin = new System.Windows.Forms.Padding(1);
             this.usDangkylichday1.Name = "usDangkylichday1";
-            this.usDangkylichday1.Size = new System.Drawing.Size(2013, 1062);
+            this.usDangkylichday1.Size = new System.Drawing.Size(1717, 975);
             this.usDangkylichday1.TabIndex = 6;
             // 
             // Giangvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1854, 1145);
+            this.ClientSize = new System.Drawing.Size(1919, 1097);
             this.Controls.Add(this.usDangkylichday1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
