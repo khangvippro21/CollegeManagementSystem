@@ -25,7 +25,7 @@ namespace DataLayer
         public DataTable SearchStudent(string keyword)
         {
             DataTable dt = new DataTable();
-            string sql = "SELECT * FROM Students WHERE StName LIKE @keyword";
+            string sql = "SELECT * FROM Students WHERE StName LIKE @keyword OR StId LIKE @keyword";
 
             try
             {
@@ -80,8 +80,8 @@ namespace DataLayer
 
         public int InsertStudent(StudentDTO student)
         {
-            string sql = "INSERT INTO Students (StId,StName, StPhone, StEmail, StGender, StAddress, StPath, StBirth) " +
-                         "VALUES (@StId,@StName, @StPhone, @StEmail, @StGender, @StAddress, @StPath, @StBirth)";
+            string sql = "INSERT INTO Students (StId,StName, StPhone, StEmail, StGender, StAddress, StPath, StBirth, StQRCodePath) " +
+                         "VALUES (@StId,@StName, @StPhone, @StEmail, @StGender, @StAddress, @StPath, @StBirth, @StQRCodePath)";
 
             try
             {
@@ -97,6 +97,7 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@StAddress", student.StAddress);
                 cmd.Parameters.AddWithValue("@StPath", student.Stpath);
                 cmd.Parameters.AddWithValue("@StBirth", student.StBirth);
+                cmd.Parameters.AddWithValue("@StQRCodePath", student.StQRCodePath);    
 
                 int rows = MyExecuteNonQuery(cmd);
                 

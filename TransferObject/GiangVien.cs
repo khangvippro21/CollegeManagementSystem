@@ -16,7 +16,20 @@ namespace TransferObject
         public string LeAddress { get; set; }
         public string LePath { get; set; }
         public DateTime LeBirth { get; set; }
+        public string LeQRCodePath {  get; set; }
 
+        public GiangVien(string leId, string leName, string lePhone, string leEmail, string leGender, string leAddress, string lePath, DateTime leBirth, string leQRCodePath)
+        {
+            LeId = leId;
+            LeName = leName;
+            LePhone = lePhone;
+            LeEmail = leEmail;
+            LeGender = leGender;
+            LeAddress = leAddress;
+            LePath = lePath;
+            LeBirth = leBirth;
+            LeQRCodePath = leQRCodePath;
+        }
         public GiangVien(string leId, string leName, string lePhone, string leEmail, string leGender, string leAddress, string lePath, DateTime leBirth)
         {
             LeId = leId;
