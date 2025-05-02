@@ -55,7 +55,7 @@ namespace CollegeMS
                 SessionManager.Instance.UserId = UserId;
                 switch (acc.UserRole)
                 {
-                    case "Student":
+                    case "student":
                         hv.Show();
                         return;
                     case "Lecturer":

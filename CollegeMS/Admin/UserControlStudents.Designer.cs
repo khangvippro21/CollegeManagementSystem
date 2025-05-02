@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewStu = new System.Windows.Forms.DataGridView();
             this.pnXoaSuaStu = new System.Windows.Forms.Panel();
+            this.txtPic = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.picbScan = new System.Windows.Forms.PictureBox();
             this.btDung = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPic = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStu)).BeginInit();
             this.pnXoaSuaStu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbScan)).BeginInit();
@@ -71,23 +71,23 @@
             this.dataGridViewStu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewStu.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewStu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewStu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewStu.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewStu.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewStu.EnableHeadersVisualStyles = false;
             this.dataGridViewStu.Location = new System.Drawing.Point(4, 342);
             this.dataGridViewStu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -131,8 +131,31 @@
             this.pnXoaSuaStu.Location = new System.Drawing.Point(0, 2);
             this.pnXoaSuaStu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pnXoaSuaStu.Name = "pnXoaSuaStu";
-            this.pnXoaSuaStu.Size = new System.Drawing.Size(1708, 336);
+            this.pnXoaSuaStu.Size = new System.Drawing.Size(1712, 336);
             this.pnXoaSuaStu.TabIndex = 9;
+            // 
+            // txtPic
+            // 
+            this.txtPic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPic.Location = new System.Drawing.Point(285, 284);
+            this.txtPic.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtPic.Name = "txtPic";
+            this.txtPic.Size = new System.Drawing.Size(321, 30);
+            this.txtPic.TabIndex = 52;
+            this.txtPic.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(156, 284);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(116, 25);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "picturePath:";
+            this.label8.Visible = false;
             // 
             // comboBox1
             // 
@@ -150,7 +173,7 @@
             this.picbScan.Location = new System.Drawing.Point(921, 171);
             this.picbScan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picbScan.Name = "picbScan";
-            this.picbScan.Size = new System.Drawing.Size(182, 138);
+            this.picbScan.Size = new System.Drawing.Size(182, 143);
             this.picbScan.TabIndex = 47;
             this.picbScan.TabStop = false;
             // 
@@ -160,7 +183,7 @@
             this.btDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDung.ForeColor = System.Drawing.Color.White;
             this.btDung.Location = new System.Drawing.Point(797, 176);
-            this.btDung.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btDung.Margin = new System.Windows.Forms.Padding(4);
             this.btDung.Name = "btDung";
             this.btDung.Size = new System.Drawing.Size(103, 32);
             this.btDung.TabIndex = 46;
@@ -186,7 +209,7 @@
             this.btScan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btScan.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btScan.Location = new System.Drawing.Point(797, 129);
-            this.btScan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btScan.Margin = new System.Windows.Forms.Padding(4);
             this.btScan.Name = "btScan";
             this.btScan.Size = new System.Drawing.Size(103, 32);
             this.btScan.TabIndex = 45;
@@ -292,6 +315,7 @@
             this.pictureBoxStu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBoxStu.Name = "pictureBoxStu";
             this.pictureBoxStu.Size = new System.Drawing.Size(221, 242);
+            this.pictureBoxStu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxStu.TabIndex = 35;
             this.pictureBoxStu.TabStop = false;
             // 
@@ -448,29 +472,6 @@
             this.label2.Size = new System.Drawing.Size(101, 25);
             this.label2.TabIndex = 20;
             this.label2.Text = "Họ và tên:";
-            // 
-            // txtPic
-            // 
-            this.txtPic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPic.Location = new System.Drawing.Point(285, 284);
-            this.txtPic.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.txtPic.Name = "txtPic";
-            this.txtPic.Size = new System.Drawing.Size(321, 30);
-            this.txtPic.TabIndex = 52;
-            this.txtPic.Visible = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(156, 284);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 25);
-            this.label8.TabIndex = 51;
-            this.label8.Text = "picturePath:";
-            this.label8.Visible = false;
             // 
             // UserControlStudents
             // 
