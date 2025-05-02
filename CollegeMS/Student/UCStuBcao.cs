@@ -12,11 +12,12 @@ using BusinessLayer.chung;
 
 namespace CollegeMS
 {
-    public partial class UCStuBcao: UserControl
+    public partial class UCStuBcao : UserControl
     {
 
         private BaocaoBL baocaoBL = new BaocaoBL();
         private ReviewBL reviewBL = new ReviewBL();
+        string leId;
         public UCStuBcao()
         {
             InitializeComponent();
@@ -27,12 +28,12 @@ namespace CollegeMS
             LoadRegisteredCourses();
         }
 
-            private void LoadRegisteredCourses()
-            {
+        private void LoadRegisteredCourses()
+        {
             try
             {
                 string studentId = SessionManager.Instance.UserId;
-                
+
 
                 DataTable dt = baocaoBL.laydsmonhoc(studentId);
                 if (dt.Rows.Count == 0)
@@ -46,7 +47,7 @@ namespace CollegeMS
                 cbbKhoahoc.DataSource = dt;
                 cbbKhoahoc.DisplayMember = "CourseName";
                 cbbKhoahoc.ValueMember = "CId";
-                cbbKhoahoc.SelectedIndex = -1; 
+                cbbKhoahoc.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -56,31 +57,31 @@ namespace CollegeMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-                string studentId = SessionManager.Instance.UserId;
-                if (cbbKhoahoc.SelectedValue == null)
-                {
-                    MessageBox.Show("Chọn một môn học.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                string courseId = cbbKhoahoc.SelectedValue.ToString();
-                string detail = rtbreport.Text.Trim();
-                if (string.IsNullOrEmpty(detail))
-                {
-                    MessageBox.Show("Nhập mô tả sự cố.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                string problemId = baocaoBL.baocaosuco(studentId, courseId, detail);
-                if (!string.IsNullOrEmpty(problemId))
-                {
-                    MessageBox.Show("Gửi thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    rtbreport.Clear();
-                    cbbKhoahoc.SelectedIndex = -1;
-                }
-                else
-                {
-                    MessageBox.Show("Không thể gửi.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+
+            string studentId = SessionManager.Instance.UserId;
+            if (cbbKhoahoc.SelectedValue == null)
+            {
+                MessageBox.Show("Chọn một môn học.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string courseId = cbbKhoahoc.SelectedValue.ToString();
+            string detail = rtbreport.Text.Trim();
+            if (string.IsNullOrEmpty(detail))
+            {
+                MessageBox.Show("Nhập mô tả sự cố.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string problemId = baocaoBL.baocaosuco(studentId, courseId, detail);
+            if (!string.IsNullOrEmpty(problemId))
+            {
+                MessageBox.Show("Gửi thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                rtbreport.Clear();
+                cbbKhoahoc.SelectedIndex = -1;
+            }
+            else
+            {
+                MessageBox.Show("Không thể gửi.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void cbbKhoahoc_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,12 +99,12 @@ namespace CollegeMS
                 DataTable dt = reviewBL.laythontingv(courseId);
                 if (dt.Rows.Count == 0)
                 {
-                    
                     ClearLecturerInfo();
                     return;
                 }
 
                 DataRow row = dt.Rows[0];
+                leId = row["LeId"].ToString();
                 txttengv.Text = row["LeName"].ToString();
                 txtmailgv.Text = row["LeEmail"].ToString();
                 txtsdtgv.Text = row["LePhone"].ToString();
@@ -124,65 +125,35 @@ namespace CollegeMS
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-                string studentId = SessionManager.Instance.UserId;
-                string courseId = cbbKhoahoc.SelectedValue.ToString();
-                string detail = rtbreview.Text.Trim();
-                if (string.IsNullOrEmpty(detail))
-                {
-                    MessageBox.Show("Vui lòng nhập đánh giá.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+            string studentId = SessionManager.Instance.UserId;
+            string courseId = cbbKhoahoc.SelectedValue.ToString();
+            string comment = rtbreview.Text.Trim();
+            if (string.IsNullOrEmpty(comment))
+            {
+                MessageBox.Show("Nhập nội dung đánh giá.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                string problemId = baocaoBL.baocaosuco(studentId, courseId, detail);
-                if (!string.IsNullOrEmpty(problemId))
-                {
-                    MessageBox.Show("Đánh giá giảng viên đã được gửi thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    rtbreview.Clear();
-                    cbbKhoahoc.SelectedIndex = -1;
-                    ClearLecturerInfo();
-                }
-                else
-                {
-                    MessageBox.Show("Không thể gửi báo cáo sự cố.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            
-           
-        }
+            DataTable dt = reviewBL.laythontingv(courseId);
+            if (dt.Rows.Count == 0)
+            {
+                ClearLecturerInfo();
+                return;
+            }
 
-        private void btnSubmitEvaluation_Click(object sender, EventArgs e)
-        {
-                string studentId = SessionManager.Instance.UserId;
-                string courseId = cbbKhoahoc.SelectedValue.ToString();
-                string comment = rtbreview.Text.Trim();
-                if (string.IsNullOrEmpty(comment))
-                {
-                    MessageBox.Show("Nhập nội dung đánh giá.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-               
-                DataTable dt = reviewBL.laythontingv(courseId);
-                        if (dt.Rows.Count == 0)
-                        {
-                            ClearLecturerInfo();
-                            return;
-                        }
+            string lecturerId = dt.Rows[0]["LeId"].ToString();
+            int reviewId = reviewBL.guidahgia(studentId, lecturerId, courseId, comment);
+            if (reviewId > 0)
+            {
+                MessageBox.Show("Đánh giá giảng viên đã được gửi thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                rtbreview.Clear();
+                cbbKhoahoc.SelectedIndex = -1;
 
-                string lecturerId = dt.Rows[0]["LeId"].ToString();
-                int reviewId = reviewBL.guidahgia(studentId, lecturerId, courseId, comment);
-                if (reviewId > 0)
-                {
-                    MessageBox.Show("Đánh giá giảng viên đã được gửi thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    rtbreview.Clear();
-                    cbbKhoahoc.SelectedIndex = -1;
-                    
-                }
-                else
-                {
-                    MessageBox.Show("Không thể gửi đánh giá giảng viên.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            
-            
+            }
+            else
+            {
+                MessageBox.Show("hello!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
