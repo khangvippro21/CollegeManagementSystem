@@ -86,8 +86,8 @@ namespace CollegeMS
                 {
                     try
                     {
-                        monhocbl.deleteCourse(id); 
-                        dgvMH.Rows.RemoveAt(dgvMH.SelectedRows[0].Index); 
+                        monhocbl.deleteCourse(id);
+                        dgvMH.Rows.RemoveAt(dgvMH.SelectedRows[0].Index);
                     }
                     catch (Exception ex)
                     {
@@ -117,7 +117,7 @@ namespace CollegeMS
             DateTime end = dtpNgayKetThuc.Value;
             int feePerCredit = int.Parse(tbPerCredit.Text);
             int fee = feePerCredit * credits;
-            MonHocDTO monhoc = new MonHocDTO(id, name, desc, credits, start, end, fee,feePerCredit);
+            MonHocDTO monhoc = new MonHocDTO(id, name, desc, credits, start, end, fee, feePerCredit);
 
             try
             {
@@ -140,21 +140,21 @@ namespace CollegeMS
             tbTimMH.Clear();
             tbMoTaMH.Clear();
             dtpNgayBatDau.Value = DateTime.Today;
-            dtpNgayKetThuc.Value=DateTime.Today;
+            dtpNgayKetThuc.Value = DateTime.Today;
             tbPerCredit.Clear();
         }
 
 
         private void btSuaMH_Click_1(object sender, EventArgs e)
         {
-            MonHocDTO course1=new MonHocDTO();
+            MonHocDTO course1 = new MonHocDTO();
             course1.CId = tbMaMH.Text;
             course1.CName = tbTenMH.Text;
             course1.CDescription = tbMoTaMH.Text;
             course1.CCredits = int.Parse(tbSoTinChi.Text);
             course1.StartDate = dtpNgayBatDau.Value;
             course1.EndDate = dtpNgayKetThuc.Value;
-            course1.FeePerCredit=int.Parse(tbPerCredit.Text);
+            course1.FeePerCredit = int.Parse(tbPerCredit.Text);
             course1.Fee = course1.FeePerCredit * course1.CCredits;
             try
             {
@@ -181,8 +181,10 @@ namespace CollegeMS
                 tbSoTinChi.Text = row.Cells[3].Value.ToString();
                 dtpNgayBatDau.Value = Convert.ToDateTime(row.Cells[4].Value);
                 dtpNgayKetThuc.Value = Convert.ToDateTime(row.Cells[5].Value);
-                tbPerCredit.Text=row.Cells[6].Value.ToString();
+                tbPerCredit.Text = row.Cells[6].Value.ToString();
             }
         }
+
+
     }
 }

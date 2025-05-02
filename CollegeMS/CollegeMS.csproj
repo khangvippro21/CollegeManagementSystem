@@ -74,7 +74,7 @@
     <Compile Include="Admin\accountUS.Designer.cs">
       <DependentUpon>accountUS.cs</DependentUpon>
     </Compile>
-    <Compile Include="chung\SessionManager.cs" />
+    <Compile Include="Admin\chung\SessionManager.cs" />
     <Compile Include="Admin\dashboardUS.cs">
       <SubType>UserControl</SubType>
     </Compile>
