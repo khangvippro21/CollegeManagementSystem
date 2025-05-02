@@ -77,7 +77,11 @@ namespace CollegeMS
         }
         private void LoadCourses()
         {
-            DataTable courses = dkkhbl.laydsmonhoc();
+            string studentId = SessionManager.Instance.UserId;
+
+            DataTable courses = dkkhbl.laydsmonhoc(studentId);
+           
+           
 
             // Kiểm tra dữ liệu
             if (courses.Rows.Count == 0)
@@ -238,6 +242,7 @@ namespace CollegeMS
 
             if (hasRegisteredAny)
                 LoadSelectedCourses();
+            LoadCourses();
         }
 
         private void btnxoa_Click(object sender, EventArgs e)

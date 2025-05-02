@@ -46,6 +46,7 @@ namespace CollegeMS
             UCStuDKKH dkkhControl = new UCStuDKKH();
             pncontentStu.Controls.Clear();
             pncontentStu.Controls.Add(dkkhControl);
+            lbchucnang.Text=btndkkh.Text;
             dkkhControl.Dock = DockStyle.Fill;
         }
 
@@ -71,6 +72,7 @@ namespace CollegeMS
             UCStuBcao baocao = new UCStuBcao();
             pncontentStu.Controls.Clear();
             pncontentStu.Controls.Add(baocao);
+            lbchucnang.Text = btBaocaosuco.Text;
             baocao.Dock = DockStyle.Fill;
         }
 
@@ -79,6 +81,7 @@ namespace CollegeMS
             Xemhocphi xemhocphi = new Xemhocphi();
             pncontentStu.Controls.Clear();
             pncontentStu.Controls.Add(xemhocphi);
+            lbchucnang.Text = bthocphi.Text;
             xemhocphi.Dock = DockStyle.Fill;
         }
     }

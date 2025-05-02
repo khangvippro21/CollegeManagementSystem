@@ -75,7 +75,10 @@ namespace DataLayer
             try
             {
                 object result = MyExecuteScalar(getMaxIdQuery, CommandType.Text);
-                maxId = result?.ToString();
+                if (result != null && result != DBNull.Value)
+                {
+                    maxId = result.ToString();
+                }
             }
             catch (SqlException ex)
             {

@@ -114,41 +114,35 @@ namespace DataLayer
         public string GenerateNewUserId(string prefix)
         {
             string sql = @"
-                SELECT TOP 1 UserId 
-                FROM Users 
-                WHERE UserId LIKE @Prefix + '[0-9][0-9][0-9]' 
-                ORDER BY UserId DESC";
+            SELECT TOP 1 UserId 
+            FROM Users 
+            WHERE UserId LIKE @Prefix + '[0-9][0-9][0-9]' 
+            ORDER BY UserId DESC";
 
             string lastUserId = string.Empty;
             int newIdNumber = 1;
+
+            SqlCommand cmd = new SqlCommand(sql);
+            cmd.Parameters.AddWithValue("@Prefix", prefix);
+
             try
             {
-                Connect();
-                using (SqlCommand cmd = new SqlCommand(sql, cn))
+                object result = MyExecuteScalar(cmd);
+                if (result != null && result != DBNull.Value)
                 {
-                    cmd.Parameters.AddWithValue("@Prefix", prefix);
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    lastUserId = result.ToString();
+                    string lastIdNumberStr = lastUserId.Substring(prefix.Length);
+                    if (int.TryParse(lastIdNumberStr, out int lastIdNumber))
                     {
-                        if (reader.Read())
-                        {
-                            lastUserId = reader["UserId"].ToString();
-                        }
+                        newIdNumber = lastIdNumber + 1;
                     }
                 }
             }
             catch (SqlException ex)
             {
-                throw new Exception("Lỗi khi lấy mã người dùng cuối cùng: " + ex.Message);
+                throw new Exception("Lỗi khi lấy mã người dùng cuối cùng: " + ex.Message, ex);
             }
 
-            if (!string.IsNullOrEmpty(lastUserId))
-            {
-                string lastIdNumberStr = lastUserId.Substring(prefix.Length);
-                if (int.TryParse(lastIdNumberStr, out int lastIdNumber))
-                {
-                    newIdNumber = lastIdNumber + 1;
-                }
-            }
             return prefix + newIdNumber.ToString("D3");
         }
 
@@ -160,45 +154,38 @@ namespace DataLayer
             }
 
             string sql = "INSERT INTO Users (UserId, UserPass, UserRole) VALUES (@UserId, @UserPass, @UserRole)";
-
+            SqlCommand cmd = new SqlCommand(sql);
+            cmd.Parameters.AddWithValue("@UserId", userId);
+            cmd.Parameters.AddWithValue("@UserPass", userPass);
+            cmd.Parameters.AddWithValue("@UserRole", userRole);
 
             try
             {
-                Connect();
-
-                using (SqlCommand cmd = new SqlCommand(sql, cn))
-                {
-                    cmd.Parameters.AddWithValue("@UserId", userId);
-                    cmd.Parameters.AddWithValue("@UserPass", userPass);
-                    cmd.Parameters.AddWithValue("@UserRole", userRole);
-                    cmd.ExecuteNonQuery();
-                }
+                MyExecuteNonQuery(cmd);
             }
             catch (SqlException ex)
             {
-                throw new Exception("Lỗi khi tạo tài khoản: " + ex.Message);
+                throw new Exception("Lỗi khi tạo tài khoản: " + ex.Message, ex);
             }
         }
+
         public bool UserExists(string userId)
         {
             string sql = "SELECT COUNT(*) FROM Users WHERE UserId = @UserId";
+            SqlCommand cmd = new SqlCommand(sql);
+            cmd.Parameters.AddWithValue("@UserId", userId);
 
             try
             {
-
-                using (SqlCommand cmd = new SqlCommand(sql, cn))
-                {
-                    cmd.Parameters.AddWithValue("@UserId", userId);
-                    int count = (int)cmd.ExecuteScalar();
-                    return count > 0;
-                }
+                object result = MyExecuteScalar(cmd);
+                int count = Convert.ToInt32(result);
+                return count > 0;
             }
             catch (SqlException ex)
             {
-                throw new Exception("Lỗi khi kiểm tra UserId: " + ex.Message);
+                throw new Exception("Lỗi khi kiểm tra UserId: " + ex.Message, ex);
             }
         }
-
 
     }
 }

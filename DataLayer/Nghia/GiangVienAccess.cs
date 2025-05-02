@@ -65,19 +65,19 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@LeBirth", giangvien.LeBirth);
                 cmd.Parameters.AddWithValue("@LeId", giangvien.LeId);
                 return MyExecuteNonQuery(cmd) > 0;
-    
+
             }
             catch (Exception ex)
             {
                 throw new Exception("Lỗi khi chỉnh sửa thông tin giảng viên: " + ex.Message);
             }
-           
+
         }
 
         public void InsertLecturer(GiangVien giangvien)
         {
-            string sql = "INSERT INTO Lecturers (LeId,LeName, LePhone, LeEmail, LeGender, LeAddress, LePath, LeBirth) " +
-                         "VALUES (@LeId,@LeName, @LePhone, @LeEmail, @LeGender, @LeAddress, @LePath, @LeBirth)";
+            string sql = "INSERT INTO Lecturers (LeId,LeName, LePhone, LeEmail, LeGender, LeAddress, LePath, LeBirth, LeQRCodePath) " +
+                         "VALUES (@LeId,@LeName, @LePhone, @LeEmail, @LeGender, @LeAddress, @LePath, @LeBirth, @LeQRCodePath)";
             SqlConnection connection = cn;
             SqlCommand cmd = null;
 
@@ -94,6 +94,7 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@LeAddress", giangvien.LeAddress);
                 cmd.Parameters.AddWithValue("@LePath", giangvien.LePath);
                 cmd.Parameters.AddWithValue("@LeBirth", giangvien.LeBirth);
+                cmd.Parameters.AddWithValue("@LeQRCodePath", giangvien.LeQRCodePath);
 
                 cmd.ExecuteNonQuery();
                 Console.WriteLine("Thêm giảng viên thành công.");
@@ -119,7 +120,7 @@ namespace DataLayer
         public DataTable SearchLecturer(string keyword)
         {
             DataTable dt = new DataTable();
-            string sql = "SELECT * FROM Lecturers WHERE LeName LIKE @keyword";
+            string sql = "SELECT * FROM Lecturers WHERE LeName LIKE @keyword or LeId LIKE @keyword ";
 
             try
             {
@@ -154,55 +155,6 @@ namespace DataLayer
                 throw new Exception("Lỗi khi xóa giảng viên: " + ex.Message);
             }
         }
-        public void UpdateGiangVien(GiangVien giangvien)
-        {
-            int rows;
-            string sql = @"UPDATE Lecturers SET
-                            LeName = @LeName, 
-                            LePhone = @LePhone, 
-                            LeEmail = @LeEmail, 
-                            LeGender = @LeGender,
-                            LeAddress=@LeAddress,
-                            LeBirth=@LeBirth,
-                            LePath=@LePath
-                            WHERE LeId = @LeId";
-            SqlConnection connection = cn;
-            SqlCommand cmd = null;
-
-            try
-            {
-                if (connection.State != ConnectionState.Open)
-                    connection.Open();
-                cmd = new SqlCommand(sql, connection);
-                cmd.Parameters.AddWithValue("@LeId", giangvien.LeId);  
-                cmd.Parameters.AddWithValue("@LeName", giangvien.LeName);
-                cmd.Parameters.AddWithValue("@LePhone", giangvien.LePhone);
-                cmd.Parameters.AddWithValue("@LeEmail", giangvien.LeEmail);
-                cmd.Parameters.AddWithValue("@LeGender", giangvien.LeGender);
-                cmd.Parameters.AddWithValue("@LeAddress", giangvien.LeAddress);
-                cmd.Parameters.AddWithValue("@LePath", giangvien.LePath);
-                cmd.Parameters.AddWithValue("@LeBirth", giangvien.LeBirth);
-
-                rows=MyExecuteNonQuery(cmd);
-                if (rows > 0)
-                {
-                    Console.WriteLine("Chỉnh sửa thông tin giảng viên thành công.");
-                }
-                else
-                {
-                    Console.WriteLine("Không có giảng viên nào được chỉnh sửa.");
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi chỉnh sửa thông tin giảng viên: " + ex.Message);
-            }
-            finally
-            {
-                if (connection.State == ConnectionState.Open) ;
-                connection.Close();
-            }
-
-        }
+   
     }
 }

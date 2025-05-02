@@ -51,7 +51,10 @@ namespace CollegeMS.Student
             dgvdshocphi.Columns["LecturerName"].HeaderText = "Tên Giảng Viên";
             dgvdshocphi.Columns["CId"].HeaderText = "Mã Môn Học";
             dgvdshocphi.Columns["TotalFee"].HeaderText = "Tổng Học Phí";
-           
+            dgvdshocphi.Columns["StartDate"].HeaderText = "Ngày bắt đầu";
+            dgvdshocphi.Columns["EndDate"].HeaderText = "Ngày kết thúc";
+            dgvdshocphi.Columns["CCredits"].HeaderText = "Số tín chỉ";
+            dgvdshocphi.Columns["FeePerCredit"].HeaderText = "Số tiền mỗi tín";
             if (string.IsNullOrEmpty(studentId))
             {
                 txttongph.Text = "0";

@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btthoat = new System.Windows.Forms.Button();
-            this.btBaocaosuco = new System.Windows.Forms.Button();
             this.btNhapdiem = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -44,13 +43,15 @@
             this.lbDatetime2 = new System.Windows.Forms.Label();
             this.lbDatetime = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lbloaichucnang = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbchucnang = new System.Windows.Forms.Label();
             this.usMarkUpdate1 = new CollegeMS.Lecturer.USMarkUpdate();
             this.usDangkylichday1 = new CollegeMS.USDangkylichday();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(3)))), ((int)(((byte)(125)))));
             this.panel1.Controls.Add(this.btthoat);
-            this.panel1.Controls.Add(this.btBaocaosuco);
             this.panel1.Controls.Add(this.btNhapdiem);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.btndkkh);
@@ -77,11 +77,11 @@
             this.btthoat.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btthoat.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btthoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btthoat.ForeColor = System.Drawing.Color.White;
             this.btthoat.Image = global::CollegeMS.Properties.Resources.Import2;
             this.btthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btthoat.Location = new System.Drawing.Point(14, 285);
+            this.btthoat.Location = new System.Drawing.Point(11, 226);
             this.btthoat.Name = "btthoat";
             this.btthoat.Size = new System.Drawing.Size(202, 38);
             this.btthoat.TabIndex = 13;
@@ -89,26 +89,6 @@
             this.btthoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btthoat.UseVisualStyleBackColor = true;
             this.btthoat.Click += new System.EventHandler(this.btthoat_Click);
-            // 
-            // btBaocaosuco
-            // 
-            this.btBaocaosuco.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btBaocaosuco.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btBaocaosuco.FlatAppearance.BorderSize = 0;
-            this.btBaocaosuco.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btBaocaosuco.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btBaocaosuco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBaocaosuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBaocaosuco.ForeColor = System.Drawing.Color.White;
-            this.btBaocaosuco.Image = global::CollegeMS.Properties.Resources.Error1;
-            this.btBaocaosuco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBaocaosuco.Location = new System.Drawing.Point(14, 226);
-            this.btBaocaosuco.Name = "btBaocaosuco";
-            this.btBaocaosuco.Size = new System.Drawing.Size(202, 38);
-            this.btBaocaosuco.TabIndex = 12;
-            this.btBaocaosuco.Text = "              Báo cáo sự cố";
-            this.btBaocaosuco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBaocaosuco.UseVisualStyleBackColor = true;
             // 
             // btNhapdiem
             // 
@@ -118,7 +98,7 @@
             this.btNhapdiem.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btNhapdiem.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btNhapdiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btNhapdiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNhapdiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btNhapdiem.ForeColor = System.Drawing.Color.White;
             this.btNhapdiem.Image = global::CollegeMS.Properties.Resources.Scorecard1;
             this.btNhapdiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,7 +154,7 @@
             this.btndkkh.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btndkkh.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btndkkh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndkkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndkkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndkkh.ForeColor = System.Drawing.Color.White;
             this.btndkkh.Image = global::CollegeMS.Properties.Resources.Edit;
             this.btndkkh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -219,6 +199,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(216, 0);
             this.panel3.Name = "panel3";
@@ -244,8 +225,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(7)))), ((int)(((byte)(125)))));
+            this.panel4.Controls.Add(this.lbchucnang);
             this.panel4.Controls.Add(this.lbDatetime2);
-            this.panel4.Controls.Add(this.lbloaichucnang);
             this.panel4.Controls.Add(this.lbDatetime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(216, 43);
@@ -253,16 +234,27 @@
             this.panel4.Size = new System.Drawing.Size(1154, 73);
             this.panel4.TabIndex = 5;
             // 
-            // lbloaichucnang
+            // label1
             // 
-            this.lbloaichucnang.AutoSize = true;
-            this.lbloaichucnang.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbloaichucnang.ForeColor = System.Drawing.Color.White;
-            this.lbloaichucnang.Location = new System.Drawing.Point(278, 17);
-            this.lbloaichucnang.Name = "lbloaichucnang";
-            this.lbloaichucnang.Size = new System.Drawing.Size(65, 22);
-            this.lbloaichucnang.TabIndex = 0;
-            this.lbloaichucnang.Text = "?????";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = ".";
+            // 
+            // lbchucnang
+            // 
+            this.lbchucnang.AutoSize = true;
+            this.lbchucnang.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbchucnang.ForeColor = System.Drawing.Color.White;
+            this.lbchucnang.Location = new System.Drawing.Point(419, 8);
+            this.lbchucnang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbchucnang.Name = "lbchucnang";
+            this.lbchucnang.Size = new System.Drawing.Size(112, 39);
+            this.lbchucnang.TabIndex = 5;
+            this.lbchucnang.Text = "?????";
             // 
             // usMarkUpdate1
             // 
@@ -299,6 +291,8 @@
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -318,14 +312,14 @@
         private System.Windows.Forms.Label lbDatetime2;
         private System.Windows.Forms.Label lbDatetime;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lbloaichucnang;
         private System.Windows.Forms.Button btthoat;
-        private System.Windows.Forms.Button btBaocaosuco;
         private System.Windows.Forms.Button btNhapdiem;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel9;
         private USDangkylichday usDangkylichday1;
 
         private Lecturer.USMarkUpdate usMarkUpdate1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbchucnang;
     }
 }

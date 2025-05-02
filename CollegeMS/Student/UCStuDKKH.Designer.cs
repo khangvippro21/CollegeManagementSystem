@@ -44,20 +44,22 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(2, -1);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(4, 17);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(260, 29);
+            this.label4.Size = new System.Drawing.Size(347, 36);
             this.label4.TabIndex = 8;
             this.label4.Text = "Môn học có thể đăng kí";
             // 
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(763, 45);
+            this.btnHuy.Location = new System.Drawing.Point(1366, 160);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(90, 47);
+            this.btnHuy.Size = new System.Drawing.Size(120, 58);
             this.btnHuy.TabIndex = 7;
             this.btnHuy.Text = "HỦY";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -67,24 +69,25 @@
             // 
             this.dgvDKKHtrong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDKKHtrong.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvDKKHtrong.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvDKKHtrong.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvDKKHtrong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDKKHtrong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDKKHtrong.Location = new System.Drawing.Point(2, 45);
-            this.dgvDKKHtrong.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDKKHtrong.Location = new System.Drawing.Point(10, 75);
+            this.dgvDKKHtrong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDKKHtrong.Name = "dgvDKKHtrong";
             this.dgvDKKHtrong.RowHeadersWidth = 51;
             this.dgvDKKHtrong.RowTemplate.Height = 24;
             this.dgvDKKHtrong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDKKHtrong.Size = new System.Drawing.Size(745, 243);
+            this.dgvDKKHtrong.Size = new System.Drawing.Size(1280, 311);
             this.dgvDKKHtrong.TabIndex = 6;
             // 
             // btnxoa
             // 
             this.btnxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxoa.Location = new System.Drawing.Point(761, 448);
+            this.btnxoa.Location = new System.Drawing.Point(1366, 69);
+            this.btnxoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(90, 47);
+            this.btnxoa.Size = new System.Drawing.Size(120, 58);
             this.btnxoa.TabIndex = 12;
             this.btnxoa.Text = "XÓA";
             this.btnxoa.UseVisualStyleBackColor = true;
@@ -93,9 +96,10 @@
             // btnluu
             // 
             this.btnluu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnluu.Location = new System.Drawing.Point(761, 376);
+            this.btnluu.Location = new System.Drawing.Point(1366, 80);
+            this.btnluu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnluu.Name = "btnluu";
-            this.btnluu.Size = new System.Drawing.Size(90, 47);
+            this.btnluu.Size = new System.Drawing.Size(120, 58);
             this.btnluu.TabIndex = 11;
             this.btnluu.Text = "LƯU";
             this.btnluu.UseVisualStyleBackColor = true;
@@ -103,20 +107,25 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnxoa);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(1, 294);
+            this.panel1.Controls.Add(this.dgvDKKHselect);
+            this.panel1.Location = new System.Drawing.Point(0, 408);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(744, 81);
+            this.panel1.Size = new System.Drawing.Size(1509, 411);
             this.panel1.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 42);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(4, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 29);
+            this.label3.Size = new System.Drawing.Size(295, 36);
             this.label3.TabIndex = 0;
             this.label3.Text = "Môn học đã đăng kí";
             // 
@@ -127,29 +136,28 @@
             this.dgvDKKHselect.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dgvDKKHselect.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDKKHselect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDKKHselect.Location = new System.Drawing.Point(0, 376);
-            this.dgvDKKHselect.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDKKHselect.Location = new System.Drawing.Point(9, 57);
+            this.dgvDKKHselect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDKKHselect.Name = "dgvDKKHselect";
             this.dgvDKKHselect.RowHeadersWidth = 51;
             this.dgvDKKHselect.RowTemplate.Height = 24;
             this.dgvDKKHselect.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDKKHselect.Size = new System.Drawing.Size(745, 237);
+            this.dgvDKKHselect.Size = new System.Drawing.Size(1281, 336);
             this.dgvDKKHselect.TabIndex = 9;
             // 
             // UCStuDKKH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Controls.Add(this.btnxoa);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.btnluu);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvDKKHselect);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.dgvDKKHtrong);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCStuDKKH";
-            this.Size = new System.Drawing.Size(960, 615);
+            this.Size = new System.Drawing.Size(1513, 823);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDKKHtrong)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

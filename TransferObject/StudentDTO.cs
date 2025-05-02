@@ -17,6 +17,7 @@ namespace TransferObject
         public string StAddress { get; set; }
         public string Stpath { get; set; }
         public DateTime StBirth { get; set; }
+        public string StQRCodePath {  get; set; }
 
         public StudentDTO(string stId, string stName, string stPhone, string stEmail, string stGender, string stAddress, string stpath, DateTime stbirth)
         {
@@ -28,6 +29,18 @@ namespace TransferObject
             StAddress = stAddress;
             Stpath = stpath;
             StBirth = stbirth;
+        }
+        public StudentDTO(string stId, string stName, string stPhone, string stEmail, string stGender, string stAddress, string stpath, DateTime stbirth,string stQRCodePath)
+        {
+            StId = stId;
+            StName = stName;
+            StPhone = stPhone;
+            StEmail = stEmail;
+            StGender = stGender;
+            StAddress = stAddress;
+            Stpath = stpath;
+            StBirth = stbirth;
+            StQRCodePath = stQRCodePath;
         }
     }
 }

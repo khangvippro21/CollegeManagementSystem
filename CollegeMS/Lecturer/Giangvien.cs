@@ -21,7 +21,7 @@ namespace CollegeMS
         }
         private void LoadDateTime()
         {
-            lbDatetime.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
+            label1.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
             timer = new Timer();
             timer.Interval = 60000;
             timer.Tick += Timer_Tick;
@@ -30,7 +30,7 @@ namespace CollegeMS
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            lbDatetime.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
+            label1.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
         }
 
 
@@ -60,18 +60,25 @@ namespace CollegeMS
         {
             usDangkylichday1.Visible = false;
             usMarkUpdate1.Visible = false;
+            
         }
 
         private void btndkkh_Click(object sender, EventArgs e)
         {
             usDangkylichday1.Visible = true;
             usMarkUpdate1.Visible = false;
+            lbchucnang.Text = btndkkh.Text;
         }
 
         private void btNhapdiem_Click(object sender, EventArgs e)
         {
             usDangkylichday1.Visible = false;
-            usMarkUpdate1.Visible = true;
+            lbchucnang.Text = btNhapdiem.Text;
+        }
+
+        private void btBaocaosuco_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

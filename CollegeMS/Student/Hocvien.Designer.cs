@@ -49,6 +49,7 @@
             this.lbloaichucnang = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pncontentStu = new System.Windows.Forms.Panel();
+            this.lbchucnang = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -242,9 +243,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(10, 13);
+            this.label1.Size = new System.Drawing.Size(13, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = ".";
             // 
@@ -267,13 +269,14 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(7)))), ((int)(((byte)(125)))));
+            this.panel4.Controls.Add(this.lbchucnang);
             this.panel4.Controls.Add(this.lbDatetime2);
             this.panel4.Controls.Add(this.lbloaichucnang);
             this.panel4.Controls.Add(this.lbDatetime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(204, 28);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1032, 85);
+            this.panel4.Size = new System.Drawing.Size(1032, 75);
             this.panel4.TabIndex = 4;
             // 
             // lbloaichucnang
@@ -283,18 +286,30 @@
             this.lbloaichucnang.ForeColor = System.Drawing.Color.White;
             this.lbloaichucnang.Location = new System.Drawing.Point(278, 17);
             this.lbloaichucnang.Name = "lbloaichucnang";
-            this.lbloaichucnang.Size = new System.Drawing.Size(65, 22);
+            this.lbloaichucnang.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbloaichucnang.Size = new System.Drawing.Size(0, 22);
             this.lbloaichucnang.TabIndex = 0;
-            this.lbloaichucnang.Text = "?????";
             // 
             // pncontentStu
             // 
             this.pncontentStu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pncontentStu.Location = new System.Drawing.Point(204, 113);
+            this.pncontentStu.Location = new System.Drawing.Point(204, 103);
             this.pncontentStu.Margin = new System.Windows.Forms.Padding(2);
             this.pncontentStu.Name = "pncontentStu";
-            this.pncontentStu.Size = new System.Drawing.Size(1032, 610);
+            this.pncontentStu.Size = new System.Drawing.Size(1032, 620);
             this.pncontentStu.TabIndex = 5;
+            // 
+            // lbchucnang
+            // 
+            this.lbchucnang.AutoSize = true;
+            this.lbchucnang.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbchucnang.ForeColor = System.Drawing.Color.White;
+            this.lbchucnang.Location = new System.Drawing.Point(362, 17);
+            this.lbchucnang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbchucnang.Name = "lbchucnang";
+            this.lbchucnang.Size = new System.Drawing.Size(112, 39);
+            this.lbchucnang.TabIndex = 4;
+            this.lbchucnang.Text = "?????";
             // 
             // Hocvien
             // 
@@ -344,5 +359,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel pncontentStu;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbchucnang;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -14,10 +15,12 @@ namespace CollegeMS
 {
     public partial class UserMainForm : Form
     {
+        private Timer timer;
         private UserControlFee userControlHocphi;
         public UserMainForm()
         {
             InitializeComponent();
+            LoadDateTime();
         }
         private void UserMainForm_Load(object sender, EventArgs e)
         {
@@ -42,6 +45,20 @@ namespace CollegeMS
             userControlQLGV2.Visible = false;
             lbloaichucnang.Text = btDashboard.Text;
 
+        }
+
+        private void LoadDateTime()
+        {
+            label1.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
+            timer = new Timer();
+            timer.Interval = 60000;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
         }
 
         private void btQLHV_Click(object sender, EventArgs e)

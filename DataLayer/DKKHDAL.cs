@@ -14,7 +14,7 @@ namespace DataLayer
         
         
 
-            public DataTable laydsmonhoc()
+            public DataTable laydsmonhoc(string studentId)
             {
 
                 string query = @"
@@ -29,20 +29,25 @@ namespace DataLayer
             (c.CCredits * c.FeePerCredit) AS TotalFee
         FROM Courses c
         INNER JOIN Lecturers_Courses lc ON c.CId = lc.CId
-        INNER JOIN Lecturers l ON lc.LeId = l.LeId";
+        INNER JOIN Lecturers l ON lc.LeId = l.LeId
+        WHERE c.CId NOT IN (
+            SELECT sc.CId FROM Students_Courses sc WHERE sc.StId = @StId)";
 
 
-                DataTable dt = new DataTable();
-                try
-                {
-                    MyAdapterExecute(query).Fill(dt);
-                    return dt;
-                }
-                catch (SqlException ex)
-                {
-                    throw ex;
-                }
+            SqlCommand cmd = new SqlCommand(query);
+            cmd.Parameters.AddWithValue("@StId", studentId);
+
+            DataTable dt = new DataTable();
+            try
+            {
+                MyAdapterExecute(cmd).Fill(dt);  // MyAdapterExecute nên hỗ trợ SqlCommand
+                return dt;
             }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi khi lấy danh sách môn học chưa đăng ký", ex);
+            }
+        }
             public int Dangkimonhoc(string studentId, string courseId, decimal fee)
             {
                 {
