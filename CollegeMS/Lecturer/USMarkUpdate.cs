@@ -107,5 +107,10 @@ namespace CollegeMS.Lecturer
                 load_StudInCourse();
             }
         }
+
+        private void USMarkUpdate_VisibleChanged(object sender, EventArgs e)
+        {
+            load_Courses();
+        }
     }
 }
