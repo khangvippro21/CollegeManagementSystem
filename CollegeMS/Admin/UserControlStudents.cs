@@ -37,19 +37,10 @@ namespace CollegeMS
             studentbl = new StudentBL();
             LoadStudentData();
             Cameras = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            captureDevice = new VideoCaptureDevice();
             foreach (FilterInfo camera in Cameras)
-            {
-                if (camera.Name.Contains("DroidCam Source 2"))
-                {
-                    captureDevice = new VideoCaptureDevice(camera.MonikerString);
-                    break;
-                }
-            }
-            if (captureDevice == null)
-            {
-                MessageBox.Show("DroidCam Source 2 not found.");
-            }
+                comboBox1.Items.Add(camera.Name);
+            comboBox1.SelectedIndex = 0;
+            captureDevice = new VideoCaptureDevice();
         }
         public void LoadStudentData()
         {
@@ -362,6 +353,7 @@ namespace CollegeMS
 
         private void btScan_Click_1(object sender, EventArgs e)
         {
+            captureDevice = new VideoCaptureDevice(Cameras[comboBox1.SelectedIndex].MonikerString);
             captureDevice.NewFrame += CaptureDevice_NewFrame;
             captureDevice.Start();
         }
