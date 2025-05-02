@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Bao\BaocaoBL.cs" />
     <Compile Include="Bao\DKKHBL.cs" />
+    <Compile Include="Bao\ReviewBL.cs" />
     <Compile Include="GiangVienBL.cs" />
     <Compile Include="Khang\AttendanceBL.cs" />
     <Compile Include="Khang\CoTble_BL.cs" />

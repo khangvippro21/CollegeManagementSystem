@@ -140,6 +140,12 @@
     <Compile Include="Admin\UserQLMH.Designer.cs">
       <DependentUpon>UserQLMH.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student\Xemhocphi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Student\Xemhocphi.Designer.cs">
+      <DependentUpon>Xemhocphi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\accountUS.resx">
       <DependentUpon>accountUS.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\UserQLMH.resx">
       <DependentUpon>UserQLMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Xemhocphi.resx">
+      <DependentUpon>Xemhocphi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -361,6 +370,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Tick Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

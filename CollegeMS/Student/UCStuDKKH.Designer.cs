@@ -68,6 +68,7 @@
             this.dgvDKKHtrong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDKKHtrong.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDKKHtrong.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvDKKHtrong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDKKHtrong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDKKHtrong.Location = new System.Drawing.Point(2, 45);
             this.dgvDKKHtrong.Margin = new System.Windows.Forms.Padding(2);
@@ -124,6 +125,7 @@
             this.dgvDKKHselect.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDKKHselect.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDKKHselect.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvDKKHselect.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDKKHselect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDKKHselect.Location = new System.Drawing.Point(0, 376);
             this.dgvDKKHselect.Margin = new System.Windows.Forms.Padding(2);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CollegeMS.Student;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +23,7 @@ namespace CollegeMS
 
         private void LoadDateTime()
         {
-            lbDatetime.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
+            label1.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
             timer = new Timer();
             timer.Interval = 60000;
             timer.Tick += Timer_Tick;
@@ -31,7 +32,7 @@ namespace CollegeMS
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            lbDatetime.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
+            label1.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
         }
 
         
@@ -63,6 +64,22 @@ namespace CollegeMS
             {
                 this.Close();
             }
+        }
+
+        private void btBaocaosuco_Click(object sender, EventArgs e)
+        {
+            UCStuBcao baocao = new UCStuBcao();
+            pncontentStu.Controls.Clear();
+            pncontentStu.Controls.Add(baocao);
+            baocao.Dock = DockStyle.Fill;
+        }
+
+        private void bthocphi_Click(object sender, EventArgs e)
+        {
+            Xemhocphi xemhocphi = new Xemhocphi();
+            pncontentStu.Controls.Clear();
+            pncontentStu.Controls.Add(xemhocphi);
+            xemhocphi.Dock = DockStyle.Fill;
         }
     }
 }

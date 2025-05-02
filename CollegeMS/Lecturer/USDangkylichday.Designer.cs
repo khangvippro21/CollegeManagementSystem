@@ -46,9 +46,11 @@
             // 
             this.dgvMonhocTrong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMonhocTrong.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMonhocTrong.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvMonhocTrong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMonhocTrong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMonhocTrong.Location = new System.Drawing.Point(13, 19);
-            this.dgvMonhocTrong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMonhocTrong.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMonhocTrong.Name = "dgvMonhocTrong";
             this.dgvMonhocTrong.ReadOnly = true;
             this.dgvMonhocTrong.RowHeadersWidth = 51;
@@ -61,9 +63,11 @@
             // 
             this.dgvMonhoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMonhoc.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMonhoc.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvMonhoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMonhoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMonhoc.Location = new System.Drawing.Point(13, 468);
-            this.dgvMonhoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMonhoc.Margin = new System.Windows.Forms.Padding(2);
             this.dgvMonhoc.Name = "dgvMonhoc";
             this.dgvMonhoc.ReadOnly = true;
             this.dgvMonhoc.RowHeadersWidth = 51;
@@ -76,7 +80,7 @@
             // 
             this.btSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSave.Location = new System.Drawing.Point(1139, 19);
-            this.btSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btSave.Margin = new System.Windows.Forms.Padding(2);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(102, 50);
             this.btSave.TabIndex = 2;
@@ -88,7 +92,7 @@
             // 
             this.btCancel_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCancel_1.Location = new System.Drawing.Point(1139, 93);
-            this.btCancel_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btCancel_1.Margin = new System.Windows.Forms.Padding(2);
             this.btCancel_1.Name = "btCancel_1";
             this.btCancel_1.Size = new System.Drawing.Size(102, 50);
             this.btCancel_1.TabIndex = 3;
@@ -100,7 +104,7 @@
             // 
             this.btRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btRemove.Location = new System.Drawing.Point(1139, 468);
-            this.btRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btRemove.Name = "btRemove";
             this.btRemove.Size = new System.Drawing.Size(107, 50);
             this.btRemove.TabIndex = 4;
@@ -115,7 +119,7 @@
             this.panel1.Controls.Add(this.dgvMonhocTrong);
             this.panel1.Controls.Add(this.btCancel_1);
             this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1746, 453);
             this.panel1.TabIndex = 5;
@@ -129,7 +133,7 @@
             this.panel2.Controls.Add(this.btRemove);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1633, 991);
             this.panel2.TabIndex = 6;
@@ -138,7 +142,7 @@
             // 
             this.btCancel_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCancel_2.Location = new System.Drawing.Point(1139, 538);
-            this.btCancel_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btCancel_2.Margin = new System.Windows.Forms.Padding(2);
             this.btCancel_2.Name = "btCancel_2";
             this.btCancel_2.Size = new System.Drawing.Size(102, 50);
             this.btCancel_2.TabIndex = 4;
@@ -151,7 +155,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "USDangkylichday";
             this.Size = new System.Drawing.Size(1633, 991);
             this.Load += new System.EventHandler(this.USDangkylichday_Load);

@@ -32,7 +32,6 @@
             this.btthoat = new System.Windows.Forms.Button();
             this.btBaocaosuco = new System.Windows.Forms.Button();
             this.btndkkh = new System.Windows.Forms.Button();
-            this.btRateGV = new System.Windows.Forms.Button();
             this.bthocphi = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -43,6 +42,7 @@
             this.lbWelcome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbDatetime2 = new System.Windows.Forms.Label();
             this.lbDatetime = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -53,6 +53,7 @@
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +63,6 @@
             this.panel1.Controls.Add(this.btthoat);
             this.panel1.Controls.Add(this.btBaocaosuco);
             this.panel1.Controls.Add(this.btndkkh);
-            this.panel1.Controls.Add(this.btRateGV);
             this.panel1.Controls.Add(this.bthocphi);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
@@ -80,15 +80,15 @@
             this.btthoat.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btthoat.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btthoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.btthoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btthoat.ForeColor = System.Drawing.Color.White;
             this.btthoat.Image = global::CollegeMS.Properties.Resources.Import2;
             this.btthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btthoat.Location = new System.Drawing.Point(12, 327);
+            this.btthoat.Location = new System.Drawing.Point(11, 273);
             this.btthoat.Name = "btthoat";
             this.btthoat.Size = new System.Drawing.Size(182, 37);
             this.btthoat.TabIndex = 19;
-            this.btthoat.Text = "             Thoát";
+            this.btthoat.Text = "                 Thoát";
             this.btthoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btthoat.UseVisualStyleBackColor = true;
             this.btthoat.Click += new System.EventHandler(this.btthoat_Click);
@@ -101,17 +101,18 @@
             this.btBaocaosuco.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btBaocaosuco.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btBaocaosuco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btBaocaosuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBaocaosuco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btBaocaosuco.ForeColor = System.Drawing.Color.White;
-            this.btBaocaosuco.Image = global::CollegeMS.Properties.Resources.Error1;
+            this.btBaocaosuco.Image = global::CollegeMS.Properties.Resources.Info;
             this.btBaocaosuco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBaocaosuco.Location = new System.Drawing.Point(12, 273);
+            this.btBaocaosuco.Location = new System.Drawing.Point(11, 219);
             this.btBaocaosuco.Name = "btBaocaosuco";
             this.btBaocaosuco.Size = new System.Drawing.Size(182, 37);
             this.btBaocaosuco.TabIndex = 18;
-            this.btBaocaosuco.Text = "             Báo cáo sự cố";
+            this.btBaocaosuco.Text = "       Báo cáo - Đánh giá";
             this.btBaocaosuco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btBaocaosuco.UseVisualStyleBackColor = true;
+            this.btBaocaosuco.Click += new System.EventHandler(this.btBaocaosuco_Click);
             // 
             // btndkkh
             // 
@@ -121,38 +122,18 @@
             this.btndkkh.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btndkkh.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btndkkh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndkkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndkkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndkkh.ForeColor = System.Drawing.Color.White;
             this.btndkkh.Image = global::CollegeMS.Properties.Resources.Edit;
             this.btndkkh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btndkkh.Location = new System.Drawing.Point(12, 113);
+            this.btndkkh.Location = new System.Drawing.Point(14, 119);
             this.btndkkh.Name = "btndkkh";
             this.btndkkh.Size = new System.Drawing.Size(182, 37);
             this.btndkkh.TabIndex = 17;
-            this.btndkkh.Text = "             Đăng kí khóa học";
+            this.btndkkh.Text = "        Đăng kí khóa học";
             this.btndkkh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndkkh.UseVisualStyleBackColor = true;
             this.btndkkh.Click += new System.EventHandler(this.btndkkh_Click);
-            // 
-            // btRateGV
-            // 
-            this.btRateGV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btRateGV.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btRateGV.FlatAppearance.BorderSize = 0;
-            this.btRateGV.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btRateGV.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btRateGV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btRateGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRateGV.ForeColor = System.Drawing.Color.White;
-            this.btRateGV.Image = global::CollegeMS.Properties.Resources.Star;
-            this.btRateGV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btRateGV.Location = new System.Drawing.Point(12, 219);
-            this.btRateGV.Name = "btRateGV";
-            this.btRateGV.Size = new System.Drawing.Size(182, 37);
-            this.btRateGV.TabIndex = 12;
-            this.btRateGV.Text = "             Đánh giá giảng viên";
-            this.btRateGV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btRateGV.UseVisualStyleBackColor = true;
             // 
             // bthocphi
             // 
@@ -162,7 +143,7 @@
             this.bthocphi.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.bthocphi.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.bthocphi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bthocphi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bthocphi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bthocphi.ForeColor = System.Drawing.Color.White;
             this.bthocphi.Image = global::CollegeMS.Properties.Resources.Banknotes1;
             this.bthocphi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -170,9 +151,10 @@
             this.bthocphi.Name = "bthocphi";
             this.bthocphi.Size = new System.Drawing.Size(182, 37);
             this.bthocphi.TabIndex = 11;
-            this.bthocphi.Text = "             Xem học phí";
+            this.bthocphi.Text = "            Xem học phí";
             this.bthocphi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bthocphi.UseVisualStyleBackColor = true;
+            this.bthocphi.Click += new System.EventHandler(this.bthocphi_Click);
             // 
             // panel5
             // 
@@ -250,11 +232,21 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(204, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1032, 28);
             this.panel3.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(10, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = ".";
             // 
             // lbDatetime2
             // 
@@ -321,6 +313,8 @@
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -340,7 +334,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbloaichucnang;
         private System.Windows.Forms.Label lbDatetime2;
-        private System.Windows.Forms.Button btRateGV;
         private System.Windows.Forms.Button bthocphi;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
@@ -350,5 +343,6 @@
         private System.Windows.Forms.Button btthoat;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel pncontentStu;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -92,7 +92,24 @@ namespace DataLayer
                 throw ex;
             }   
         }
-       
+        public SqlDataAdapter MyAdapterExecute(SqlCommand cmd)
+        {
+            Connect();
+            try
+            {
+                cmd.Connection = cn;
+                return new SqlDataAdapter(cmd);
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
         public int MyExecuteNonQuery(SqlCommand cmd)
         {
             try
