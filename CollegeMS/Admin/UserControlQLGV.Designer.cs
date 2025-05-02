@@ -52,10 +52,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnXoaSuaStu = new System.Windows.Forms.Panel();
+            this.picbScan = new System.Windows.Forms.PictureBox();
+            this.btDung = new System.Windows.Forms.Button();
+            this.btScan = new System.Windows.Forms.Button();
             this.btChonAnh = new System.Windows.Forms.Button();
             this.dgvGV = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGV)).BeginInit();
             this.pnXoaSuaStu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbScan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -255,8 +259,8 @@
             this.cbGioiTinhGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cbGioiTinhGV.FormattingEnabled = true;
             this.cbGioiTinhGV.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
+            "Male",
+            "Female"});
             this.cbGioiTinhGV.Location = new System.Drawing.Point(277, 107);
             this.cbGioiTinhGV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbGioiTinhGV.Name = "cbGioiTinhGV";
@@ -338,6 +342,9 @@
             // pnXoaSuaStu
             // 
             this.pnXoaSuaStu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pnXoaSuaStu.Controls.Add(this.picbScan);
+            this.pnXoaSuaStu.Controls.Add(this.btDung);
+            this.pnXoaSuaStu.Controls.Add(this.btScan);
             this.pnXoaSuaStu.Controls.Add(this.btChonAnh);
             this.pnXoaSuaStu.Controls.Add(this.btTimGV);
             this.pnXoaSuaStu.Controls.Add(this.tbTimGV);
@@ -365,6 +372,42 @@
             this.pnXoaSuaStu.Name = "pnXoaSuaStu";
             this.pnXoaSuaStu.Size = new System.Drawing.Size(1917, 429);
             this.pnXoaSuaStu.TabIndex = 28;
+            // 
+            // picbScan
+            // 
+            this.picbScan.Location = new System.Drawing.Point(998, 237);
+            this.picbScan.Name = "picbScan";
+            this.picbScan.Size = new System.Drawing.Size(192, 166);
+            this.picbScan.TabIndex = 48;
+            this.picbScan.TabStop = false;
+            // 
+            // btDung
+            // 
+            this.btDung.BackColor = System.Drawing.Color.White;
+            this.btDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDung.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btDung.Location = new System.Drawing.Point(871, 339);
+            this.btDung.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btDung.Name = "btDung";
+            this.btDung.Size = new System.Drawing.Size(96, 40);
+            this.btDung.TabIndex = 43;
+            this.btDung.Text = "DỪNG";
+            this.btDung.UseVisualStyleBackColor = false;
+            this.btDung.Click += new System.EventHandler(this.btDung_Click);
+            // 
+            // btScan
+            // 
+            this.btScan.BackColor = System.Drawing.Color.White;
+            this.btScan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btScan.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btScan.Location = new System.Drawing.Point(871, 270);
+            this.btScan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btScan.Name = "btScan";
+            this.btScan.Size = new System.Drawing.Size(96, 40);
+            this.btScan.TabIndex = 42;
+            this.btScan.Text = "SCAN";
+            this.btScan.UseVisualStyleBackColor = false;
+            this.btScan.Click += new System.EventHandler(this.btScan_Click);
             // 
             // btChonAnh
             // 
@@ -420,10 +463,11 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserControlQLGV";
             this.Size = new System.Drawing.Size(1919, 1016);
-            this.Load += new System.EventHandler(this.UserControlQLGV_Load);
+            this.Load += new System.EventHandler(this.UserControlQLGV_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGV)).EndInit();
             this.pnXoaSuaStu.ResumeLayout(false);
             this.pnXoaSuaStu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbScan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGV)).EndInit();
             this.ResumeLayout(false);
 
@@ -455,5 +499,8 @@
         private System.Windows.Forms.Panel pnXoaSuaStu;
         private System.Windows.Forms.DataGridView dgvGV;
         private System.Windows.Forms.Button btChonAnh;
+        private System.Windows.Forms.Button btDung;
+        private System.Windows.Forms.Button btScan;
+        private System.Windows.Forms.PictureBox picbScan;
     }
 }
