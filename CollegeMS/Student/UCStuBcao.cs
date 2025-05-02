@@ -130,14 +130,14 @@ namespace CollegeMS
                 string detail = rtbreview.Text.Trim();
                 if (string.IsNullOrEmpty(detail))
                 {
-                    MessageBox.Show("Vui lòng nhập mô tả sự cố.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Vui lòng nhập đánh giá.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 string problemId = baocaoBL.baocaosuco(studentId, courseId, detail);
                 if (!string.IsNullOrEmpty(problemId))
                 {
-                    MessageBox.Show("Báo cáo sự cố đã được gửi thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đánh giá giảng viên đã được gửi thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     rtbreview.Clear();
                     cbbKhoahoc.SelectedIndex = -1;
                     ClearLecturerInfo();

@@ -13,11 +13,19 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using BusinessLayer;
 using TransferObject;
+using AForge.Video;
+using AForge.Video.DirectShow;
+using ZXing;
+using QRCoder;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Drawing.Imaging;
 
 namespace CollegeMS
 {
     public partial class UserControlQLGV : UserControl
     {
+        FilterInfoCollection Cameras;
+        VideoCaptureDevice captureDevice;
         GiangVienBL giangvienbl = new GiangVienBL();
         DataTable dt = new DataTable();
         string selectedId = "";
@@ -66,10 +74,6 @@ namespace CollegeMS
             }
         }
 
-        private void UserControlQLGV_Load(object sender, EventArgs e)
-        {
-            LoadGV();
-        }
 
         private void btTimGV_Click(object sender, EventArgs e)
         {
@@ -98,8 +102,6 @@ namespace CollegeMS
             string address = tbDiaChiGV.Text;
             DateTime birth = dtpNgaySinhGV.Value;
             string path = tbHinhAnh.Text;
-
-
             GiangVien gv = new GiangVien(
                 selectedId,
                 name,
@@ -109,6 +111,7 @@ namespace CollegeMS
                 address,
                 path,
                 birth
+
             );
             try
             {
@@ -135,9 +138,8 @@ namespace CollegeMS
             string address = tbDiaChiGV.Text;
             DateTime birth = dtpNgaySinhGV.Value;
             string path = tbHinhAnh.Text;
-            TransferObject.GiangVien newGiangVien = new TransferObject.GiangVien(
+            GiangVien newGiangVien = new GiangVien(
                 "", name, phone, email, gender, address, path, birth);
-
             try
             {
 
@@ -260,5 +262,54 @@ namespace CollegeMS
 
             }
         }
+
+        private void btScan_Click(object sender, EventArgs e)
+        {
+            captureDevice = new VideoCaptureDevice(Cameras[comboBox1.SelectedIndex].MonikerString);
+            captureDevice.NewFrame += CaptureDevice_NewFrame;
+            captureDevice.Start();
+        }
+
+        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            BarcodeReader reader = new BarcodeReader();
+            var result = reader.Decode(bitmap);
+            if (result != null)
+            {
+                tbTimGV.Invoke(new MethodInvoker(delegate ()
+                {
+                    tbTimGV.Text = result.ToString();
+                    SearchLecturers(tbTimGV.Text);
+                }
+                ));
+            }
+            picbScan.Image = bitmap;
+
+        }
+
+        private void btDung_Click(object sender, EventArgs e)
+        {
+            if (captureDevice != null)
+            {
+                if (captureDevice.IsRunning)
+                {
+                    captureDevice.Stop();
+                    picbScan.Image = null;
+                }
+            }
+        }
+
+        private void UserControlQLGV_Load_1(object sender, EventArgs e)
+        {
+            LoadGV();
+            Cameras = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo camera in Cameras)
+                comboBox1.Items.Add(camera.Name);
+            comboBox1.SelectedIndex = 0;
+            captureDevice = new VideoCaptureDevice();
+        }
+
+        
     }
 } 

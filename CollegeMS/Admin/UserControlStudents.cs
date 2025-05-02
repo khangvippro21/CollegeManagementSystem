@@ -12,6 +12,9 @@ using BusinessLayer;
 using TransferObject;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using AForge.Video;
+using AForge.Video.DirectShow;
+using ZXing;
 
 namespace CollegeMS
 {
@@ -20,7 +23,8 @@ namespace CollegeMS
 
 
         private string selectedStudentId = "";
-
+        FilterInfoCollection Cameras;
+        VideoCaptureDevice captureDevice;
         private UserMainForm prform;
         private DataGridView dgvStudents;
         protected StudentBL studentbl;
@@ -32,6 +36,11 @@ namespace CollegeMS
             this.Dock = DockStyle.Fill;
             studentbl = new StudentBL();
             LoadStudentData();
+            Cameras = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo camera in Cameras)
+                comboBox1.Items.Add(camera.Name);
+            comboBox1.SelectedIndex = 0;
+            captureDevice = new VideoCaptureDevice();
         }
         public void LoadStudentData()
         {
@@ -321,6 +330,46 @@ namespace CollegeMS
                 SearchStudents(txtsearch);
             }
         }
+    
+
+        private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            BarcodeReader reader = new BarcodeReader();
+            var result = reader.Decode(bitmap);
+            if (result != null)
+            {
+                txtsearchStu.Invoke(new MethodInvoker(delegate ()
+                {
+                    txtsearchStu.Text = result.ToString();
+                    SearchStudents(txtsearchStu.Text);
+                }
+                ));
+
+            }
+            picbScan.Image = bitmap;
+        }
+
+
+        private void btScan_Click_1(object sender, EventArgs e)
+        {
+            captureDevice = new VideoCaptureDevice(Cameras[comboBox1.SelectedIndex].MonikerString);
+            captureDevice.NewFrame += CaptureDevice_NewFrame;
+            captureDevice.Start();
+        }
+
+        private void btDung_Click_1(object sender, EventArgs e)
+        {
+            if (captureDevice != null)
+            {
+                if (captureDevice.IsRunning)
+                {
+                    captureDevice.Stop();
+                    picbScan.Image = null;
+                }
+            }
+        }
+       
     }
 }
 

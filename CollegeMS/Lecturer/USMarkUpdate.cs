@@ -26,9 +26,6 @@ namespace CollegeMS.Lecturer
         private DataTable monhoc;
         private DataTable hocvien;
         private string courseId;
-
-        
-
         private void load_Courses()
         {
             dgvMonhoc.DataSource = null;

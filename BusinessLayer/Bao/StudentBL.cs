@@ -7,6 +7,10 @@ using System.Data;
 using System.Data.SqlClient;
 using TransferObject;
 using DataLayer;
+using QRCoder;
+using System.Drawing.Imaging;
+using System.Drawing;
+using System.IO;
 
 namespace BusinessLayer
 {
@@ -48,6 +52,7 @@ namespace BusinessLayer
             if (string.IsNullOrEmpty(student.StPhone)) throw new ArgumentException("Số điện thoại không được để trống.", nameof(student.StPhone));
 
             student.StId = GenerateNewStudentId();
+            student.StQRCodePath = QRGenerate(student.StId);
 
             try
             {
@@ -76,6 +81,19 @@ namespace BusinessLayer
         public int DeleteStudent(string studentId)
         {
             return studentdal.DeleteStudent(studentId); 
+        }
+        private string QRGenerate(string StId)
+        {
+            QRCodeGenerator qr = new QRCodeGenerator();
+            QRCodeData data = qr.CreateQrCode(StId, QRCodeGenerator.ECCLevel.Q);
+            QRCode code = new QRCode(data);
+            Bitmap qrImage = code.GetGraphic(5);
+            string qrId = $"{StId}.png";
+            string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+            string destFolder = Path.Combine(projectRoot, "QRCode", "SinhVien");
+            string destFilePath = Path.Combine(destFolder, qrId);
+            qrImage.Save(destFilePath, ImageFormat.Png);
+            return destFilePath;
         }
     }
 }
