@@ -73,5 +73,6 @@ namespace CollegeMS
             usDangkylichday1.Visible = false;
             usMarkUpdate1.Visible = true;
         }
+
     }
 }

@@ -78,7 +78,7 @@
             this.dgvHocvien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvHocvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHocvien.Location = new System.Drawing.Point(804, 121);
-            this.dgvHocvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvHocvien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvHocvien.Name = "dgvHocvien";
             this.dgvHocvien.ReadOnly = true;
             this.dgvHocvien.RowHeadersWidth = 51;
@@ -93,7 +93,7 @@
             this.dgvMonhoc.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgvMonhoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMonhoc.Location = new System.Drawing.Point(0, 85);
-            this.dgvMonhoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMonhoc.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMonhoc.Name = "dgvMonhoc";
             this.dgvMonhoc.ReadOnly = true;
             this.dgvMonhoc.RowHeadersWidth = 51;
@@ -113,7 +113,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtHoten);
             this.panel1.Location = new System.Drawing.Point(92, 523);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(603, 318);
             this.panel1.TabIndex = 10;
@@ -133,7 +133,7 @@
             // 
             this.txtStdId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtStdId.Location = new System.Drawing.Point(176, 51);
-            this.txtStdId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStdId.Margin = new System.Windows.Forms.Padding(4);
             this.txtStdId.Name = "txtStdId";
             this.txtStdId.ReadOnly = true;
             this.txtStdId.Size = new System.Drawing.Size(389, 30);
@@ -145,7 +145,7 @@
             this.btSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btSave.Location = new System.Drawing.Point(469, 184);
-            this.btSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSave.Margin = new System.Windows.Forms.Padding(4);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(97, 83);
             this.btSave.TabIndex = 4;
@@ -167,7 +167,7 @@
             // 
             this.txtMark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtMark.Location = new System.Drawing.Point(177, 184);
-            this.txtMark.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMark.Margin = new System.Windows.Forms.Padding(4);
             this.txtMark.Name = "txtMark";
             this.txtMark.Size = new System.Drawing.Size(196, 30);
             this.txtMark.TabIndex = 2;
@@ -187,7 +187,7 @@
             // 
             this.txtHoten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtHoten.Location = new System.Drawing.Point(177, 116);
-            this.txtHoten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoten.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoten.Name = "txtHoten";
             this.txtHoten.ReadOnly = true;
             this.txtHoten.Size = new System.Drawing.Size(389, 30);
@@ -199,7 +199,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dgvMonhoc);
             this.panel2.Location = new System.Drawing.Point(92, 57);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(603, 427);
             this.panel2.TabIndex = 11;
@@ -209,7 +209,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(804, 57);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(788, 784);
             this.panel3.TabIndex = 12;
@@ -223,10 +223,11 @@
             this.Controls.Add(this.dgvHocvien);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "USMarkUpdate";
             this.Size = new System.Drawing.Size(2493, 1337);
             this.Load += new System.EventHandler(this.USMarkUpdate_Load);
+            this.VisibleChanged += new System.EventHandler(this.USMarkUpdate_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocvien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonhoc)).EndInit();
             this.panel1.ResumeLayout(false);
