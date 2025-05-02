@@ -61,6 +61,25 @@ namespace DataLayer
                 DisConnect();
             }
         }
+
+        public object MyExecuteScalar(SqlCommand cmd)
+        {
+            Connect();
+            try
+            {
+                cmd.Connection = cn;
+                return cmd.ExecuteScalar();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
+
         public SqlDataAdapter MyAdapterExecute(string sql)
         {
             //string cnstr = "Data Source=BAOBODOI\\DINHBAO;Initial Catalog=CollegeMS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
@@ -73,7 +92,24 @@ namespace DataLayer
                 throw ex;
             }   
         }
-       
+        public SqlDataAdapter MyAdapterExecute(SqlCommand cmd)
+        {
+            Connect();
+            try
+            {
+                cmd.Connection = cn;
+                return new SqlDataAdapter(cmd);
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
         public int MyExecuteNonQuery(SqlCommand cmd)
         {
             try

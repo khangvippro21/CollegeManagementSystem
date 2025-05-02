@@ -15,22 +15,66 @@ namespace BusinessLayer.Bao
     {
         private DKKHDAL dal = new DKKHDAL();
 
-        
-        public bool dangkimonhoc(string studentId, string courseId, decimal fee)
+
+        public int dangkimonhoc(string studentId, string courseId, decimal fee)
         {
-            if (dal.kiemtratrungmon(studentId, courseId))
+
+            try
             {
-                return false; 
+                return dal.Dangkimonhoc(studentId, courseId, fee);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
             }
 
-            return dal.Dangkimonhoc(studentId, courseId, fee);
+        }
+        public bool kiemtratrungmon(string studentId, string courseId)
+        {
+
+
+            return dal.kiemtratrungmon(studentId, courseId);
+
         }
 
-       
         public DataTable laydsmonhoc()
         {
-            return dal.laydsmonhoc();
+            try
+            {
+                return dal.laydsmonhoc();
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+
+        }
+        public DataTable laydsmonhocdadangky(string studentId)
+        {
+            try
+            {
+                return dal.layMonHocDaDangKy(studentId);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
         }
 
+        public int huydangky(string studentId, string courseId)
+        {
+            try
+            {
+                return dal.HuyDangKyMonHoc(studentId, courseId);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

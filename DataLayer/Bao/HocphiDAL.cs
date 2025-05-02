@@ -41,5 +41,23 @@ namespace DataLayer
             MyAdapterExecute(query).Fill(dt);
             return dt;
         }
+
+        public decimal tonghpsinhvien(string studentId)
+        {
+
+            string query = @"
+                SELECT 
+                    SUM(sc.Fee) AS TotalFee
+                FROM Students s
+                JOIN Students_Courses sc ON s.StId = sc.StId
+                JOIN Courses c ON sc.CId = c.CId
+                WHERE s.StId = @StId";
+
+            SqlCommand cmd = new SqlCommand(query);
+            cmd.Parameters.AddWithValue("@StId", studentId);
+
+            object result = MyExecuteScalar(cmd);
+            return Convert.ToDecimal(result);
+        }
     }
 }

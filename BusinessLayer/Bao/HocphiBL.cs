@@ -28,5 +28,10 @@ namespace BusinessLayer
             return hocphiDAL.GetTotalFeeByCourse();
         }
 
+        public decimal tonghpsinhvien(string studentId)
+        {
+            return hocphiDAL.tonghpsinhvien(studentId);
+        }
+
     }
 }

@@ -66,7 +66,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 1097);
+            this.panel1.Size = new System.Drawing.Size(216, 749);
             this.panel1.TabIndex = 3;
             // 
             // btthoat
@@ -139,7 +139,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 113);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(8, 984);
+            this.panel5.Size = new System.Drawing.Size(8, 636);
             this.panel5.TabIndex = 9;
             // 
             // panel9
@@ -222,7 +222,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(216, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1703, 43);
+            this.panel3.Size = new System.Drawing.Size(1154, 43);
             this.panel3.TabIndex = 4;
             // 
             // lbDatetime2
@@ -250,7 +250,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(216, 43);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1703, 73);
+            this.panel4.Size = new System.Drawing.Size(1154, 73);
             this.panel4.TabIndex = 5;
             // 
             // lbloaichucnang
@@ -272,10 +272,6 @@
             this.usMarkUpdate1.Size = new System.Drawing.Size(1870, 1086);
             this.usMarkUpdate1.TabIndex = 8;
             // 
-            // uSdsHocVien2
-            // 
-
-            // 
             // usDangkylichday1
             // 
             this.usDangkylichday1.Location = new System.Drawing.Point(220, 120);
@@ -284,15 +280,11 @@
             this.usDangkylichday1.Size = new System.Drawing.Size(1717, 975);
             this.usDangkylichday1.TabIndex = 6;
             // 
-            // uSdsHocVien1
-            // 
-
-            // 
             // Giangvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1919, 1097);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.usMarkUpdate1);
             this.Controls.Add(this.usDangkylichday1);
             this.Controls.Add(this.panel4);

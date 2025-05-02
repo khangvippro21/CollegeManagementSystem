@@ -6,16 +6,42 @@ using System.Threading.Tasks;
 using TransferObject;
 using DataLayer;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace BusinessLayer.Bao
 {
-    class BaocaoBL
+   public class BaocaoBL
     {
         private BaocaoDTO baocao;
-        private BaocaoDAL baocaoDAL;
-        public void taobaocao()
+        private  BaocaoDAL baocaoDAL = new BaocaoDAL();
+        
+        public DataTable laydsmonhoc(string studentId)
         {
-            baocaoDAL.taobaocao(baocao);
+            try
+            {
+                return baocaoDAL.dsmonhocdadk(studentId);
+            }
+            catch (SqlException ex)
+            {
+                throw  ex;
+            }
+        }
+
+        public string baocaosuco(string studentId, string courseId, string detail)
+        {
+            try
+            {
+                if (!baocaoDAL.kiemtramonhoc(studentId, courseId))
+                {
+                    throw new Exception("Bạn chỉ có thể báo cáo sự cố cho môn học đã đăng ký.");
+                }
+
+                return baocaoDAL.taobaocao(studentId, courseId, detail);
+            }
+            catch (SqlException ex)
+            {
+                throw  ex;
+            }
         }
 
     }

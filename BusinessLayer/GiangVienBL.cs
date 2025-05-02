@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 using TransferObject;
 using DataLayer;
 using System.Data;
+using QRCoder;
+using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace BusinessLayer
 {
@@ -45,6 +49,7 @@ namespace BusinessLayer
             if (string.IsNullOrEmpty(giangVien.LePhone)) throw new ArgumentException("Số điện thoại không được để trống.", nameof(giangVien.LePhone));
 
             giangVien.LeId = GenerateNewLecturerId();
+            giangVien.LeQRCodePath = QRGenerate(giangVien.LeId);
 
             try
             {
@@ -73,6 +78,19 @@ namespace BusinessLayer
         public bool UpdateLecturer(GiangVien giangVien)
         {
            return giangVienDal.UpdateLecturer(giangVien);
+        }
+        private string QRGenerate(string LeId)
+        {
+            QRCodeGenerator qr = new QRCodeGenerator();
+            QRCodeData data = qr.CreateQrCode(LeId, QRCodeGenerator.ECCLevel.Q);
+            QRCode code = new QRCode(data);
+            Bitmap qrImage = code.GetGraphic(5);
+            string qrId = $"{LeId}.png";
+            string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\.."));
+            string destFolder = Path.Combine(projectRoot, "QRCode", "GiangVien");
+            string destFilePath = Path.Combine(destFolder, qrId);
+            qrImage.Save(destFilePath, ImageFormat.Png);
+            return destFilePath;
         }
     }
 }
