@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewStu = new System.Windows.Forms.DataGridView();
             this.pnXoaSuaStu = new System.Windows.Forms.Panel();
             this.picbScan = new System.Windows.Forms.PictureBox();
@@ -57,6 +57,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStu)).BeginInit();
             this.pnXoaSuaStu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbScan)).BeginInit();
@@ -70,23 +71,23 @@
             this.dataGridViewStu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewStu.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridViewStu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewStu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewStu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewStu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewStu.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewStu.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewStu.EnableHeadersVisualStyles = false;
             this.dataGridViewStu.Location = new System.Drawing.Point(4, 408);
             this.dataGridViewStu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -101,6 +102,7 @@
             // pnXoaSuaStu
             // 
             this.pnXoaSuaStu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pnXoaSuaStu.Controls.Add(this.comboBox1);
             this.pnXoaSuaStu.Controls.Add(this.picbScan);
             this.pnXoaSuaStu.Controls.Add(this.btDung);
             this.pnXoaSuaStu.Controls.Add(this.btnChonAnh);
@@ -136,7 +138,7 @@
             // 
             this.picbScan.Location = new System.Drawing.Point(960, 211);
             this.picbScan.Name = "picbScan";
-            this.picbScan.Size = new System.Drawing.Size(192, 166);
+            this.picbScan.Size = new System.Drawing.Size(192, 143);
             this.picbScan.TabIndex = 47;
             this.picbScan.TabStop = false;
             // 
@@ -145,10 +147,10 @@
             this.btDung.BackColor = System.Drawing.Color.White;
             this.btDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDung.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btDung.Location = new System.Drawing.Point(833, 337);
+            this.btDung.Location = new System.Drawing.Point(833, 285);
             this.btDung.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btDung.Name = "btDung";
-            this.btDung.Size = new System.Drawing.Size(96, 40);
+            this.btDung.Size = new System.Drawing.Size(116, 40);
             this.btDung.TabIndex = 46;
             this.btDung.Text = "DỪNG";
             this.btDung.UseVisualStyleBackColor = false;
@@ -169,10 +171,10 @@
             this.btScan.BackColor = System.Drawing.Color.White;
             this.btScan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btScan.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btScan.Location = new System.Drawing.Point(833, 268);
+            this.btScan.Location = new System.Drawing.Point(833, 215);
             this.btScan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btScan.Name = "btScan";
-            this.btScan.Size = new System.Drawing.Size(96, 40);
+            this.btScan.Size = new System.Drawing.Size(116, 40);
             this.btScan.TabIndex = 45;
             this.btScan.Text = "SCAN";
             this.btScan.UseVisualStyleBackColor = false;
@@ -456,6 +458,14 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Họ và tên:";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(960, 360);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(192, 28);
+            this.comboBox1.TabIndex = 50;
+            // 
             // UserControlStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -502,5 +512,6 @@
         private System.Windows.Forms.PictureBox picbScan;
         private System.Windows.Forms.Button btDung;
         private System.Windows.Forms.Button btScan;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
