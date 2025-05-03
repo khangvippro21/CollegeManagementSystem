@@ -58,10 +58,10 @@ namespace CollegeMS
                     case "student":
                         hv.Show();
                         return;
-                    case "Lecturer":
+                    case "lecturer":
                         gv.Show();
                         return;
-                    case "Admin":
+                    case "admin":
                         this.DialogResult = DialogResult.OK;
                         return;
                 }
