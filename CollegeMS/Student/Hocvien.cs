@@ -15,6 +15,7 @@ namespace CollegeMS
     public partial class Hocvien: Form
     {
         private Timer timer;
+        
         public Hocvien()
         {
             InitializeComponent();
@@ -47,27 +48,17 @@ namespace CollegeMS
             pncontentStu.Controls.Clear();
             pncontentStu.Controls.Add(dkkhControl);
             dkkhControl.Dock = DockStyle.Fill;
+            lbloaichucnang.Text = btndkkh.Text;
         }
 
         private void btthoat_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Enabled = false;
-            loginForm loginForm = new loginForm();
-            DialogResult result = loginForm.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                this.Enabled = true;
-                this.Show();
-            }
-            else
-            {
-                this.Close();
-            }
+            Application.Restart();
         }
 
         private void btBaocaosuco_Click(object sender, EventArgs e)
         {
+            lbloaichucnang.Text = btBaocaosuco.Text;
             UCStuBcao baocao = new UCStuBcao();
             pncontentStu.Controls.Clear();
             pncontentStu.Controls.Add(baocao);
@@ -77,6 +68,7 @@ namespace CollegeMS
         private void bthocphi_Click(object sender, EventArgs e)
         {
             Xemhocphi xemhocphi = new Xemhocphi();
+            lbloaichucnang.Text = bthocphi.Text;
             pncontentStu.Controls.Clear();
             pncontentStu.Controls.Add(xemhocphi);
             xemhocphi.Dock = DockStyle.Fill;

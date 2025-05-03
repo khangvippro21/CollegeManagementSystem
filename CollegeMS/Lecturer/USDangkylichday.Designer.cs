@@ -73,7 +73,7 @@
             this.dgvMonhoc.RowHeadersWidth = 51;
             this.dgvMonhoc.RowTemplate.Height = 24;
             this.dgvMonhoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMonhoc.Size = new System.Drawing.Size(1400, 612);
+            this.dgvMonhoc.Size = new System.Drawing.Size(1400, 575);
             this.dgvMonhoc.TabIndex = 1;
             // 
             // btSave
@@ -82,9 +82,9 @@
             this.btSave.Location = new System.Drawing.Point(1519, 23);
             this.btSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btSave.Name = "btSave";
-            this.btSave.Size = new System.Drawing.Size(136, 62);
+            this.btSave.Size = new System.Drawing.Size(176, 62);
             this.btSave.TabIndex = 2;
-            this.btSave.Text = "SAVE";
+            this.btSave.Text = "LƯU";
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
@@ -94,9 +94,9 @@
             this.btCancel_1.Location = new System.Drawing.Point(1519, 114);
             this.btCancel_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btCancel_1.Name = "btCancel_1";
-            this.btCancel_1.Size = new System.Drawing.Size(136, 62);
+            this.btCancel_1.Size = new System.Drawing.Size(176, 62);
             this.btCancel_1.TabIndex = 3;
-            this.btCancel_1.Text = "CANCEL";
+            this.btCancel_1.Text = "HỦY CHỌN";
             this.btCancel_1.UseVisualStyleBackColor = true;
             this.btCancel_1.Click += new System.EventHandler(this.btCancel_1_Click);
             // 
@@ -106,9 +106,9 @@
             this.btRemove.Location = new System.Drawing.Point(1519, 576);
             this.btRemove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btRemove.Name = "btRemove";
-            this.btRemove.Size = new System.Drawing.Size(143, 62);
+            this.btRemove.Size = new System.Drawing.Size(179, 62);
             this.btRemove.TabIndex = 4;
-            this.btRemove.Text = "REMOVE";
+            this.btRemove.Text = "XÓA";
             this.btRemove.UseVisualStyleBackColor = true;
             this.btRemove.Click += new System.EventHandler(this.btRemove_Click);
             // 
@@ -144,9 +144,9 @@
             this.btCancel_2.Location = new System.Drawing.Point(1519, 662);
             this.btCancel_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btCancel_2.Name = "btCancel_2";
-            this.btCancel_2.Size = new System.Drawing.Size(136, 62);
+            this.btCancel_2.Size = new System.Drawing.Size(179, 62);
             this.btCancel_2.TabIndex = 4;
-            this.btCancel_2.Text = "CANCEL";
+            this.btCancel_2.Text = "HỦY CHỌN";
             this.btCancel_2.UseVisualStyleBackColor = true;
             this.btCancel_2.Click += new System.EventHandler(this.btCancel_2_Click);
             // 

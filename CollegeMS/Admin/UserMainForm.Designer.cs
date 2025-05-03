@@ -317,7 +317,6 @@
             this.accountUS2.Name = "accountUS2";
             this.accountUS2.Size = new System.Drawing.Size(2558, 1189);
             this.accountUS2.TabIndex = 10;
-            this.accountUS2.Load += new System.EventHandler(this.accountUS2_Load);
             // 
             // userControlFee1
             // 

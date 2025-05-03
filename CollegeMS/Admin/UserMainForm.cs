@@ -16,6 +16,7 @@ namespace CollegeMS
     public partial class UserMainForm : Form
     {
         private UserControlFee userControlHocphi;
+        
         public UserMainForm()
         {
             InitializeComponent();
@@ -125,26 +126,9 @@ namespace CollegeMS
             panelSlide.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 144);
         }
 
-        private void accountUS2_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btThoat_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Enabled = false;
-            loginForm loginForm = new loginForm();
-            DialogResult result = loginForm.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                this.Enabled = true;
-                this.Show();
-            }
-            else
-            {
-                this.Close();
-            }
+            Application.Restart();
         }
     }
 }

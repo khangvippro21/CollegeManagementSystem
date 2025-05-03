@@ -26,7 +26,6 @@ namespace CollegeMS
             InitializeDataGridView();
             InitializeSelectedCoursesGrid();
             LoadSelectedCourses();
-            dgvDKKHtrong.CellValueChanged += dgvDKKH_CellValueChanged;
         }
 
         private void dgvDKKH_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -71,30 +70,21 @@ namespace CollegeMS
             dgvDKKHselect.DataSource = selectedCoursesTable;
             dgvDKKHselect.AutoGenerateColumns = false;
             dgvDKKHselect.AllowUserToAddRows = false;
-
-
-
         }
         private void LoadCourses()
         {
-            DataTable courses = dkkhbl.laydsmonhoc();
-
-            // Kiểm tra dữ liệu
+            DataTable courses = dkkhbl.laydsmonhoc(SessionManager.Instance.UserId);
             if (courses.Rows.Count == 0)
             {
                 MessageBox.Show("Không có dữ liệu môn học");
                 return;
             }
-
             dgvDKKHtrong.DataSource = courses;
             dgvDKKHtrong.Columns["CourseName"].HeaderText = "Tên Môn Học";
             dgvDKKHtrong.Columns["LecturerName"].HeaderText = "Tên Giảng Viên";
             dgvDKKHtrong.Columns["CId"].HeaderText = "Mã Môn Học";
             dgvDKKHtrong.Columns["TotalFee"].HeaderText = "Tổng Học Phí";
             dgvDKKHtrong.CurrentCellDirtyStateChanged += dgvDKKH_CurrentCellDirtyStateChanged;
-            dgvDKKHtrong.CellValueChanged += dgvDKKH_CellValueChanged;
-
-
         }
         private void dgvDKKH_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
@@ -107,9 +97,6 @@ namespace CollegeMS
         {
             string studentId = SessionManager.Instance.UserId;
             DataTable dt = dkkhbl.laydsmonhocdadangky(studentId);
-
-
-
             if (!dgvDKKHselect.Columns.Contains("Select"))
             {
                 DataGridViewCheckBoxColumn checkBoxColumn = new DataGridViewCheckBoxColumn
@@ -127,7 +114,6 @@ namespace CollegeMS
             dgvDKKHselect.Columns["CId"].HeaderText = "Mã Môn Học";
             dgvDKKHselect.Columns["TotalFee"].HeaderText = "Tổng Học Phí";
             dgvDKKHselect.CurrentCellDirtyStateChanged += dgvDKKH_CurrentCellDirtyStateChanged;
-            dgvDKKHselect.CellValueChanged += dgvDKKH_CellValueChanged;
             dgvDKKHselect.ReadOnly = false;
             dgvDKKHselect.Columns["Select"].ReadOnly = false;
             foreach (DataGridViewColumn col in dgvDKKHselect.Columns)
@@ -138,50 +124,6 @@ namespace CollegeMS
                 }
 
             }
-
-        }
-
-        private void dgvDKKH_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-
-            if (e.ColumnIndex == dgvDKKHtrong.Columns["Select"].Index && e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvDKKHtrong.Rows[e.RowIndex];
-                string courseId = row.Cells["CId"].Value.ToString();
-                bool isChecked = Convert.ToBoolean(row.Cells["Select"].Value);
-
-                if (isChecked)
-                {
-                    // Kiểm tra chưa có trong bảng tạm
-                    if (!selectedCoursesTable.AsEnumerable().Any(r => r.Field<string>("CId") == courseId))
-                    {
-                        selectedCoursesTable.Rows.Add(
-                            row.Cells["CId"].Value,
-                            row.Cells["CourseName"].Value,
-                            row.Cells["LecturerName"].Value,
-                            row.Cells["StartDate"].Value,
-                            row.Cells["EndDate"].Value,
-                            row.Cells["CCredits"].Value,
-                            row.Cells["FeePerCredit"].Value,
-                            row.Cells["TotalFee"].Value
-                        );
-                    }
-
-                    row.DefaultCellStyle.BackColor = Color.White;
-                }
-                else
-                {
-
-                    DataRow[] rowsToRemove = selectedCoursesTable.Select($"CId = '{courseId}'");
-                    foreach (DataRow r in rowsToRemove)
-                    {
-                        selectedCoursesTable.Rows.Remove(r);
-                    }
-
-                    row.DefaultCellStyle.BackColor = Color.White;
-                }
-            }
-
 
         }
 
@@ -243,8 +185,6 @@ namespace CollegeMS
         private void btnxoa_Click(object sender, EventArgs e)
         {
             string studentId = SessionManager.Instance.UserId;
-
-
             if (MessageBox.Show("Bạn có chắc muốn hủy đăng ký các môn đã chọn?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 return;
             try
@@ -254,20 +194,19 @@ namespace CollegeMS
                     if (row.Cells["Select"].Value != null && Convert.ToBoolean(row.Cells["Select"].Value))
                     {
                         string courseId = row.Cells["CId"].Value.ToString();
-
                         dkkhbl.huydangky(studentId, courseId);
                         MessageBox.Show("Hủy đăng ký thành công!");
                         LoadSelectedCourses();
                     }
-
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi hủy đăng ký môn học: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            LoadCourses();
         }
+    
     }
 }
 

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO; 
+using System.IO;
 using BusinessLayer;
 using TransferObject;
 using System.Xml.Linq;
@@ -182,7 +182,7 @@ namespace CollegeMS
                 {
                     try
                     {
-                       int kq= studentbl.DeleteStudent(id);
+                        int kq = studentbl.DeleteStudent(id);
                         if (kq > 0)
                             MessageBox.Show("Xóa học viên thành công!");
                         else
@@ -330,24 +330,30 @@ namespace CollegeMS
                 SearchStudents(txtsearch);
             }
         }
-    
+
 
         private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
             BarcodeReader reader = new BarcodeReader();
-            var result = reader.Decode(bitmap);
-            if (result != null)
+            try
             {
-                txtsearchStu.Invoke(new MethodInvoker(delegate ()
+                var result = reader.Decode(bitmap);
+                if (result != null)
                 {
-                    txtsearchStu.Text = result.ToString();
-                    SearchStudents(txtsearchStu.Text);
+                    txtsearchStu.Invoke(new MethodInvoker(delegate ()
+                    {
+                        txtsearchStu.Text = result.ToString();
+                        SearchStudents(txtsearchStu.Text);
+                    }
+                    ));
                 }
-                ));
-
+                picbScan.Image = bitmap;
             }
-            picbScan.Image = bitmap;
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show("Kiem tra camera!");
+            }
         }
 
 
@@ -369,7 +375,7 @@ namespace CollegeMS
                 }
             }
         }
-       
+
     }
 }
 

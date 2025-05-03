@@ -38,11 +38,11 @@ namespace BusinessLayer.Bao
 
         }
 
-        public DataTable laydsmonhoc()
+        public DataTable laydsmonhoc(string s)
         {
             try
             {
-                return dal.laydsmonhoc();
+                return dal.laydsmonhoc(s);
             }
             catch (SqlException ex)
             {

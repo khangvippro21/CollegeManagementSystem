@@ -14,6 +14,7 @@ namespace CollegeMS
     public partial class Giangvien: Form
     {
         private Timer timer;
+        
         public Giangvien()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace CollegeMS
         }
         private void LoadDateTime()
         {
-            lbDatetime.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
+            lbDate.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
             timer = new Timer();
             timer.Interval = 60000;
             timer.Tick += Timer_Tick;
@@ -30,7 +31,7 @@ namespace CollegeMS
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            lbDatetime.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
+            lbDate.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm", new CultureInfo("vi-VN"));
         }
 
 
@@ -41,19 +42,7 @@ namespace CollegeMS
 
         private void btthoat_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Enabled = false;
-            loginForm loginForm = new loginForm();
-            DialogResult result = loginForm.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                this.Enabled = true;
-                this.Show();
-            }
-            else
-            {
-                this.Close();
-            }
+            Application.Restart();
         }
 
         private void Giangvien_Load(object sender, EventArgs e)
@@ -64,12 +53,14 @@ namespace CollegeMS
 
         private void btndkkh_Click(object sender, EventArgs e)
         {
+            lbloaichucnang.Text = btndkkh.Text;
             usDangkylichday1.Visible = true;
             usMarkUpdate1.Visible = false;
         }
 
         private void btNhapdiem_Click(object sender, EventArgs e)
         {
+            lbloaichucnang.Text = btNhapdiem.Text; 
             usDangkylichday1.Visible = false;
             usMarkUpdate1.Visible = true;
         }

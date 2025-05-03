@@ -174,6 +174,7 @@
             this.picbScan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picbScan.Name = "picbScan";
             this.picbScan.Size = new System.Drawing.Size(182, 143);
+            this.picbScan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picbScan.TabIndex = 47;
             this.picbScan.TabStop = false;
             // 

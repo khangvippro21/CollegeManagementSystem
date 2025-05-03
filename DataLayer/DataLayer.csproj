@@ -49,7 +49,7 @@
   <ItemGroup>
     <Compile Include="Bao\BaocaoDAL.cs" />
     <Compile Include="Bao\ReviewDAL.cs" />
-    <Compile Include="DKKHDAL.cs" />
+    <Compile Include="Bao\DKKHDAL.cs" />
     <Compile Include="Khang\LecturersCoursesDL.cs" />
     <Compile Include="Khang\StudentsCoursesDL.cs" />
     <Compile Include="Nghia\GiangVienAccess.cs" />

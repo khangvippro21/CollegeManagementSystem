@@ -27,7 +27,7 @@ namespace CollegeMS
             UserMainForm a = new UserMainForm();
             if (progressBar1.Value < 100)
             {
-                progressBar1.Value += 20;
+                progressBar1.Value += 25;
             }
             else
             {

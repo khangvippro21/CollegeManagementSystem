@@ -182,6 +182,8 @@ namespace CollegeMS
 
         private void btRemove_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn có chắc muốn hủy đăng ký các môn đã chọn?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                return;
             foreach (DataGridViewRow row in dgvMonhoc.Rows)
             {
                 if (row.Cells["Select"].Value != null && Convert.ToBoolean(row.Cells["Select"].Value))
