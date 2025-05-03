@@ -81,6 +81,12 @@
     <Compile Include="Admin\dashboardUS.Designer.cs">
       <DependentUpon>dashboardUS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\UserControlDanhGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UserControlDanhGia.Designer.cs">
+      <DependentUpon>UserControlDanhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturer\Giangvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,11 +173,23 @@
     <Compile Include="Student\Xemhocphi.Designer.cs">
       <DependentUpon>Xemhocphi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\UserControlXemSuCo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UserControlXemSuCo.Designer.cs">
+      <DependentUpon>UserControlXemSuCo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\accountUS.resx">
       <DependentUpon>accountUS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\dashboardUS.resx">
       <DependentUpon>dashboardUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UserControlDanhGia.resx">
+      <DependentUpon>UserControlDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UserControlXemSuCo.resx">
+      <DependentUpon>UserControlXemSuCo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\Giangvien.resx">
       <DependentUpon>Giangvien.cs</DependentUpon>
@@ -395,6 +413,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-wrench-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-wrench-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-like-40.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

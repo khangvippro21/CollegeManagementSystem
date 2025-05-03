@@ -13,6 +13,10 @@ namespace BusinessLayer.Bao
     {
         private ReviewDAL reviewDAL = new ReviewDAL();
         private BaocaoDAL baocaoDAL = new BaocaoDAL();
+        public DataTable getReview()
+        {
+            return reviewDAL.getReview();
+        }
         public DataTable laythontingv(string courseId)
         {
             try
