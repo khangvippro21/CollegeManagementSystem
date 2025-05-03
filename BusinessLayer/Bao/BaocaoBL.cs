@@ -14,7 +14,11 @@ namespace BusinessLayer.Bao
     {
         private BaocaoDTO baocao;
         private  BaocaoDAL baocaoDAL = new BaocaoDAL();
-        
+
+        public DataTable getallBaoCao()
+        {
+            return baocaoDAL.getallBaoCao();
+        }
         public DataTable laydsmonhoc(string studentId)
         {
             try

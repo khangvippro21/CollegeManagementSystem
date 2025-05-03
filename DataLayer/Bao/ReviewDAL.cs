@@ -10,7 +10,13 @@ namespace DataLayer.Bao
 {
     public class ReviewDAL:DatabaseAccess
     {
-
+        public DataTable getReview()
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT * FROM ReviewLecturers";
+            MyAdapterExecute(query).Fill(dt);
+            return dt;
+        }
         public DataTable laythongtingv(string courseId)
         {
 

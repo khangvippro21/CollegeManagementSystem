@@ -56,6 +56,7 @@ namespace CollegeMS
             lbloaichucnang.Text = btndkkh.Text;
             usDangkylichday1.Visible = true;
             usMarkUpdate1.Visible = false;
+            MoveSidePanel(btndkkh);
         }
 
         private void btNhapdiem_Click(object sender, EventArgs e)
@@ -63,6 +64,11 @@ namespace CollegeMS
             lbloaichucnang.Text = btNhapdiem.Text; 
             usDangkylichday1.Visible = false;
             usMarkUpdate1.Visible = true;
+            MoveSidePanel(btNhapdiem);
+        }
+        private void MoveSidePanel(Control button)
+        {
+            PanelSlide.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 113);
         }
 
     }

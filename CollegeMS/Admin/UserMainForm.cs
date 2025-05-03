@@ -42,6 +42,8 @@ namespace CollegeMS
             accountUS2.Visible = false;
             userControlQLMH1.Visible = false;
             userControlQLGV2.Visible = false;
+            userControlXemSuCo1.Visible = false;
+            userControlDanhGia1.Visible = false;
             lbloaichucnang.Text = btDashboard.Text;
 
         }
@@ -54,6 +56,8 @@ namespace CollegeMS
             accountUS2.Visible = false;
             userControlQLGV2.Visible = false;
             userControlQLMH1.Visible = false;
+            userControlXemSuCo1.Visible = false;
+            userControlDanhGia1.Visible = false;
             lbloaichucnang.Text = btQLHV.Text;
             MoveSidePanel(btQLHV);
         }
@@ -66,6 +70,8 @@ namespace CollegeMS
             accountUS2.Visible = false;
             userControlQLGV2.Visible = false;
             userControlQLMH1.Visible = false;
+            userControlXemSuCo1.Visible = false;
+            userControlDanhGia1.Visible = false;
             lbloaichucnang.Text = btDashboard.Text;
             MoveSidePanel(btDashboard);
         }
@@ -78,6 +84,8 @@ namespace CollegeMS
             accountUS2.Visible = false;
             userControlQLGV2.Visible = false;
             userControlQLMH1.Visible = false;
+            userControlXemSuCo1.Visible = false;
+            userControlDanhGia1.Visible = false;
             lbloaichucnang.Text = btQLHP.Text;
             MoveSidePanel(btQLHP);
         }
@@ -89,6 +97,8 @@ namespace CollegeMS
             userControlStudents1.Visible = false;
             userControlQLGV2.Visible = false;
             userControlQLMH1.Visible = false;
+            userControlXemSuCo1.Visible = false;
+            userControlDanhGia1.Visible = false;
             lbloaichucnang.Text = btQLTK.Text;
             MoveSidePanel(btQLTK);
         }
@@ -106,6 +116,8 @@ namespace CollegeMS
             userControlStudents1.Visible = false;
             userControlQLGV2.Visible = true;
             userControlQLMH1.Visible = false;
+            userControlXemSuCo1.Visible = false;
+            userControlDanhGia1.Visible = false;
             lbloaichucnang.Text = btQLGV.Text;
             MoveSidePanel(btQLGV);
         }
@@ -118,6 +130,8 @@ namespace CollegeMS
             userControlStudents1.Visible = false;
             userControlQLGV2.Visible = false;
             userControlQLMH1.Visible = true;
+            userControlXemSuCo1.Visible = false;
+            userControlDanhGia1.Visible = false;
             lbloaichucnang.Text = btQLMH.Text;
             MoveSidePanel(btQLMH);
         }
@@ -129,6 +143,34 @@ namespace CollegeMS
         private void btThoat_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void btXemSuCo_Click(object sender, EventArgs e)
+        {
+            accountUS2.Visible = false;
+            dashboardUS1.Visible = false;
+            userControlFee1.Visible = false;
+            userControlStudents1.Visible = false;
+            userControlQLGV2.Visible = false;
+            userControlQLMH1.Visible = false;
+            userControlXemSuCo1.Visible = true;
+            userControlDanhGia1.Visible = false;
+            lbloaichucnang.Text = btXemSuCo.Text;
+            MoveSidePanel(btXemSuCo);
+
+        }
+
+        private void btXemDanhGia_Click(object sender, EventArgs e)
+        {
+            accountUS2.Visible = false;
+            dashboardUS1.Visible = false;
+            userControlFee1.Visible = false;
+            userControlStudents1.Visible = false;
+            userControlQLGV2.Visible = false;
+            userControlQLMH1.Visible = false;
+            userControlDanhGia1.Visible = true;
+            lbloaichucnang.Text = btXemDanhGia.Text;
+            MoveSidePanel(btXemDanhGia);
         }
     }
 }

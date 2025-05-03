@@ -13,6 +13,13 @@ namespace DataLayer
 {
     public class BaocaoDAL:DatabaseAccess
     {
+        public DataTable getallBaoCao()
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT * FROM Problems";
+            MyAdapterExecute(query).Fill(dt);
+            return dt;
+        }
         public DataTable dsmonhocdadk(string studentId)
         {
 

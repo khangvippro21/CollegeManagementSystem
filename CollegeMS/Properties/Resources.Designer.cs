@@ -303,6 +303,16 @@ namespace CollegeMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_like_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-like-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_money_40__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-money-40 (1)", resourceCulture);
@@ -336,6 +346,26 @@ namespace CollegeMS.Properties {
         internal static System.Drawing.Bitmap icons8_teacher_40__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-teacher-40 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_wrench_40 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-wrench-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_wrench_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-wrench-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
