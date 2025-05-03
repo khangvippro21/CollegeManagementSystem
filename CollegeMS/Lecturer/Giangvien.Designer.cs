@@ -32,9 +32,7 @@
             this.btthoat = new System.Windows.Forms.Button();
             this.btNhapdiem = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.slidePanel = new System.Windows.Forms.Panel();
             this.btndkkh = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbWelcome = new System.Windows.Forms.Label();
@@ -58,14 +56,14 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(3)))), ((int)(((byte)(125)))));
             this.panel1.Controls.Add(this.btthoat);
             this.panel1.Controls.Add(this.btNhapdiem);
-            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.btndkkh);
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(288, 922);
+            this.panel1.Size = new System.Drawing.Size(324, 1152);
             this.panel1.TabIndex = 3;
             // 
             // btthoat
@@ -80,10 +78,10 @@
             this.btthoat.ForeColor = System.Drawing.Color.White;
             this.btthoat.Image = global::CollegeMS.Properties.Resources.Import2;
             this.btthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btthoat.Location = new System.Drawing.Point(19, 278);
-            this.btthoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btthoat.Location = new System.Drawing.Point(17, 448);
+            this.btthoat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btthoat.Name = "btthoat";
-            this.btthoat.Size = new System.Drawing.Size(269, 47);
+            this.btthoat.Size = new System.Drawing.Size(303, 123);
             this.btthoat.TabIndex = 13;
             this.btthoat.Text = "              Thoát";
             this.btthoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -93,6 +91,7 @@
             // btNhapdiem
             // 
             this.btNhapdiem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btNhapdiem.Dock = System.Windows.Forms.DockStyle.Top;
             this.btNhapdiem.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.btNhapdiem.FlatAppearance.BorderSize = 0;
             this.btNhapdiem.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -102,10 +101,10 @@
             this.btNhapdiem.ForeColor = System.Drawing.Color.White;
             this.btNhapdiem.Image = global::CollegeMS.Properties.Resources.Scorecard1;
             this.btNhapdiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btNhapdiem.Location = new System.Drawing.Point(19, 206);
-            this.btNhapdiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btNhapdiem.Location = new System.Drawing.Point(12, 297);
+            this.btNhapdiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btNhapdiem.Name = "btNhapdiem";
-            this.btNhapdiem.Size = new System.Drawing.Size(269, 47);
+            this.btNhapdiem.Size = new System.Drawing.Size(312, 123);
             this.btNhapdiem.TabIndex = 11;
             this.btNhapdiem.Text = "              Nhập điểm";
             this.btNhapdiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,46 +113,27 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.panel9);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.slidePanel);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 139);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(0, 174);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(11, 783);
+            this.panel5.Size = new System.Drawing.Size(12, 978);
             this.panel5.TabIndex = 9;
             // 
-            // panel9
+            // slidePanel
             // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(4, 139);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(13, 47);
-            this.panel9.TabIndex = 14;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(1, 66);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(13, 47);
-            this.panel7.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(1, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(11, 47);
-            this.panel6.TabIndex = 0;
+            this.slidePanel.BackColor = System.Drawing.Color.White;
+            this.slidePanel.Location = new System.Drawing.Point(1, 0);
+            this.slidePanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.slidePanel.Name = "slidePanel";
+            this.slidePanel.Size = new System.Drawing.Size(12, 123);
+            this.slidePanel.TabIndex = 0;
             // 
             // btndkkh
             // 
             this.btndkkh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btndkkh.Dock = System.Windows.Forms.DockStyle.Top;
             this.btndkkh.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.btndkkh.FlatAppearance.BorderSize = 0;
             this.btndkkh.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -163,10 +143,10 @@
             this.btndkkh.ForeColor = System.Drawing.Color.White;
             this.btndkkh.Image = global::CollegeMS.Properties.Resources.Edit;
             this.btndkkh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btndkkh.Location = new System.Drawing.Point(19, 139);
-            this.btndkkh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btndkkh.Location = new System.Drawing.Point(12, 174);
+            this.btndkkh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btndkkh.Name = "btndkkh";
-            this.btndkkh.Size = new System.Drawing.Size(269, 47);
+            this.btndkkh.Size = new System.Drawing.Size(312, 123);
             this.btndkkh.TabIndex = 1;
             this.btndkkh.Text = "             Đăng kí lịch dạy";
             this.btndkkh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,29 +159,29 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(288, 139);
+            this.panel2.Size = new System.Drawing.Size(324, 174);
             this.panel2.TabIndex = 0;
             // 
             // lbWelcome
             // 
             this.lbWelcome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWelcome.ForeColor = System.Drawing.Color.White;
-            this.lbWelcome.Location = new System.Drawing.Point(53, 81);
+            this.lbWelcome.Location = new System.Drawing.Point(60, 101);
             this.lbWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbWelcome.Name = "lbWelcome";
-            this.lbWelcome.Size = new System.Drawing.Size(157, 39);
+            this.lbWelcome.Size = new System.Drawing.Size(177, 49);
             this.lbWelcome.TabIndex = 1;
             this.lbWelcome.Text = "WELCOME!";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CollegeMS.Properties.Resources.Student_Center;
-            this.pictureBox1.Location = new System.Drawing.Point(99, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(111, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(72, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -209,28 +189,28 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(288, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(324, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1539, 53);
+            this.panel3.Size = new System.Drawing.Size(1600, 66);
             this.panel3.TabIndex = 4;
             // 
             // lbDatetime2
             // 
             this.lbDatetime2.AutoSize = true;
-            this.lbDatetime2.Location = new System.Drawing.Point(-143, 38);
+            this.lbDatetime2.Location = new System.Drawing.Point(-161, 48);
             this.lbDatetime2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDatetime2.Name = "lbDatetime2";
-            this.lbDatetime2.Size = new System.Drawing.Size(0, 16);
+            this.lbDatetime2.Size = new System.Drawing.Size(0, 20);
             this.lbDatetime2.TabIndex = 2;
             // 
             // lbDatetime
             // 
             this.lbDatetime.AutoSize = true;
-            this.lbDatetime.Location = new System.Drawing.Point(-151, 38);
+            this.lbDatetime.Location = new System.Drawing.Point(-170, 48);
             this.lbDatetime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDatetime.Name = "lbDatetime";
-            this.lbDatetime.Size = new System.Drawing.Size(0, 16);
+            this.lbDatetime.Size = new System.Drawing.Size(0, 20);
             this.lbDatetime.TabIndex = 1;
             // 
             // panel4
@@ -240,10 +220,10 @@
             this.panel4.Controls.Add(this.lbloaichucnang);
             this.panel4.Controls.Add(this.lbDatetime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(288, 53);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(324, 66);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1539, 90);
+            this.panel4.Size = new System.Drawing.Size(1600, 112);
             this.panel4.TabIndex = 5;
             // 
             // lbloaichucnang
@@ -251,41 +231,41 @@
             this.lbloaichucnang.AutoSize = true;
             this.lbloaichucnang.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbloaichucnang.ForeColor = System.Drawing.Color.White;
-            this.lbloaichucnang.Location = new System.Drawing.Point(371, 21);
+            this.lbloaichucnang.Location = new System.Drawing.Point(417, 26);
             this.lbloaichucnang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbloaichucnang.Name = "lbloaichucnang";
-            this.lbloaichucnang.Size = new System.Drawing.Size(83, 30);
+            this.lbloaichucnang.Size = new System.Drawing.Size(100, 36);
             this.lbloaichucnang.TabIndex = 0;
             this.lbloaichucnang.Text = "?????";
             // 
             // usMarkUpdate1
             // 
             this.usMarkUpdate1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.usMarkUpdate1.Location = new System.Drawing.Point(288, 139);
-            this.usMarkUpdate1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.usMarkUpdate1.Location = new System.Drawing.Point(324, 174);
+            this.usMarkUpdate1.Margin = new System.Windows.Forms.Padding(6);
             this.usMarkUpdate1.Name = "usMarkUpdate1";
-            this.usMarkUpdate1.Size = new System.Drawing.Size(2493, 1337);
+            this.usMarkUpdate1.Size = new System.Drawing.Size(2805, 1671);
             this.usMarkUpdate1.TabIndex = 8;
             // 
             // usDangkylichday1
             // 
-            this.usDangkylichday1.Location = new System.Drawing.Point(293, 148);
+            this.usDangkylichday1.Location = new System.Drawing.Point(330, 185);
             this.usDangkylichday1.Margin = new System.Windows.Forms.Padding(1);
             this.usDangkylichday1.Name = "usDangkylichday1";
-            this.usDangkylichday1.Size = new System.Drawing.Size(2289, 1200);
+            this.usDangkylichday1.Size = new System.Drawing.Size(2575, 1500);
             this.usDangkylichday1.TabIndex = 6;
             // 
             // Giangvien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1827, 922);
+            this.ClientSize = new System.Drawing.Size(1924, 1152);
             this.Controls.Add(this.usMarkUpdate1);
             this.Controls.Add(this.usDangkylichday1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Giangvien";
             this.Text = "Lecturer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -305,7 +285,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel slidePanel;
         private System.Windows.Forms.Button btndkkh;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbWelcome;
@@ -317,8 +297,6 @@
         private System.Windows.Forms.Label lbloaichucnang;
         private System.Windows.Forms.Button btthoat;
         private System.Windows.Forms.Button btNhapdiem;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel9;
         private USDangkylichday usDangkylichday1;
 
         private Lecturer.USMarkUpdate usMarkUpdate1;

@@ -66,13 +66,20 @@ namespace CollegeMS
         {
             usDangkylichday1.Visible = true;
             usMarkUpdate1.Visible = false;
+            MoveSidePanel(btndkkh);
+
         }
 
         private void btNhapdiem_Click(object sender, EventArgs e)
         {
             usDangkylichday1.Visible = false;
             usMarkUpdate1.Visible = true;
-        }
+            MoveSidePanel(btNhapdiem);
 
+        }
+        private void MoveSidePanel(Control button)
+        {
+            slidePanel.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 113);
+        }
     }
 }

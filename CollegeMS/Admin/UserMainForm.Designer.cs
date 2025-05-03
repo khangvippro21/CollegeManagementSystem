@@ -35,6 +35,7 @@
             this.lbDatetime = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btThoat = new System.Windows.Forms.Button();
             this.btQLTK = new System.Windows.Forms.Button();
             this.btQLHP = new System.Windows.Forms.Button();
             this.btQLMH = new System.Windows.Forms.Button();
@@ -46,15 +47,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.userControlQLGV2 = new CollegeMS.UserControlQLGV();
             this.userControlStudents1 = new CollegeMS.UserControlStudents();
             this.accountUS2 = new CollegeMS.accountUS();
             this.userControlFee1 = new CollegeMS.UserControlFee();
             this.dashboardUS1 = new CollegeMS.dashboardUS();
             this.userControlQLMH1 = new CollegeMS.UserControlQLMH();
-            this.userControlQLGV2 = new CollegeMS.UserControlQLGV();
             this.userControlQLGV1 = new CollegeMS.UserControlQLGV();
             this.accountUS1 = new CollegeMS.accountUS();
-            this.btThoat = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -70,7 +70,7 @@
             this.panel4.Controls.Add(this.lbDatetime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(372, 103);
-            this.panel4.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panel4.Margin = new System.Windows.Forms.Padding(8);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1170, 172);
             this.panel4.TabIndex = 8;
@@ -109,7 +109,7 @@
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(372, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panel3.Margin = new System.Windows.Forms.Padding(8);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1170, 103);
             this.panel3.TabIndex = 7;
@@ -128,10 +128,29 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panel1.Margin = new System.Windows.Forms.Padding(8);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(372, 1058);
             this.panel1.TabIndex = 6;
+            // 
+            // btThoat
+            // 
+            this.btThoat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btThoat.FlatAppearance.BorderSize = 0;
+            this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThoat.ForeColor = System.Drawing.Color.White;
+            this.btThoat.Image = global::CollegeMS.Properties.Resources.Import2;
+            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThoat.Location = new System.Drawing.Point(12, 960);
+            this.btThoat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(360, 123);
+            this.btThoat.TabIndex = 15;
+            this.btThoat.Text = "               Thoát";
+            this.btThoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btQLTK
             // 
@@ -271,7 +290,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(8);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(372, 222);
             this.panel2.TabIndex = 0;
@@ -291,12 +310,20 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(166, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(108, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // userControlQLGV2
+            // 
+            this.userControlQLGV2.Location = new System.Drawing.Point(372, 275);
+            this.userControlQLGV2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlQLGV2.Name = "userControlQLGV2";
+            this.userControlQLGV2.Size = new System.Drawing.Size(2164, 1048);
+            this.userControlQLGV2.TabIndex = 15;
             // 
             // userControlStudents1
             // 
@@ -313,7 +340,9 @@
             // 
             // accountUS2
             // 
+            this.accountUS2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.accountUS2.Location = new System.Drawing.Point(372, 275);
+            this.accountUS2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.accountUS2.Name = "accountUS2";
             this.accountUS2.Size = new System.Drawing.Size(2558, 1189);
             this.accountUS2.TabIndex = 10;
@@ -331,7 +360,7 @@
             // dashboardUS1
             // 
             this.dashboardUS1.Location = new System.Drawing.Point(372, 275);
-            this.dashboardUS1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dashboardUS1.Margin = new System.Windows.Forms.Padding(2);
             this.dashboardUS1.Name = "dashboardUS1";
             this.dashboardUS1.Size = new System.Drawing.Size(2464, 1438);
             this.dashboardUS1.TabIndex = 9;
@@ -339,16 +368,10 @@
             // userControlQLMH1
             // 
             this.userControlQLMH1.Location = new System.Drawing.Point(372, 275);
+            this.userControlQLMH1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControlQLMH1.Name = "userControlQLMH1";
             this.userControlQLMH1.Size = new System.Drawing.Size(2172, 1172);
             this.userControlQLMH1.TabIndex = 13;
-            // 
-            // userControlQLGV2
-            // 
-            this.userControlQLGV2.Location = new System.Drawing.Point(372, 275);
-            this.userControlQLGV2.Name = "userControlQLGV2";
-            this.userControlQLGV2.Size = new System.Drawing.Size(2164, 1048);
-            this.userControlQLGV2.TabIndex = 15;
             // 
             // userControlQLGV1
             // 
@@ -360,30 +383,12 @@
             // 
             // accountUS1
             // 
+            this.accountUS1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.accountUS1.Location = new System.Drawing.Point(300, 179);
             this.accountUS1.Margin = new System.Windows.Forms.Padding(2);
             this.accountUS1.Name = "accountUS1";
             this.accountUS1.Size = new System.Drawing.Size(1674, 964);
             this.accountUS1.TabIndex = 10;
-            // 
-            // btThoat
-            // 
-            this.btThoat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btThoat.FlatAppearance.BorderSize = 0;
-            this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoat.ForeColor = System.Drawing.Color.White;
-            this.btThoat.Image = global::CollegeMS.Properties.Resources.Import2;
-            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(12, 960);
-            this.btThoat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(360, 123);
-            this.btThoat.TabIndex = 15;
-            this.btThoat.Text = "               Thoát";
-            this.btThoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.UseVisualStyleBackColor = true;
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // UserMainForm
             // 

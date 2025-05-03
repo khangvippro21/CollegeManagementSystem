@@ -47,6 +47,8 @@ namespace CollegeMS
             pncontentStu.Controls.Clear();
             pncontentStu.Controls.Add(dkkhControl);
             dkkhControl.Dock = DockStyle.Fill;
+            MoveSidePanel(btndkkh);
+
         }
 
         private void btthoat_Click(object sender, EventArgs e)
@@ -72,6 +74,8 @@ namespace CollegeMS
             pncontentStu.Controls.Clear();
             pncontentStu.Controls.Add(baocao);
             baocao.Dock = DockStyle.Fill;
+            MoveSidePanel(btBaocaosuco);
+
         }
 
         private void bthocphi_Click(object sender, EventArgs e)
@@ -80,6 +84,12 @@ namespace CollegeMS
             pncontentStu.Controls.Clear();
             pncontentStu.Controls.Add(xemhocphi);
             xemhocphi.Dock = DockStyle.Fill;
+            MoveSidePanel(bthocphi);
+
+        }
+        private void MoveSidePanel(Control button)
+        {
+            SlidePanel.Location = new Point(button.Location.X - button.Location.X, button.Location.Y - 113);
         }
     }
 }
