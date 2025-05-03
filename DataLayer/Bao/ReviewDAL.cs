@@ -63,7 +63,7 @@ namespace DataLayer.Bao
 
             try
             {
-                object result = MyExecuteScalar(cmd);
+                object result = MyExecuteNonQuery(cmd);
                 return Convert.ToInt32(result);
             }
             catch (SqlException ex)

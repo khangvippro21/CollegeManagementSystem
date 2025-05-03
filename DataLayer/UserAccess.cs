@@ -114,26 +114,25 @@ namespace DataLayer
         public string GenerateNewUserId(string prefix)
         {
             string sql = @"
-                SELECT TOP 1 UserId 
-                FROM Users 
-                WHERE UserId LIKE @Prefix + '[0-9][0-9][0-9]' 
-                ORDER BY UserId DESC";
+        SELECT TOP 1 UserId 
+        FROM Users 
+        WHERE UserId LIKE @Prefix + '[0-9][0-9][0-9]' 
+        ORDER BY UserId DESC";
 
             string lastUserId = string.Empty;
             int newIdNumber = 1;
+
             try
             {
-                Connect();
-                using (SqlCommand cmd = new SqlCommand(sql, cn))
+                SqlCommand cmd = new SqlCommand(sql);
+                cmd.Parameters.AddWithValue("@Prefix", prefix);
+                SqlDataAdapter adapter = MyAdapterExecute(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                if (dt.Rows.Count > 0)
                 {
-                    cmd.Parameters.AddWithValue("@Prefix", prefix);
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            lastUserId = reader["UserId"].ToString();
-                        }
-                    }
+                    lastUserId = dt.Rows[0]["UserId"].ToString();
                 }
             }
             catch (SqlException ex)
@@ -149,6 +148,7 @@ namespace DataLayer
                     newIdNumber = lastIdNumber + 1;
                 }
             }
+
             return prefix + newIdNumber.ToString("D3");
         }
 
@@ -160,19 +160,14 @@ namespace DataLayer
             }
 
             string sql = "INSERT INTO Users (UserId, UserPass, UserRole) VALUES (@UserId, @UserPass, @UserRole)";
-
+            SqlCommand cmd = new SqlCommand(sql);
+            cmd.Parameters.AddWithValue("@UserId", userId);
+            cmd.Parameters.AddWithValue("@UserPass", userPass);
+            cmd.Parameters.AddWithValue("@UserRole", userRole);
 
             try
             {
-                Connect();
-
-                using (SqlCommand cmd = new SqlCommand(sql, cn))
-                {
-                    cmd.Parameters.AddWithValue("@UserId", userId);
-                    cmd.Parameters.AddWithValue("@UserPass", userPass);
-                    cmd.Parameters.AddWithValue("@UserRole", userRole);
-                    cmd.ExecuteNonQuery();
-                }
+                MyExecuteNonQuery(cmd);
             }
             catch (SqlException ex)
             {
@@ -182,16 +177,14 @@ namespace DataLayer
         public bool UserExists(string userId)
         {
             string sql = "SELECT COUNT(*) FROM Users WHERE UserId = @UserId";
+            SqlCommand cmd = new SqlCommand(sql);
+            cmd.Parameters.AddWithValue("@UserId", userId);
 
             try
             {
-
-                using (SqlCommand cmd = new SqlCommand(sql, cn))
-                {
-                    cmd.Parameters.AddWithValue("@UserId", userId);
-                    int count = (int)cmd.ExecuteScalar();
-                    return count > 0;
-                }
+                object result = MyExecuteScalar(cmd);
+                int count = Convert.ToInt32(result);
+                return count > 0;
             }
             catch (SqlException ex)
             {
