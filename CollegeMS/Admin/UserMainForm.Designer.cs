@@ -35,10 +35,20 @@
             this.lbDatetime = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btThoat = new System.Windows.Forms.Button();
+            this.btXemDanhGia = new System.Windows.Forms.Button();
+            this.btXemSuCo = new System.Windows.Forms.Button();
+            this.btQLTK = new System.Windows.Forms.Button();
+            this.btQLHP = new System.Windows.Forms.Button();
+            this.btQLMH = new System.Windows.Forms.Button();
+            this.btQLGV = new System.Windows.Forms.Button();
+            this.btQLHV = new System.Windows.Forms.Button();
+            this.btDashboard = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panelSlide = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbWelcome = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userControlDanhGia1 = new CollegeMS.Admin.UserControlDanhGia();
             this.userControlXemSuCo1 = new CollegeMS.UserControlXemSuCo();
             this.userControlQLGV2 = new CollegeMS.UserControlQLGV();
@@ -49,17 +59,9 @@
             this.userControlQLMH1 = new CollegeMS.UserControlQLMH();
             this.userControlQLGV1 = new CollegeMS.UserControlQLGV();
             this.accountUS1 = new CollegeMS.accountUS();
-            this.btThoat = new System.Windows.Forms.Button();
-            this.btXemDanhGia = new System.Windows.Forms.Button();
-            this.btXemSuCo = new System.Windows.Forms.Button();
-            this.btQLTK = new System.Windows.Forms.Button();
-            this.btQLHP = new System.Windows.Forms.Button();
-            this.btQLMH = new System.Windows.Forms.Button();
-            this.btQLGV = new System.Windows.Forms.Button();
-            this.btQLHV = new System.Windows.Forms.Button();
-            this.btDashboard = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -73,19 +75,19 @@
             this.panel4.Controls.Add(this.lbloaichucnang);
             this.panel4.Controls.Add(this.lbDatetime);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(372, 103);
-            this.panel4.Margin = new System.Windows.Forms.Padding(8);
+            this.panel4.Location = new System.Drawing.Point(248, 67);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1170, 172);
+            this.panel4.Size = new System.Drawing.Size(665, 112);
             this.panel4.TabIndex = 8;
             // 
             // lbDatetime2
             // 
             this.lbDatetime2.AutoSize = true;
-            this.lbDatetime2.Location = new System.Drawing.Point(-242, 74);
-            this.lbDatetime2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.lbDatetime2.Location = new System.Drawing.Point(-161, 48);
+            this.lbDatetime2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbDatetime2.Name = "lbDatetime2";
-            this.lbDatetime2.Size = new System.Drawing.Size(0, 20);
+            this.lbDatetime2.Size = new System.Drawing.Size(0, 13);
             this.lbDatetime2.TabIndex = 2;
             // 
             // lbloaichucnang
@@ -93,29 +95,30 @@
             this.lbloaichucnang.AutoSize = true;
             this.lbloaichucnang.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbloaichucnang.ForeColor = System.Drawing.Color.White;
-            this.lbloaichucnang.Location = new System.Drawing.Point(626, 42);
-            this.lbloaichucnang.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.lbloaichucnang.Location = new System.Drawing.Point(417, 27);
+            this.lbloaichucnang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbloaichucnang.Name = "lbloaichucnang";
-            this.lbloaichucnang.Size = new System.Drawing.Size(165, 58);
+            this.lbloaichucnang.Size = new System.Drawing.Size(112, 39);
             this.lbloaichucnang.TabIndex = 0;
             this.lbloaichucnang.Text = "?????";
             // 
             // lbDatetime
             // 
             this.lbDatetime.AutoSize = true;
-            this.lbDatetime.Location = new System.Drawing.Point(-254, 74);
-            this.lbDatetime.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.lbDatetime.Location = new System.Drawing.Point(-169, 48);
+            this.lbDatetime.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbDatetime.Name = "lbDatetime";
-            this.lbDatetime.Size = new System.Drawing.Size(0, 20);
+            this.lbDatetime.Size = new System.Drawing.Size(0, 13);
             this.lbDatetime.TabIndex = 1;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(372, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(8);
+            this.panel3.Location = new System.Drawing.Point(248, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1170, 103);
+            this.panel3.Size = new System.Drawing.Size(665, 67);
             this.panel3.TabIndex = 7;
             // 
             // panel1
@@ -134,139 +137,10 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(8);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(372, 1170);
+            this.panel1.Size = new System.Drawing.Size(248, 487);
             this.panel1.TabIndex = 6;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.panelSlide);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 222);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(12, 948);
-            this.panel5.TabIndex = 0;
-            // 
-            // panelSlide
-            // 
-            this.panelSlide.BackColor = System.Drawing.Color.White;
-            this.panelSlide.Location = new System.Drawing.Point(0, 0);
-            this.panelSlide.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panelSlide.Name = "panelSlide";
-            this.panelSlide.Size = new System.Drawing.Size(12, 123);
-            this.panelSlide.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lbWelcome);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(8);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(372, 222);
-            this.panel2.TabIndex = 0;
-            // 
-            // lbWelcome
-            // 
-            this.lbWelcome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbWelcome.ForeColor = System.Drawing.Color.White;
-            this.lbWelcome.Location = new System.Drawing.Point(90, 157);
-            this.lbWelcome.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.lbWelcome.Name = "lbWelcome";
-            this.lbWelcome.Size = new System.Drawing.Size(266, 74);
-            this.lbWelcome.TabIndex = 1;
-            this.lbWelcome.Text = "WELCOME!";
-            // 
-            // userControlDanhGia1
-            // 
-            this.userControlDanhGia1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.userControlDanhGia1.Location = new System.Drawing.Point(372, 275);
-            this.userControlDanhGia1.Name = "userControlDanhGia1";
-            this.userControlDanhGia1.Size = new System.Drawing.Size(1930, 1008);
-            this.userControlDanhGia1.TabIndex = 17;
-            // 
-            // userControlXemSuCo1
-            // 
-            this.userControlXemSuCo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.userControlXemSuCo1.Location = new System.Drawing.Point(372, 275);
-            this.userControlXemSuCo1.Name = "userControlXemSuCo1";
-            this.userControlXemSuCo1.Size = new System.Drawing.Size(1930, 1008);
-            this.userControlXemSuCo1.TabIndex = 16;
-            // 
-            // userControlQLGV2
-            // 
-            this.userControlQLGV2.Location = new System.Drawing.Point(372, 275);
-            this.userControlQLGV2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControlQLGV2.Name = "userControlQLGV2";
-            this.userControlQLGV2.Size = new System.Drawing.Size(2164, 1048);
-            this.userControlQLGV2.TabIndex = 15;
-            // 
-            // userControlStudents1
-            // 
-            this.userControlStudents1.AllowDrop = true;
-            this.userControlStudents1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlStudents1.AutoSize = true;
-            this.userControlStudents1.Location = new System.Drawing.Point(372, 275);
-            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.userControlStudents1.Name = "userControlStudents1";
-            this.userControlStudents1.Size = new System.Drawing.Size(3051, 1571);
-            this.userControlStudents1.TabIndex = 14;
-            // 
-            // accountUS2
-            // 
-            this.accountUS2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.accountUS2.Location = new System.Drawing.Point(372, 275);
-            this.accountUS2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.accountUS2.Name = "accountUS2";
-            this.accountUS2.Size = new System.Drawing.Size(2558, 1189);
-            this.accountUS2.TabIndex = 10;
-            // 
-            // userControlFee1
-            // 
-            this.userControlFee1.BackColor = System.Drawing.Color.Transparent;
-            this.userControlFee1.Location = new System.Drawing.Point(372, 275);
-            this.userControlFee1.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
-            this.userControlFee1.Name = "userControlFee1";
-            this.userControlFee1.Size = new System.Drawing.Size(1974, 1148);
-            this.userControlFee1.TabIndex = 11;
-            // 
-            // dashboardUS1
-            // 
-            this.dashboardUS1.Location = new System.Drawing.Point(372, 275);
-            this.dashboardUS1.Margin = new System.Windows.Forms.Padding(2);
-            this.dashboardUS1.Name = "dashboardUS1";
-            this.dashboardUS1.Size = new System.Drawing.Size(2464, 1438);
-            this.dashboardUS1.TabIndex = 9;
-            // 
-            // userControlQLMH1
-            // 
-            this.userControlQLMH1.Location = new System.Drawing.Point(372, 275);
-            this.userControlQLMH1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControlQLMH1.Name = "userControlQLMH1";
-            this.userControlQLMH1.Size = new System.Drawing.Size(2172, 1172);
-            this.userControlQLMH1.TabIndex = 13;
-            // 
-            // userControlQLGV1
-            // 
-            this.userControlQLGV1.Location = new System.Drawing.Point(372, 275);
-            this.userControlQLGV1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControlQLGV1.Name = "userControlQLGV1";
-            this.userControlQLGV1.Size = new System.Drawing.Size(1758, 1268);
-            this.userControlQLGV1.TabIndex = 12;
-            // 
-            // accountUS1
-            // 
-            this.accountUS1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.accountUS1.Location = new System.Drawing.Point(300, 179);
-            this.accountUS1.Margin = new System.Windows.Forms.Padding(2);
-            this.accountUS1.Name = "accountUS1";
-            this.accountUS1.Size = new System.Drawing.Size(1674, 964);
-            this.accountUS1.TabIndex = 10;
             // 
             // btThoat
             // 
@@ -277,10 +151,10 @@
             this.btThoat.ForeColor = System.Drawing.Color.White;
             this.btThoat.Image = global::CollegeMS.Properties.Resources.Import2;
             this.btThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btThoat.Location = new System.Drawing.Point(12, 1206);
-            this.btThoat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btThoat.Location = new System.Drawing.Point(8, 784);
+            this.btThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(360, 123);
+            this.btThoat.Size = new System.Drawing.Size(240, 80);
             this.btThoat.TabIndex = 15;
             this.btThoat.Text = "               Thoát";
             this.btThoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -296,10 +170,10 @@
             this.btXemDanhGia.ForeColor = System.Drawing.Color.White;
             this.btXemDanhGia.Image = global::CollegeMS.Properties.Resources.icons8_like_40;
             this.btXemDanhGia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXemDanhGia.Location = new System.Drawing.Point(12, 1083);
-            this.btXemDanhGia.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btXemDanhGia.Location = new System.Drawing.Point(8, 704);
+            this.btXemDanhGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btXemDanhGia.Name = "btXemDanhGia";
-            this.btXemDanhGia.Size = new System.Drawing.Size(360, 123);
+            this.btXemDanhGia.Size = new System.Drawing.Size(240, 80);
             this.btXemDanhGia.TabIndex = 17;
             this.btXemDanhGia.Text = "               Xem Đánh Giá Giảng Viên";
             this.btXemDanhGia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -315,10 +189,10 @@
             this.btXemSuCo.ForeColor = System.Drawing.Color.White;
             this.btXemSuCo.Image = global::CollegeMS.Properties.Resources.icons8_wrench_40;
             this.btXemSuCo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btXemSuCo.Location = new System.Drawing.Point(12, 960);
-            this.btXemSuCo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btXemSuCo.Location = new System.Drawing.Point(8, 624);
+            this.btXemSuCo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btXemSuCo.Name = "btXemSuCo";
-            this.btXemSuCo.Size = new System.Drawing.Size(360, 123);
+            this.btXemSuCo.Size = new System.Drawing.Size(240, 80);
             this.btXemSuCo.TabIndex = 16;
             this.btXemSuCo.Text = "               Xem Báo Cáo Sự Cố";
             this.btXemSuCo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -334,10 +208,10 @@
             this.btQLTK.ForeColor = System.Drawing.Color.White;
             this.btQLTK.Image = ((System.Drawing.Image)(resources.GetObject("btQLTK.Image")));
             this.btQLTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLTK.Location = new System.Drawing.Point(12, 837);
-            this.btQLTK.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btQLTK.Location = new System.Drawing.Point(8, 544);
+            this.btQLTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btQLTK.Name = "btQLTK";
-            this.btQLTK.Size = new System.Drawing.Size(360, 123);
+            this.btQLTK.Size = new System.Drawing.Size(240, 80);
             this.btQLTK.TabIndex = 14;
             this.btQLTK.Text = "               Quản lý tài khoản";
             this.btQLTK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -353,10 +227,10 @@
             this.btQLHP.ForeColor = System.Drawing.Color.White;
             this.btQLHP.Image = ((System.Drawing.Image)(resources.GetObject("btQLHP.Image")));
             this.btQLHP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLHP.Location = new System.Drawing.Point(12, 714);
-            this.btQLHP.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btQLHP.Location = new System.Drawing.Point(8, 464);
+            this.btQLHP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btQLHP.Name = "btQLHP";
-            this.btQLHP.Size = new System.Drawing.Size(360, 123);
+            this.btQLHP.Size = new System.Drawing.Size(240, 80);
             this.btQLHP.TabIndex = 13;
             this.btQLHP.Text = "               Quản lý học phí";
             this.btQLHP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -372,9 +246,10 @@
             this.btQLMH.ForeColor = System.Drawing.Color.White;
             this.btQLMH.Image = ((System.Drawing.Image)(resources.GetObject("btQLMH.Image")));
             this.btQLMH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLMH.Location = new System.Drawing.Point(12, 591);
+            this.btQLMH.Location = new System.Drawing.Point(8, 384);
+            this.btQLMH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btQLMH.Name = "btQLMH";
-            this.btQLMH.Size = new System.Drawing.Size(360, 123);
+            this.btQLMH.Size = new System.Drawing.Size(240, 80);
             this.btQLMH.TabIndex = 12;
             this.btQLMH.Text = "               Quản lý môn học";
             this.btQLMH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -390,10 +265,10 @@
             this.btQLGV.ForeColor = System.Drawing.Color.White;
             this.btQLGV.Image = ((System.Drawing.Image)(resources.GetObject("btQLGV.Image")));
             this.btQLGV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLGV.Location = new System.Drawing.Point(12, 468);
-            this.btQLGV.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btQLGV.Location = new System.Drawing.Point(8, 304);
+            this.btQLGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btQLGV.Name = "btQLGV";
-            this.btQLGV.Size = new System.Drawing.Size(360, 123);
+            this.btQLGV.Size = new System.Drawing.Size(240, 80);
             this.btQLGV.TabIndex = 11;
             this.btQLGV.Text = "               Quản lý giảng viên";
             this.btQLGV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -409,10 +284,10 @@
             this.btQLHV.ForeColor = System.Drawing.Color.White;
             this.btQLHV.Image = ((System.Drawing.Image)(resources.GetObject("btQLHV.Image")));
             this.btQLHV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQLHV.Location = new System.Drawing.Point(12, 345);
-            this.btQLHV.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btQLHV.Location = new System.Drawing.Point(8, 224);
+            this.btQLHV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btQLHV.Name = "btQLHV";
-            this.btQLHV.Size = new System.Drawing.Size(360, 123);
+            this.btQLHV.Size = new System.Drawing.Size(240, 80);
             this.btQLHV.TabIndex = 10;
             this.btQLHV.Text = "               Quản lý học viên";
             this.btQLHV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -428,32 +303,173 @@
             this.btDashboard.ForeColor = System.Drawing.Color.White;
             this.btDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btDashboard.Image")));
             this.btDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btDashboard.Location = new System.Drawing.Point(12, 222);
-            this.btDashboard.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btDashboard.Location = new System.Drawing.Point(8, 144);
+            this.btDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btDashboard.Name = "btDashboard";
-            this.btDashboard.Size = new System.Drawing.Size(360, 123);
+            this.btDashboard.Size = new System.Drawing.Size(240, 80);
             this.btDashboard.TabIndex = 9;
             this.btDashboard.Text = "               Dashboard";
             this.btDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btDashboard.UseVisualStyleBackColor = true;
             this.btDashboard.Click += new System.EventHandler(this.btDashboard_Click);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panelSlide);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 144);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(8, 343);
+            this.panel5.TabIndex = 0;
+            // 
+            // panelSlide
+            // 
+            this.panelSlide.BackColor = System.Drawing.Color.White;
+            this.panelSlide.Location = new System.Drawing.Point(0, 0);
+            this.panelSlide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelSlide.Name = "panelSlide";
+            this.panelSlide.Size = new System.Drawing.Size(8, 80);
+            this.panelSlide.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lbWelcome);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(248, 144);
+            this.panel2.TabIndex = 0;
+            // 
+            // lbWelcome
+            // 
+            this.lbWelcome.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWelcome.ForeColor = System.Drawing.Color.White;
+            this.lbWelcome.Location = new System.Drawing.Point(60, 102);
+            this.lbWelcome.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbWelcome.Name = "lbWelcome";
+            this.lbWelcome.Size = new System.Drawing.Size(177, 48);
+            this.lbWelcome.TabIndex = 1;
+            this.lbWelcome.Text = "WELCOME!";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(166, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8);
+            this.pictureBox1.Location = new System.Drawing.Point(111, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 120);
+            this.pictureBox1.Size = new System.Drawing.Size(72, 78);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // userControlDanhGia1
+            // 
+            this.userControlDanhGia1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.userControlDanhGia1.Location = new System.Drawing.Point(248, 179);
+            this.userControlDanhGia1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.userControlDanhGia1.Name = "userControlDanhGia1";
+            this.userControlDanhGia1.Size = new System.Drawing.Size(1287, 655);
+            this.userControlDanhGia1.TabIndex = 17;
+            // 
+            // userControlXemSuCo1
+            // 
+            this.userControlXemSuCo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.userControlXemSuCo1.Location = new System.Drawing.Point(248, 179);
+            this.userControlXemSuCo1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.userControlXemSuCo1.Name = "userControlXemSuCo1";
+            this.userControlXemSuCo1.Size = new System.Drawing.Size(1287, 655);
+            this.userControlXemSuCo1.TabIndex = 16;
+            // 
+            // userControlQLGV2
+            // 
+            this.userControlQLGV2.Location = new System.Drawing.Point(248, 179);
+            this.userControlQLGV2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.userControlQLGV2.Name = "userControlQLGV2";
+            this.userControlQLGV2.Size = new System.Drawing.Size(1443, 681);
+            this.userControlQLGV2.TabIndex = 15;
+            // 
+            // userControlStudents1
+            // 
+            this.userControlStudents1.AllowDrop = true;
+            this.userControlStudents1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlStudents1.AutoSize = true;
+            this.userControlStudents1.Location = new System.Drawing.Point(248, 179);
+            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlStudents1.Name = "userControlStudents1";
+            this.userControlStudents1.Size = new System.Drawing.Size(2034, 1021);
+            this.userControlStudents1.TabIndex = 14;
+            // 
+            // accountUS2
+            // 
+            this.accountUS2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.accountUS2.Location = new System.Drawing.Point(248, 179);
+            this.accountUS2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.accountUS2.Name = "accountUS2";
+            this.accountUS2.Size = new System.Drawing.Size(1705, 773);
+            this.accountUS2.TabIndex = 10;
+            // 
+            // userControlFee1
+            // 
+            this.userControlFee1.BackColor = System.Drawing.Color.Transparent;
+            this.userControlFee1.Location = new System.Drawing.Point(248, 179);
+            this.userControlFee1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlFee1.Name = "userControlFee1";
+            this.userControlFee1.Size = new System.Drawing.Size(1316, 746);
+            this.userControlFee1.TabIndex = 11;
+            // 
+            // dashboardUS1
+            // 
+            this.dashboardUS1.Location = new System.Drawing.Point(248, 179);
+            this.dashboardUS1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dashboardUS1.Name = "dashboardUS1";
+            this.dashboardUS1.Size = new System.Drawing.Size(1643, 935);
+            this.dashboardUS1.TabIndex = 9;
+            // 
+            // userControlQLMH1
+            // 
+            this.userControlQLMH1.Location = new System.Drawing.Point(248, 179);
+            this.userControlQLMH1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.userControlQLMH1.Name = "userControlQLMH1";
+            this.userControlQLMH1.Size = new System.Drawing.Size(1448, 762);
+            this.userControlQLMH1.TabIndex = 13;
+            // 
+            // userControlQLGV1
+            // 
+            this.userControlQLGV1.Location = new System.Drawing.Point(372, 275);
+            this.userControlQLGV1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlQLGV1.Name = "userControlQLGV1";
+            this.userControlQLGV1.Size = new System.Drawing.Size(1758, 1268);
+            this.userControlQLGV1.TabIndex = 12;
+            // 
+            // accountUS1
+            // 
+            this.accountUS1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.accountUS1.Location = new System.Drawing.Point(300, 179);
+            this.accountUS1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.accountUS1.Name = "accountUS1";
+            this.accountUS1.Size = new System.Drawing.Size(1674, 964);
+            this.accountUS1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = ".";
+            // 
             // UserMainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1542, 1170);
+            this.ClientSize = new System.Drawing.Size(913, 487);
             this.Controls.Add(this.userControlDanhGia1);
             this.Controls.Add(this.userControlXemSuCo1);
             this.Controls.Add(this.panel4);
@@ -465,7 +481,7 @@
             this.Controls.Add(this.userControlFee1);
             this.Controls.Add(this.dashboardUS1);
             this.Controls.Add(this.userControlQLMH1);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
@@ -474,6 +490,8 @@
             this.Load += new System.EventHandler(this.UserMainForm_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -515,6 +533,7 @@
         private System.Windows.Forms.Button btXemSuCo;
         private UserControlXemSuCo userControlXemSuCo1;
         private Admin.UserControlDanhGia userControlDanhGia1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
