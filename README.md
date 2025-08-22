@@ -13,6 +13,8 @@
 
 ## 3. Chức năng chính của hệ thống
 
+<img width="940" height="692" alt="image" src="https://github.com/user-attachments/assets/4fde2060-98c4-4b8b-a09a-5048c7b96c7b" />
+
 ### 3.1. Đối tượng sử dụng và quyền truy cập
 - **Admin**: Quản lý toàn bộ hệ thống, phân quyền, quản lý sinh viên, giảng viên, môn học, tài khoản.
 - **Giảng viên**: Đăng ký lịch dạy, xem danh sách sinh viên, nhập điểm, báo cáo.
@@ -50,6 +52,12 @@
 - Phần mềm giúp nâng cao hiệu quả quản lý học viên và giảng viên, đồng thời giảm thiểu sai sót và tăng tính chính xác trong quản trị dữ liệu.
 - Hệ thống có tiềm năng phát triển tiếp các tính năng mở rộng như chatbot, phân tích dữ liệu học tập, báo cáo nâng cao.
 
+## Giao diện 
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/95210186-8426-411b-a385-05e8af4b9676" />
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/dce17a4e-c429-493f-8ec3-ad8963e988f9" />
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/9bda2300-5866-4c30-b0b7-9b5358428953" />
+<img width="941" height="564" alt="image" src="https://github.com/user-attachments/assets/98f1524c-429f-459a-b3e4-d5aebb5d5ad9" />
+<img width="940" height="588" alt="image" src="https://github.com/user-attachments/assets/bf3f97fa-98c8-4379-bec4-0149865a9891" />
+<img width="940" height="588" alt="image" src="https://github.com/user-attachments/assets/37383bb8-fd5c-4a24-a110-1bd4dd3ceb1e" />
+<img width="940" height="588" alt="image" src="https://github.com/user-attachments/assets/a7e3f26a-a78a-482a-a319-4302b89e0274" />
 ---
-
-Bạn có thể dùng phần này làm nội dung cơ bản cho file README.md của dự án quản lý trường đại học, giúp người đọc nhanh chóng hiểu mục tiêu, công nghệ, chức năng và kết quả của hệ thống.
